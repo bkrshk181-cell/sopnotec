@@ -4,3 +4,5 @@ __pycache__/
 .vercel
 node_modules/
 preview.html
+.env
+.env.local

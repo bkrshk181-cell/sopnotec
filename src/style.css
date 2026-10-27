@@ -380,6 +380,9 @@ form.cf{padding:40px;border-radius:28px;background:var(--card);border:1px solid 
 .field input:focus+label,.field input:not(:placeholder-shown)+label,.field textarea:focus+label,.field textarea:not(:placeholder-shown)+label{top:6px;font-size:11px;color:var(--c1)}
 form.cf .btn{justify-content:center}
 .sent{grid-column:1/-1;text-align:center;color:#4ade80;font-weight:600;display:none}
+.sent.err{color:#f87171}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+form.cf button:disabled,.news button:disabled{opacity:.7;cursor:wait}
 .mapbox{border-radius:28px;overflow:hidden;border:1px solid var(--line);height:380px;position:relative;background:radial-gradient(circle at 50% 50%,rgba(91,110,225,.25),transparent 60%),var(--bg2)}
 .mapbox .grid{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 40px,rgba(255,255,255,.04) 40px 41px),repeating-linear-gradient(0deg,transparent 0 40px,rgba(255,255,255,.04) 40px 41px)}
 .mapbox .pinx{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);font-size:44px;color:var(--c1);animation:bob 2.4s ease-in-out infinite;filter:drop-shadow(0 10px 20px rgba(34,199,224,.6))}

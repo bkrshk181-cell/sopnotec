@@ -48,5 +48,11 @@ python3 -m http.server 8000   # then open http://localhost:8000
 
 ## Notes
 
-- The contact form and newsletter are front-end only — connect them to a form service
-  (e.g. Formspree, Web3Forms, or a Vercel serverless function) before relying on them.
+- **Lead emails:** the contact form and newsletter post to `/api/lead` (Vercel serverless
+  function in `api/lead.js`), which emails every submission to the SopnoTec inbox through
+  Hostinger SMTP (`smtp.hostinger.com:465`, SSL). Reply-To is set to the visitor, so hitting
+  Reply answers them directly. A hidden honeypot field and a minimum fill time filter bots.
+- Set these in **Vercel → Project → Settings → Environment Variables** (see `.env.example`),
+  then redeploy: `SMTP_USER`, `SMTP_PASS`, and optionally `LEAD_TO`, `SMTP_HOST`, `SMTP_PORT`.
+  Never commit the password.
+- `python3 -m http.server` previews the pages but not `/api/lead`; use `vercel dev` to test the form locally.

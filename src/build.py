@@ -59,7 +59,7 @@ def footer():
   <div class="fgrid">
     <div><a href="index.html" class="logo"><img src="{img('logo')}" alt="SopnoTec"></a>
       <p>Tailored IT solutions, digital innovation and expert support — we help businesses grow across every digital channel.</p>
-      <form class="news"><input type="email" placeholder="Your email" required><button>Subscribe</button></form></div>
+      <form class="news" action="/api/lead" method="post"><input type="hidden" name="form" value="newsletter"><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="email" name="email" placeholder="Your email" aria-label="Your email" maxlength="200" required><button>Subscribe</button></form></div>
     <div><h5>Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="projects.html">Our projects</a></li><li><a href="team.html">Meet our team</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy policy</a></li></ul></div>
     <div><h5>Services</h5><ul>{fs}<li><a href="services.html" style="color:var(--c1)">All services →</a></li></ul></div>
     <div><h5>Contact</h5><ul><li><a href="tel:{SITE['phone1'][1]}">{SITE['phone1'][0]} ({SITE['phone1'][2]})</a></li><li><a href="tel:{SITE['phone2'][1]}">{SITE['phone2'][0]} ({SITE['phone2'][2]})</a></li><li><a href="mailto:{SITE['email']}">{SITE['email']}</a></li><li>{SITE['address']}</li></ul></div>
@@ -318,13 +318,13 @@ contact = f'''{phero("Feel free to <span class='grad'>get in touch.</span>", "Wo
 <a href="tel:{SITE['phone2'][1]}"><span class="ic">{ic('phone')}</span><span><small>Call anytime · {SITE['phone2'][2]}</small><b>{SITE['phone2'][0]}</b></span></a>
 <a href="mailto:{SITE['email']}"><span class="ic">{ic('mail')}</span><span><small>Send email</small><b>{SITE['email']}</b></span></a>
 <div class="ci"><span class="ic">{ic('pin')}</span><span><small>Visit</small><b>{SITE['address']}</b></span></div></div></div>
-<form class="cf rv r"><div class="field"><input id="n" placeholder=" " required><label for="n">Your name</label></div>
-<div class="field"><input id="em" type="email" placeholder=" " required><label for="em">Email address</label></div>
-<div class="field"><input id="ph" placeholder=" "><label for="ph">Phone</label></div>
-<div class="field"><select id="svcsel" aria-label="Service"><option value="">Choose a service</option>{opts}</select></div>
-<div class="field full"><input id="sj" placeholder=" "><label for="sj">Subject</label></div>
-<div class="field full"><textarea id="m" rows="6" placeholder=" "></textarea><label for="m">Tell us about your project</label></div>
-<button class="btn btn-primary field full" type="submit">Send message {ARROW}</button><div class="sent">Thanks! We'll be in touch shortly.</div></form>
+<form class="cf rv r" action="/api/lead" method="post" novalidate><input type="hidden" name="form" value="contact"><div class="hp" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div><div class="field"><input id="n" name="name" autocomplete="name" maxlength="120" placeholder=" " required><label for="n">Your name</label></div>
+<div class="field"><input id="em" name="email" type="email" autocomplete="email" maxlength="200" placeholder=" " required><label for="em">Email address</label></div>
+<div class="field"><input id="ph" name="phone" type="tel" autocomplete="tel" maxlength="40" placeholder=" "><label for="ph">Phone</label></div>
+<div class="field"><select id="svcsel" name="service" aria-label="Service"><option value="">Choose a service</option>{opts}</select></div>
+<div class="field full"><input id="sj" name="subject" maxlength="200" placeholder=" "><label for="sj">Subject</label></div>
+<div class="field full"><textarea id="m" name="message" rows="6" maxlength="5000" placeholder=" "></textarea><label for="m">Tell us about your project</label></div>
+<button class="btn btn-primary field full" type="submit">Send message {ARROW}</button><div class="sent" role="status" aria-live="polite">Thanks! We'll be in touch shortly.</div></form>
 </div></section>
 <section class="tight"><div class="wrap"><div class="mapbox rv s"><div class="grid"></div><div class="ping"></div><div class="pinx">{ic('pin')}</div><div class="lbl">{SITE['address']}</div></div></div></section>
 <section id="faq"><div class="wrap"><div class="center" style="margin-bottom:50px"><div class="eyebrow rv">FAQ</div><h2 class="rv">Questions, <span class="grad">answered.</span></h2></div><div class="faq">{fq}</div></div></section>'''

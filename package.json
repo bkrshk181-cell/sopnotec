@@ -1,0 +1,9 @@
+{
+  "name": "sopnotec-website",
+  "private": true,
+  "description": "SopnoTec static site + /api/lead serverless function",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  }
+}

@@ -68,8 +68,17 @@ $$('.ftabs').forEach(w=>{const bs=$$('.ftab-list button',w),ps=$$('.pane',w);let
   bs.forEach((b,i)=>b.onclick=()=>sh(i));const o=new IntersectionObserver(es=>{if(es[0].isIntersecting){sh(0);o.disconnect()}});o.observe(w)});
 
 // forms
-$$('form.cf').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();$('.sent',f).style.display='block';f.reset()}));
-$$('.news').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const b=$('button',f);b.textContent='Subscribed ✓';f.reset()}));
+const T0=Date.now();
+function sendLead(f){const d=Object.fromEntries(new FormData(f));d.page=location.pathname;d.elapsed=Date.now()-T0;
+  return fetch(f.getAttribute('action')||'/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+    .then(r=>r.json().catch(()=>({})).then(j=>{if(!r.ok||!j.ok)throw new Error(j.error||'Something went wrong. Please try again.');return j}))}
+$$('form.cf').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();if(!f.reportValidity())return;
+  const b=$('button[type=submit]',f),s=$('.sent',f),bt=b.innerHTML;b.disabled=true;b.textContent='Sending…';s.style.display='none';s.classList.remove('err');
+  sendLead(f).then(()=>{s.textContent="Thanks! We'll be in touch shortly.";s.style.display='block';f.reset()})
+    .catch(er=>{s.textContent=er.message+' You can also email us directly.';s.classList.add('err');s.style.display='block'})
+    .finally(()=>{b.disabled=false;b.innerHTML=bt})}));
+$$('.news').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const b=$('button',f);b.disabled=true;b.textContent='…';
+  sendLead(f).then(()=>{b.textContent='Subscribed ✓';f.reset()}).catch(()=>{b.textContent='Try again';b.disabled=false})}));
 const q=new URLSearchParams(location.search).get('service');if(q&&$('#svcsel'))$('#svcsel').value=q;
 $$('#yr').forEach(y=>y.textContent=new Date().getFullYear());
 
