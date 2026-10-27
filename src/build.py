@@ -62,7 +62,7 @@ def footer():
       <form class="news" action="/api/lead" method="post"><input type="hidden" name="form" value="newsletter"><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="email" name="email" placeholder="Your email" aria-label="Your email" maxlength="200" required><button>Subscribe</button></form></div>
     <div><h5>Links</h5><ul><li><a href="/">Home</a></li><li><a href="/about">About us</a></li><li><a href="/projects">Our projects</a></li><li><a href="/team">Meet our team</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li></ul></div>
     <div><h5>Services</h5><ul>{fs}<li><a href="/services" style="color:var(--c1)">All services →</a></li></ul></div>
-    <div><h5>Contact</h5><ul><li><a href="tel:{SITE['phone1'][1]}">{SITE['phone1'][0]} ({SITE['phone1'][2]})</a></li><li><a href="tel:{SITE['phone2'][1]}">{SITE['phone2'][0]} ({SITE['phone2'][2]})</a></li><li><a href="mailto:{SITE['email']}">{SITE['email']}</a></li><li>{SITE['address']}</li></ul></div>
+    <div><h5>Contact</h5><ul><li><a href="tel:{SITE['phone1'][1]}">{SITE['phone1'][0]} ({SITE['phone1'][2]})</a></li><li><a href="tel:{SITE['phone2'][1]}">{SITE['phone2'][0]} ({SITE['phone2'][2]})</a></li><li><a href="tel:{SITE['phone3'][1]}">{SITE['phone3'][0]} ({SITE['phone3'][2]})</a></li><li><a href="mailto:{SITE['email']}">{SITE['email']}</a></li><li>{SITE['address']}</li></ul></div>
   </div>
   <div class="huge">SopnoTec</div>
   <div class="copy"><span>© <span id="yr"></span> SopnoTec. All rights reserved.</span><span><a href="/privacy-policy">Privacy Policy</a> · <a href="/privacy-policy">Terms of Condition</a></span></div>
@@ -307,7 +307,7 @@ opts = "".join(f'<option value="{s["slug"]}">{e(s["name"])}</option>' for s in S
 faqs = [("What services does SopnoTec offer?", "Ten specialties: customer service representatives, live chat support, QuickBooks bookkeeping, CRM setup and customization, ticketing desk creation, cold calling / call support, campaign management, digital marketing, social media &amp; LinkedIn engagement, and WordPress development."),
         ("Is the first consultation free?", "Yes — you can receive a free consultation for any kind of IT solution. Just send us a message or call."),
         ("Do you provide support outside business hours?", "Yes. We provide 24/7 support for partners during the process, and our live chat specialists offer round-the-clock assistance."),
-        ("Where are your clients based?", "We have worked with clients across the globe. You can reach us on our Ireland and USA numbers."),
+        ("Where are your clients based?", "We have worked with clients across the globe. You can reach us on our Ireland, UK and USA numbers."),
         ("Can you work with the tools we already use?", "Yes. We integrate with your existing CRM, email platforms and business tools — including QuickBooks, Shopify, Zapier, JotForm, Trello and Adobe Sign.")]
 fq = "".join(f'<details class="rv"><summary>{q}<span class="pm">+</span></summary><div class="ans">{a}</div></details>' for q, a in faqs)
 contact = f'''{phero("Feel free to <span class='grad'>get in touch.</span>", "World class IT solutions partner of choice. Reach us any time — we'd love to hear about your project.", [("Contact", None)], "s_csr", "mail")}
@@ -316,6 +316,7 @@ contact = f'''{phero("Feel free to <span class='grad'>get in touch.</span>", "Wo
 <div class="cinfo">
 <a href="tel:{SITE['phone1'][1]}"><span class="ic">{ic('phone')}</span><span><small>Call anytime · {SITE['phone1'][2]}</small><b>{SITE['phone1'][0]}</b></span></a>
 <a href="tel:{SITE['phone2'][1]}"><span class="ic">{ic('phone')}</span><span><small>Call anytime · {SITE['phone2'][2]}</small><b>{SITE['phone2'][0]}</b></span></a>
+<a href="tel:{SITE['phone3'][1]}"><span class="ic">{ic('phone')}</span><span><small>Call anytime · {SITE['phone3'][2]}</small><b>{SITE['phone3'][0]}</b></span></a>
 <a href="mailto:{SITE['email']}"><span class="ic">{ic('mail')}</span><span><small>Send email</small><b>{SITE['email']}</b></span></a>
 <div class="ci"><span class="ic">{ic('pin')}</span><span><small>Visit</small><b>{SITE['address']}</b></span></div></div></div>
 <form class="cf rv r" action="/api/lead" method="post" novalidate><input type="hidden" name="form" value="contact"><div class="hp" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div><div class="field"><input id="n" name="name" autocomplete="name" maxlength="120" placeholder=" " required><label for="n">Your name</label></div>
@@ -326,7 +327,6 @@ contact = f'''{phero("Feel free to <span class='grad'>get in touch.</span>", "Wo
 <div class="field full"><textarea id="m" name="message" rows="6" maxlength="5000" placeholder=" "></textarea><label for="m">Tell us about your project</label></div>
 <button class="btn btn-primary field full" type="submit">Send message {ARROW}</button><div class="sent" role="status" aria-live="polite">Thanks! We'll be in touch shortly.</div></form>
 </div></section>
-<section class="tight"><div class="wrap"><div class="mapbox rv s"><div class="grid"></div><div class="ping"></div><div class="pinx">{ic('pin')}</div><div class="lbl">{SITE['address']}</div></div></div></section>
 <section id="faq"><div class="wrap"><div class="center" style="margin-bottom:50px"><div class="eyebrow rv">FAQ</div><h2 class="rv">Questions, <span class="grad">answered.</span></h2></div><div class="faq">{fq}</div></div></section>'''
 page("contact.html", "Contact — SopnoTec", "Contact SopnoTec by phone, email or the contact form.", contact)
 

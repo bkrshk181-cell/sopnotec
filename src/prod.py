@@ -17,7 +17,8 @@ HEAD = '''<!doctype html>
 <meta property="og:url" content="{canon}"><meta property="og:image" content="{site}/assets/img/og-image.jpg">
 <link rel="canonical" href="{canon}">{robots}
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/css/style.css">
 <script src="/assets/js/main.js" defer></script></head>
 <body>'''

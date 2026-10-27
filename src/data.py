@@ -4,6 +4,7 @@ SITE = dict(
     tagline="Service Provider",
     phone1=("+353 83 022 2631", "+353830222631", "Ireland"),
     phone2=("+1 636 330 8881", "+16363308881", "USA"),
+    phone3=("+44 7429 733046", "+447429733046", "UK"),
     email="Support@sopnotec.com",
     address="734 H, Bryan Burlington, NC 27215",
     url="https://sopnotec.com",

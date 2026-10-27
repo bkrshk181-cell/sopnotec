@@ -383,12 +383,6 @@ form.cf .btn{justify-content:center}
 .sent.err{color:#f87171}
 .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
 form.cf button:disabled,.news button:disabled{opacity:.7;cursor:wait}
-.mapbox{border-radius:28px;overflow:hidden;border:1px solid var(--line);height:380px;position:relative;background:radial-gradient(circle at 50% 50%,rgba(91,110,225,.25),transparent 60%),var(--bg2)}
-.mapbox .grid{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 40px,rgba(255,255,255,.04) 40px 41px),repeating-linear-gradient(0deg,transparent 0 40px,rgba(255,255,255,.04) 40px 41px)}
-.mapbox .pinx{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);font-size:44px;color:var(--c1);animation:bob 2.4s ease-in-out infinite;filter:drop-shadow(0 10px 20px rgba(34,199,224,.6))}
-.mapbox .ping{position:absolute;left:50%;top:50%;width:20px;height:20px;margin:-10px;border-radius:50%;border:2px solid var(--c1);animation:ping 2s infinite}
-@keyframes ping{to{transform:scale(8);opacity:0}}
-.mapbox .lbl{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);padding:12px 20px;border-radius:14px;background:rgba(13,11,41,.9);border:1px solid var(--line);font-weight:600;white-space:nowrap}
 
 /* faq */
 .faq{display:grid;gap:14px;max-width:900px;margin:0 auto}
