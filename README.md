@@ -43,8 +43,17 @@ python3 src/spa.py preview.html assets/img
 ## Preview locally
 
 ```bash
-python3 -m http.server 8000   # then open http://localhost:8000
+npx vercel dev               # clean URLs + /api/lead, like production
+python3 -m http.server 8000   # quick look only: open http://localhost:8000/index.html
 ```
+
+## URLs, sitemap & robots
+
+- Clean URLs: pages are served as `/about`, `/services`, `/service-crm-setup-and-customization`, etc.
+  (`cleanUrls` in `vercel.json`). Old `*.html` links 308-redirect to the clean version.
+- Internal links and assets use root-relative paths (`/about`, `/assets/...`); each page has a
+  canonical URL based on `SITE['url']` in `src/data.py`.
+- `python3 src/prod.py` regenerates `sitemap.xml` and `robots.txt` along with the pages — don't edit them by hand.
 
 ## Notes
 

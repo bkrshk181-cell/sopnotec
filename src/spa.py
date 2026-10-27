@@ -18,7 +18,7 @@ PAGES, USED = ns["PAGES"], ns["USED"]
 SERVICES, PROJECTS = ns["SERVICES"], ns["PROJECTS"]
 
 def fix(h):
-    h = re.sub(r'href="([a-z0-9\-]+)\.html([?#][^"]*)?"', lambda m: f'href="#/{m.group(1)}{m.group(2) or ""}"', h)
+    h = re.sub(r'href="/([a-z0-9\-]*)([?#][^"]*)?"', lambda m: f'href="#/{m.group(1) or "index"}{m.group(2) or ""}"', h)
     h = re.sub(r'src="__IMG_([a-z0-9_]+)__"', r'src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-img="\1"', h)
     h = re.sub(r"url\('__IMG_([a-z0-9_]+)__'\)", r"var(--i-\1)", h)
     return h

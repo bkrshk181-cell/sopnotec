@@ -20,8 +20,8 @@ ARROW = ic("arrow")
 S = {s["slug"]: s for s in SERVICES}
 P = {p["slug"]: p for p in PROJECTS}
 def nav_name(s): return s.get("nav", s["name"])
-def surl(s): return f"service-{s['slug']}.html"
-def purl(p): return f"project-{p['slug']}.html"
+def surl(s): return f"/service-{s['slug']}"
+def purl(p): return f"/project-{p['slug']}"
 
 # ---------- shared chrome ----------
 def header():
@@ -31,19 +31,19 @@ def header():
 <div id="progress"></div><div id="glow"></div>
 <div class="topbar"><div class="wrap">
   <div class="l"><a href="mailto:{SITE['email']}">{ic('mail')} {SITE['email']}</a><a href="tel:{SITE['phone2'][1]}">{ic('phone')} {SITE['phone2'][0]}</a></div>
-  <div class="r"><span style="display:inline-flex;gap:8px;align-items:center">{ic('pin')} {SITE['address']}</span><a href="contact.html">Help</a><a href="contact.html">Support</a><a href="contact.html#faq">FAQs</a></div>
+  <div class="r"><span style="display:inline-flex;gap:8px;align-items:center">{ic('pin')} {SITE['address']}</span><a href="/contact">Help</a><a href="/contact">Support</a><a href="/contact#faq">FAQs</a></div>
 </div></div>
 <nav class="main"><div class="wrap">
-  <a href="index.html" class="logo"><img src="{img('logo')}" alt="SopnoTec"></a>
+  <a href="/" class="logo"><img src="{img('logo')}" alt="SopnoTec"></a>
   <ul class="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html" data-match="service">Services <span class="caret">▼</span></a><div class="mega"><div class="mega-in">{mega}<a class="all" href="services.html">View all services {ARROW}</a></div></div></li>
-    <li><a href="projects.html" data-match="project">Projects</a></li>
-    <li><a href="team.html">Team</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/services" data-match="service">Services <span class="caret">▼</span></a><div class="mega"><div class="mega-in">{mega}<a class="all" href="/services">View all services {ARROW}</a></div></div></li>
+    <li><a href="/projects" data-match="project">Projects</a></li>
+    <li><a href="/team">Team</a></li>
+    <li><a href="/contact">Contact</a></li>
   </ul>
-  <a href="contact.html" class="btn btn-primary cta">Get Started Free {ARROW}</a>
+  <a href="/contact" class="btn btn-primary cta">Get Started Free {ARROW}</a>
   <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </div></nav>'''
 
@@ -53,19 +53,19 @@ def footer():
 <div class="fcta"><div class="wrap"><div class="in rv s">
   <div><small>Call to action</small><h3>Ready to collaborate with us?</h3></div>
   <a class="ph" href="tel:{SITE['phone1'][1]}"><span class="ic">{ic('phone')}</span><span><small>Phone</small><b>{SITE['phone1'][0]}</b></span></a>
-  <a href="contact.html" class="btn">Contact us {ARROW}</a>
+  <a href="/contact" class="btn">Contact us {ARROW}</a>
 </div></div></div>
 <footer><div class="wrap">
   <div class="fgrid">
-    <div><a href="index.html" class="logo"><img src="{img('logo')}" alt="SopnoTec"></a>
+    <div><a href="/" class="logo"><img src="{img('logo')}" alt="SopnoTec"></a>
       <p>Tailored IT solutions, digital innovation and expert support — we help businesses grow across every digital channel.</p>
       <form class="news" action="/api/lead" method="post"><input type="hidden" name="form" value="newsletter"><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="email" name="email" placeholder="Your email" aria-label="Your email" maxlength="200" required><button>Subscribe</button></form></div>
-    <div><h5>Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="projects.html">Our projects</a></li><li><a href="team.html">Meet our team</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy policy</a></li></ul></div>
-    <div><h5>Services</h5><ul>{fs}<li><a href="services.html" style="color:var(--c1)">All services →</a></li></ul></div>
+    <div><h5>Links</h5><ul><li><a href="/">Home</a></li><li><a href="/about">About us</a></li><li><a href="/projects">Our projects</a></li><li><a href="/team">Meet our team</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li></ul></div>
+    <div><h5>Services</h5><ul>{fs}<li><a href="/services" style="color:var(--c1)">All services →</a></li></ul></div>
     <div><h5>Contact</h5><ul><li><a href="tel:{SITE['phone1'][1]}">{SITE['phone1'][0]} ({SITE['phone1'][2]})</a></li><li><a href="tel:{SITE['phone2'][1]}">{SITE['phone2'][0]} ({SITE['phone2'][2]})</a></li><li><a href="mailto:{SITE['email']}">{SITE['email']}</a></li><li>{SITE['address']}</li></ul></div>
   </div>
   <div class="huge">SopnoTec</div>
-  <div class="copy"><span>© <span id="yr"></span> SopnoTec. All rights reserved.</span><span><a href="privacy-policy.html">Privacy Policy</a> · <a href="privacy-policy.html">Terms of Condition</a></span></div>
+  <div class="copy"><span>© <span id="yr"></span> SopnoTec. All rights reserved.</span><span><a href="/privacy-policy">Privacy Policy</a> · <a href="/privacy-policy">Terms of Condition</a></span></div>
 </div></footer>
 <button id="totop" aria-label="Back to top"><svg class="ringp" viewBox="0 0 54 54"><circle cx="27" cy="27" r="24" stroke="rgba(255,255,255,.1)"/><circle cx="27" cy="27" r="24" stroke="url(#tg)"/><defs><linearGradient id="tg"><stop offset="0" stop-color="#22c7e0"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs></svg>{ic('arrow')}</button>'''
 
@@ -81,7 +81,7 @@ def page(fname, title, desc, body):
     open(os.path.join(OUT, fname), "w").write(doc)
 
 def phero(title_html, sub, crumbs, bg, icon=None):
-    cr = '<a href="index.html">Home</a>' + "".join(f'<span class="sep">/</span>' + (f'<a href="{u}">{e(t)}</a>' if u else f'<span>{e(t)}</span>') for t, u in crumbs)
+    cr = '<a href="/">Home</a>' + "".join(f'<span class="sep">/</span>' + (f'<a href="{u}">{e(t)}</a>' if u else f'<span>{e(t)}</span>') for t, u in crumbs)
     big = f'<div class="ico-big">{ic(icon)}</div>' if icon else ""
     return f'''<header class="phero"><div class="bgimg" style="background-image:url('{img(bg)}')"></div><canvas class="net"></canvas>{big}
 <div class="wrap"><div class="crumbs rv">{cr}</div><h1 class="rv">{title_html}</h1>{f'<p class="rv">{e(sub)}</p>' if sub else ''}</div></header>'''
@@ -121,7 +121,7 @@ def testimonial_block():
 def cta_block(title="Looking for the best <span class='grad'>IT business solutions?</span>", sub="We're here to help grow your business. We have worked with clients across the globe — let's make yours the next success story."):
     return f'''<section style="padding-top:40px"><div class="wrap"><div class="cta-box rv s">
 <div class="eyebrow" style="justify-content:center">Let's get started</div><h2>{title}</h2><p class="sub">{e(sub)}</p>
-<div class="row"><a href="contact.html" class="btn btn-primary">Get free consultation {ARROW}</a><a href="services.html" class="btn btn-ghost">Our services</a></div>
+<div class="row"><a href="/contact" class="btn btn-primary">Get free consultation {ARROW}</a><a href="/services" class="btn btn-ghost">Our services</a></div>
 </div></div></section>'''
 
 def why_block():
@@ -130,7 +130,7 @@ def why_block():
 <div class="sticky rv l"><div class="eyebrow">6 Reasons</div><h2>Why businesses <span class="grad">choose us.</span></h2>
 <p class="sub">A trusted IT solution &amp; service business agency. IT solutions created by top experts, free consultation for any kind of IT solution, and 24/7 support for partners throughout the process.</p>
 <div class="mini"><div>{ic('award')}<b>Experienced</b><small>5+ years of experience</small></div><div>{ic('clock')}<b>Active</b><small>Support any time 24/7</small></div><div>{ic('shield')}<b>Professional</b><small>We take our job seriously</small></div></div>
-<a href="contact.html" class="btn btn-primary" style="margin-top:30px">Contact us {ARROW}</a></div>
+<a href="/contact" class="btn btn-primary" style="margin-top:30px">Contact us {ARROW}</a></div>
 <div class="reasons">{rs}</div></div></section>'''
 
 def pillars_block():
@@ -174,7 +174,7 @@ ORB = f'''<div class="orb rv s"><div class="ring"><i></i></div><div class="ring 
 <div class="chip c2"><div class="ic">⚡</div><div><b>24/7</b><small>Active support</small></div></div>
 <div class="chip c3"><div class="ic">◆</div><div><b data-count="150">0</b><small>Projects completed</small></div></div></div>'''
 
-def about_split(checks, cta=("services.html","What we offer")):
+def about_split(checks, cta=("/services","What we offer")):
     ch = "".join(f"<li>{ic('check')}{e(c)}</li>" for c in checks)
     return f'''<div class="split2">
 <div class="collage rv l"><div class="ph p1" data-parallax="-0.05"><img src="{img('about1')}" alt=""></div><div class="ph p2"><img src="{img('about2')}" alt=""></div>
@@ -187,7 +187,7 @@ def about_split(checks, cta=("services.html","What we offer")):
 # HOME
 slides = ""
 for h, p in HERO_SLIDES:
-    slides += f'''<div class="slide"><h1>{e(h)}</h1><p>{e(p)}</p><div class="ctas"><a href="contact.html" class="btn btn-primary">Get free consultation {ARROW}</a><a href="services.html" class="btn btn-ghost">Explore services</a></div></div>'''
+    slides += f'''<div class="slide"><h1>{e(h)}</h1><p>{e(p)}</p><div class="ctas"><a href="/contact" class="btn btn-primary">Get free consultation {ARROW}</a><a href="/services" class="btn btn-ghost">Explore services</a></div></div>'''
 dots = "".join("<button aria-label='slide'><i></i></button>" for _ in HERO_SLIDES)
 svc_cards = "".join(f'''<a href="{surl(s)}" class="svc rv" data-tilt style="transition-delay:{(i%3)*.1}s"><span class="num">{i+1:02d}</span><div class="ic">{ic(s['icon'])}</div><h3>{e(s['name'])}</h3><p>{e(s['short'])}</p><span class="more">Learn more {ARROW}</span></a>''' for i, s in enumerate([S[x] for x in HOME_SERVICES]))
 home = f'''
@@ -195,32 +195,32 @@ home = f'''
 <div class="wrap"><div><div class="pill"><span class="dot"></span> IT Solutions &amp; Service Agency · 24/7 Support</div>
 <div class="slides">{slides}</div><div class="dots">{dots}</div></div>{ORB}</div><div class="scrollhint"></div></header>
 {marquee()}
-<section><div class="wrap">{about_split(["Website development","Internal networking","Free IT consultation","24/7 partner support"], ("about.html","More about us"))}</div></section>
+<section><div class="wrap">{about_split(["Website development","Internal networking","Free IT consultation","24/7 partner support"], ("/about","More about us"))}</div></section>
 {pillars_block()}
 <section><div class="wrap"><div class="head"><div class="rv"><div class="eyebrow">What We're Offering</div><h2>Services built to<br><span class="grad">scale with you.</span></h2></div>
-<div class="rv"><p class="sub">SopnoTec offers tailored IT solutions and comprehensive digital development services, addressing diverse business needs and delivering customized, scalable technology.</p><a href="services.html" class="btn btn-ghost" style="margin-top:20px">All 10 services {ARROW}</a></div></div>
+<div class="rv"><p class="sub">SopnoTec offers tailored IT solutions and comprehensive digital development services, addressing diverse business needs and delivering customized, scalable technology.</p><a href="/services" class="btn btn-ghost" style="margin-top:20px">All 10 services {ARROW}</a></div></div>
 <div class="svc-grid">{svc_cards}</div></div></section>
 <section class="tight"><div class="wrap"><div class="banner rv s"><div class="bgimg" data-parallax="0.08" style="background-image:url('{img('p5833775')}')"></div>
 <div class="eyebrow">Do you need a meeting?</div><h2>We're ready to <span class="grad">develop your business!</span></h2>
 <ul class="bullets">{''.join(f"<li>{ic('check')}{t}</li>" for t in ["IT solutions are created by top experts","Receive free consultation for any kind of IT solutions","Support 24/7 for partners during the process"])}</ul>
-<a href="contact.html" class="btn btn-primary">Book a free consultation {ARROW}</a></div></div></section>
+<a href="/contact" class="btn btn-primary">Book a free consultation {ARROW}</a></div></div></section>
 {stats_block()}
 <section><div class="wrap"><div class="head"><div class="rv"><div class="eyebrow">Our Completed Projects</div><h2>Improve &amp; enhance <span class="grad">our projects.</span></h2></div>
 <p class="sub rv">Our diverse portfolio reflects our prowess in exceptional customer service, effective CRM implementations, seamless ticketing solutions, dynamic WordPress development, successful digital marketing campaigns, and more.</p></div>{proj_cards()}</div></section>
 {testimonial_block()}
 <section style="padding-top:0"><div class="wrap"><div class="head"><div class="rv"><div class="eyebrow">Our Expert People</div><h2>Meet our professional <span class="grad">team.</span></h2></div>
-<div class="rv"><p class="sub">Experienced &amp; knowledgeable professionals who make our customers pleased with their ability to create the best IT solutions.</p><a href="team.html" class="btn btn-ghost" style="margin-top:20px">Meet the team {ARROW}</a></div></div>{team_cards()}</div></section>
+<div class="rv"><p class="sub">Experienced &amp; knowledgeable professionals who make our customers pleased with their ability to create the best IT solutions.</p><a href="/team" class="btn btn-ghost" style="margin-top:20px">Meet the team {ARROW}</a></div></div>{team_cards()}</div></section>
 {cta_block()}'''
 page("index.html", "SopnoTec — IT Solutions & Service Agency", "SopnoTec offers tailored IT solutions, customer support, bookkeeping, CRM and digital marketing services.", home)
 
 # ABOUT
 about = f'''{phero("Where vision meets <span class='grad'>reality.</span>", "Cutting-edge technology, tailored solutions and expert support for unparalleled business growth.", [("About", None)], "about3", "users")}
-<section><div class="wrap">{about_split(["Best quality support","Money back guarantee","Serve the best","Trusted professionals"], ("contact.html","Work with us"))}</div></section>
+<section><div class="wrap">{about_split(["Best quality support","Money back guarantee","Serve the best","Trusted professionals"], ("/contact","Work with us"))}</div></section>
 {marquee("tilt")}
 {stats_block()}
 {why_block()}
 <section class="tight"><div class="wrap"><div class="banner rv s"><div class="bgimg" data-parallax="0.08" style="background-image:url('{img('teamphoto')}')"></div>
-<div class="eyebrow">SopnoTec</div><h2>Better IT solutions &amp; services <span class="grad">at your fingertips.</span></h2><p class="sub">From customer service to CRM, bookkeeping, development and marketing — one partner for the whole journey.</p><br><a href="services.html" class="btn btn-primary">Explore services {ARROW}</a></div></div></section>
+<div class="eyebrow">SopnoTec</div><h2>Better IT solutions &amp; services <span class="grad">at your fingertips.</span></h2><p class="sub">From customer service to CRM, bookkeeping, development and marketing — one partner for the whole journey.</p><br><a href="/services" class="btn btn-primary">Explore services {ARROW}</a></div></div></section>
 {pillars_block()}
 <section><div class="wrap"><div class="head"><div class="rv"><div class="eyebrow">Our Expert People</div><h2>Meet our professional <span class="grad">team.</span></h2></div><p class="sub rv">A team of experienced &amp; knowledgeable professionals who create the best IT solutions to improve performance of clients.</p></div>{team_cards()}</div></section>
 {testimonial_block()}{cta_block()}'''
@@ -233,7 +233,7 @@ services = f'''{phero("Unleashing excellence through our <span class='grad'>spec
 <section><div class="wrap split2">
 <div class="rv l"><div class="eyebrow">What We Offer</div><h2>One partner, <span class="grad">ten specialties.</span></h2>
 <ul class="bullets">{''.join(f"<li>{ic('check')}{t}</li>" for t in ["SopnoTec delivers personalized solutions, adapting our expertise to meet the unique demands of your business and industry.","Explore a spectrum of services designed to drive innovation, from customer engagement to web development, optimizing every aspect of your business.","Our services are crafted with a focus on tangible outcomes, ensuring your business not only meets but exceeds its goals and aspirations."])}</ul>
-<a href="about.html" class="btn btn-ghost">About us {ARROW}</a></div>
+<a href="/about" class="btn btn-ghost">About us {ARROW}</a></div>
 <div class="rv r" style="position:relative"><div class="mask" style="border-radius:28px;overflow:hidden;border:1px solid var(--line)"><img src="{img('p7567595')}" alt="" style="width:100%;height:460px;object-fit:cover"></div>
 <img src="{img('tech')}" alt="" style="position:absolute;right:-30px;bottom:-40px;width:160px;opacity:.5;animation:spin 30s linear infinite"></div>
 </div></section>
@@ -251,24 +251,24 @@ for idx, s in enumerate(SERVICES):
     rel = [others[(idx + k) % len(others)] for k in range(3)]
     pr = P[s["project"]]
     prev_s, next_s = SERVICES[idx-1], SERVICES[(idx+1) % len(SERVICES)]
-    body = f'''{phero(e(s["name"]), s["tagline"], [("Services","services.html"),(s["name"],None)], s["card"], s["icon"])}
+    body = f'''{phero(e(s["name"]), s["tagline"], [("Services","/services"),(s["name"],None)], s["card"], s["icon"])}
 <section><div class="wrap split2">
 <div class="rv l" style="position:relative"><div class="mask" style="border-radius:28px;overflow:hidden;border:1px solid var(--line)"><img src="{img(s['hero'])}" alt="" style="width:100%;height:520px;object-fit:cover"></div>
 <div class="chip" style="left:-20px;bottom:40px"><div class="ic">{ic(s['icon'])}</div><div><b>24/7</b><small>Dedicated support</small></div></div>
 <div class="chip" style="right:-10px;top:30px;animation-delay:-2s"><div class="ic">★</div><div><b data-count="120">0</b><small>Happy clients</small></div></div></div>
 <div class="rv r"><div class="eyebrow">At SopnoTec get</div><h2>{e(s['headline'])}</h2><p class="sub">{e(s['intro'])}</p><ul class="checks">{ch}</ul>
-<a href="contact.html?service={s['slug']}" class="btn btn-primary">Contact us {ARROW}</a></div></div></section>
+<a href="/contact?service={s['slug']}" class="btn btn-primary">Contact us {ARROW}</a></div></div></section>
 <section style="padding-top:0"><div class="wrap"><div class="head"><div class="rv"><div class="eyebrow">Uplifting Customer Experiences</div><h2>{e(s['name'])} services <span class="grad">at SopnoTec.</span></h2></div></div>
 <div class="ftabs rv"><div class="ftab-list">{btns}</div><div class="ftab-panel">{panes}<div class="bign">{idx+1:02d}</div></div></div></div></section>
 {pillars_block()}
 {why_block()}
 <section class="tight"><div class="wrap"><div class="banner rv s"><div class="bgimg" data-parallax="0.08" style="background-image:url('{img(pr['img'])}')"></div>
 <div class="eyebrow">Related case study · {e(pr['cat'])}</div><h2>{e(pr['name'])}: <span class="grad">{pr['big']} {e(pr['bigl'])}</span></h2><p class="sub">{e(pr['summary'])}</p><br><a href="{purl(pr)}" class="btn btn-primary">Read the case study {ARROW}</a></div></div></section>
-<section><div class="wrap"><div class="head"><div class="rv"><div class="eyebrow">Explore more</div><h2>Other <span class="grad">services.</span></h2></div><a href="services.html" class="btn btn-ghost rv">All services {ARROW}</a></div>
+<section><div class="wrap"><div class="head"><div class="rv"><div class="eyebrow">Explore more</div><h2>Other <span class="grad">services.</span></h2></div><a href="/services" class="btn btn-ghost rv">All services {ARROW}</a></div>
 <div class="svc-grid">{svc_img_cards(rel)}</div>
 <div class="pager"><a href="{surl(prev_s)}"><small>← Previous service</small><b>{e(prev_s['name'])}</b></a><a class="nx" href="{surl(next_s)}"><small>Next service →</small><b>{e(next_s['name'])}</b></a></div></div></section>
 {cta_block()}'''
-    page(surl(s), f"{s['name']} — SopnoTec", s["short"], body)
+    page(surl(s)[1:] + ".html", f"{s['name']} — SopnoTec", s["short"], body)
 
 # PROJECTS
 projects = f'''{phero("Improve &amp; enhance <span class='grad'>our projects.</span>", "Our portfolio illustrates our commitment to excellence — from customer service and CRM to bookkeeping and digital transformation.", [("Projects", None)], "bgmeet", "rocket")}
@@ -282,7 +282,7 @@ for idx, p in enumerate(PROJECTS):
     svcs = "".join(f'<a class="sl" href="{surl(S[x])}">{e(S[x]["name"])} {ARROW}</a>' for x in p["services"])
     tools = "".join(f"<span>{e(t)}</span>" for t in p["tools"])
     prev_p, next_p = PROJECTS[idx-1], PROJECTS[(idx+1) % len(PROJECTS)]
-    body = f'''{phero(e(p['name']), p["summary"], [("Projects","projects.html"),(p['name'],None)], p["img"], "rocket")}
+    body = f'''{phero(e(p['name']), p["summary"], [("Projects","/projects"),(p['name'],None)], p["img"], "rocket")}
 <section><div class="wrap pd-grid"><div>
 <div class="cover mask"><img src="{img(p['img'])}" alt="" data-parallax="0.06" style="transform:scale(1.15)"></div>
 <div class="pd-stats stagger">{st}</div>
@@ -290,15 +290,15 @@ for idx, p in enumerate(PROJECTS):
 <div class="pager"><a href="{purl(prev_p)}"><small>← Previous project</small><b>{e(prev_p['name'])}</b></a><a class="nx" href="{purl(next_p)}"><small>Next project →</small><b>{e(next_p['name'])}</b></a></div></div>
 <aside class="side rv r"><div class="side-card"><h4>Project info</h4><dl><div><dt>Category</dt><dd>{e(p['cat'])}</dd></div><div><dt>Client</dt><dd>Confidential</dd></div><div><dt>Highlight</dt><dd>{p['big']} {e(p['bigl'])}</dd></div></dl><div class="tools" style="margin-top:20px">{tools}</div></div>
 <div class="side-card"><h4>Services used</h4>{svcs}</div>
-<div class="side-card" style="background:linear-gradient(135deg,rgba(91,110,225,.25),rgba(139,92,246,.15))"><h4 style="color:#fff">Need something similar?</h4><p style="color:#c3c6e6;margin-bottom:18px">Get a free consultation from our experts.</p><a href="contact.html" class="btn btn-primary">Let's talk {ARROW}</a></div></aside>
+<div class="side-card" style="background:linear-gradient(135deg,rgba(91,110,225,.25),rgba(139,92,246,.15))"><h4 style="color:#fff">Need something similar?</h4><p style="color:#c3c6e6;margin-bottom:18px">Get a free consultation from our experts.</p><a href="/contact" class="btn btn-primary">Let's talk {ARROW}</a></div></aside>
 </div></section>{cta_block()}'''
-    page(purl(p), f"{p['name']} — SopnoTec Case Study", p["summary"], body)
+    page(purl(p)[1:] + ".html", f"{p['name']} — SopnoTec Case Study", p["summary"], body)
 
 # TEAM
 team = f'''{phero("Meet our professional <span class='grad'>team.</span>", "Experienced & knowledgeable professionals who make our customers pleased with their ability to create the best IT solutions.", [("Team", None)], "teamphoto", "users")}
 <section><div class="wrap">{team_cards(full=True)}</div></section>
 <section class="tight"><div class="wrap"><div class="banner rv s"><div class="bgimg" data-parallax="0.08" style="background-image:url('{img('group')}')"></div>
-<div class="eyebrow">Our culture</div><h2>We help our clients stand out — <span class="grad">and they help us grow.</span></h2><p class="sub">A 10+ strong team across customer support, accounting, development and marketing, serving clients across the globe.</p><br><a href="contact.html" class="btn btn-primary">Work with us {ARROW}</a></div></div></section>
+<div class="eyebrow">Our culture</div><h2>We help our clients stand out — <span class="grad">and they help us grow.</span></h2><p class="sub">A 10+ strong team across customer support, accounting, development and marketing, serving clients across the globe.</p><br><a href="/contact" class="btn btn-primary">Work with us {ARROW}</a></div></div></section>
 {stats_block()}{cta_block()}'''
 page("team.html", "Team — SopnoTec", "Meet the SopnoTec team.", team)
 
@@ -337,6 +337,6 @@ page("privacy-policy.html", "Privacy Policy — SopnoTec", "SopnoTec privacy pol
 
 # 404
 page("404.html", "Page not found — SopnoTec", "Page not found",
-     f'<section class="nf"><canvas class="net" style="position:absolute;inset:0"></canvas><div class="wrap" style="position:relative"><div class="big grad"><span>4</span><span>0</span><span>4</span></div><h2 style="margin:10px 0 16px">This page took a coffee break.</h2><p class="sub" style="margin:0 auto 30px">The page you are looking for doesn\'t exist or has been moved.</p><a href="index.html" class="btn btn-primary">Back to home {ARROW}</a></div></section>')
+     f'<section class="nf"><canvas class="net" style="position:absolute;inset:0"></canvas><div class="wrap" style="position:relative"><div class="big grad"><span>4</span><span>0</span><span>4</span></div><h2 style="margin:10px 0 16px">This page took a coffee break.</h2><p class="sub" style="margin:0 auto 30px">The page you are looking for doesn\'t exist or has been moved.</p><a href="/" class="btn btn-primary">Back to home {ARROW}</a></div></section>')
 
 print("built", sorted(os.listdir(OUT)))

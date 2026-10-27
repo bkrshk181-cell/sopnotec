@@ -6,6 +6,7 @@ SITE = dict(
     phone2=("+1 636 330 8881", "+16363308881", "USA"),
     email="Support@sopnotec.com",
     address="734 H, Bryan Burlington, NC 27215",
+    url="https://sopnotec.com",
 )
 
 ICONS = {

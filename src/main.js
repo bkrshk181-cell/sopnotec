@@ -37,8 +37,8 @@ tt.onclick=()=>scrollTo({top:0,behavior:'smooth'});
 $('.burger').onclick=()=>nav.classList.toggle('open');
 
 // active link
-const here=location.pathname.split('/').pop()||'index.html';
-$$('.menu>li>a').forEach(a=>{const h=a.getAttribute('href');if(h===here||(a.dataset.match&&here.startsWith(a.dataset.match)))a.classList.add('on')});
+const here=location.pathname.replace(/\.html$/,'').replace(/\/index$/,'/').split('/').pop();
+$$('.menu>li>a').forEach(a=>{const h=(a.getAttribute('href')||'').replace(/^\//,'');if(h===here||(a.dataset.match&&here.startsWith(a.dataset.match)))a.classList.add('on')});
 
 // cursor glow + spotlight/tilt
 const gl=$('#glow');
