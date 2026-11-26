@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cctv.sopnotec.com/sitemap.xml
