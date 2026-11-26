@@ -12,6 +12,8 @@ SITE = dict(
 
 ICONS = {
  "headset": '<path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 15a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2zM3 15a2 2 0 0 0 2 2h1v-6H5a2 2 0 0 0-2 2z"/><path d="M18 17v1a3 3 0 0 1-3 3h-3"/>',
+ "search": '<circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>',
+ "megaphone": '<path d="m3 11 15-6v14L3 13z"/><path d="M3 11v2"/><path d="M7 13.5V18a2 2 0 0 0 4 0v-3"/><path d="M21 9v6"/>',
  "chart": '<path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/><path d="M15 8h4v4"/>',
  "chat": '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/>',
  "calc": '<rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6.5h8M8 11h.01M12 11h.01M16 11h.01M8 14.5h.01M12 14.5h.01M16 14.5v3.5M8 18h4"/>',
@@ -58,6 +60,17 @@ SERVICES = [
    ("Data-Driven Insights","Our digital marketing is powered by data-driven insights, allowing us to refine and optimize your online campaigns for maximum effectiveness. We analyze user behavior, engagement rates, and conversion data to continually adapt our strategies, ensuring your marketing efforts are always on the cutting edge."),
    ("Comprehensive Online Presence","Achieve a comprehensive online presence with our all-encompassing digital marketing services. From email marketing to PPC campaigns and beyond, we ensure every aspect of your online strategy works in harmony to amplify your brand's voice and reach your target audience across all digital platforms."),
   ], tagline="Our comprehensive digital marketing strategies leverage the latest tools and techniques, driving targeted traffic and enhancing brand visibility.", project="digital-assistant"),
+ dict(slug="meta-and-google-ads-management", name="Meta & Google Ads Management", nav="Meta & Google Ads", icon="megaphone", card="bulb", hero="s_camp",
+  short="Done-for-you Facebook, Instagram and Google Ads campaigns: set up, managed and optimized every week to turn ad spend into leads and sales.",
+  headline="Turn Ad Spend into Customers with Meta & Google Ads",
+  intro="Our Meta and Google Ads Management service puts your business in front of people who are ready to buy. We plan, build and run your campaigns on Facebook, Instagram, Google Search, YouTube and beyond, track every lead and sale, and keep optimizing so each dollar works harder. You get a dedicated team, clear reporting and campaigns built around your goals.",
+  checks=["Facebook & Instagram Ads","Google Search, PMax & YouTube","Conversion Tracking Setup","Clear Monthly Reporting"],
+  features=[
+   ("Meta Ads (Facebook & Instagram)","We build Meta campaigns that stop the scroll: lead forms, traffic, sales and retargeting campaigns aimed at the right audiences, from interest and lookalike audiences to past website visitors. We write the ad copy, test different creatives and offers, and shift budget toward the ads that bring in real customers."),
+   ("Google Ads (Search, PMax & YouTube)","Reach customers at the exact moment they search for what you offer. We handle keyword research, negative keyword lists, ad copy, extensions and bidding for Search campaigns, and run Performance Max, Display and YouTube campaigns to win back visitors and grow awareness. Every campaign is built around your best services and locations."),
+   ("Tracking & Optimization","Good decisions need good data. We set up the Meta Pixel, Conversions API, Google Tag and GA4 conversion tracking so every call, form and sale is counted. Then we review your accounts every week, pausing what doesn't work, scaling what does and testing new ideas to lower your cost per lead."),
+   ("Transparent Reporting","No guesswork and no jargon. You get a clear monthly report showing spend, leads, cost per result and what we changed, plus recommendations for the month ahead. You keep full ownership of your ad accounts and data, and we stay on call whenever you need an update."),
+  ], tagline="Expertly managed Meta and Google Ads campaigns that put your business in front of ready-to-buy customers and turn ad spend into measurable results.", project="digital-assistant"),
  dict(slug="live-chat-support-specialist", name="Live Chat Support Specialist", icon="chat", card="s_chat", hero="tima",
   short="Real-time engagement to convert online visitors into satisfied customers through effective live chat assistance.",
   headline="Engage and Convert in Real-Time with Live Chat Support",

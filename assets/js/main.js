@@ -69,13 +69,21 @@ $$('.ftabs').forEach(w=>{const bs=$$('.ftab-list button',w),ps=$$('.pane',w);let
 
 // forms
 const T0=Date.now();
+// spam protection: signed form token from /api/lead + Cloudflare Turnstile captcha when configured
+let TOK=null;const tsBoxes=$$('.ts-box');
+function getTok(){if(!TOK)TOK=fetch('/api/lead',{cache:'no-store'}).then(r=>r.json()).then(j=>{if(j.sitekey&&tsBoxes.length)loadTs(j.sitekey);return j.token}).catch(()=>{TOK=null;return ''});return TOK}
+function loadTs(key){window.onTsLoad=()=>tsBoxes.forEach(el=>{el._w=turnstile.render(el,{sitekey:key,theme:'dark'})});
+  const sc=document.createElement('script');sc.src='https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTsLoad&render=explicit';sc.async=true;document.head.appendChild(sc)}
+if(tsBoxes.length)getTok();else document.addEventListener('focusin',e=>{if(e.target.closest('form.cf,.news'))getTok()});
 function sendLead(f){const d=Object.fromEntries(new FormData(f));d.page=location.pathname;d.elapsed=Date.now()-T0;
-  return fetch(f.getAttribute('action')||'/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
-    .then(r=>r.json().catch(()=>({})).then(j=>{if(!r.ok||!j.ok)throw new Error(j.error||'Something went wrong. Please try again.');return j}))}
+  const box=$('.ts-box',f);if(box&&box._w!==undefined&&!d['cf-turnstile-response'])return Promise.reject(new Error('Please complete the security check.'));
+  return getTok().then(t=>{d.token=t;return fetch(f.getAttribute('action')||'/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})})
+    .then(r=>r.json().catch(()=>({})).then(j=>{if(!r.ok||!j.ok)throw new Error(j.error||'Something went wrong. Please try again.');return j}))
+    .finally(()=>{if(box&&box._w!==undefined&&window.turnstile)turnstile.reset(box._w)})}
 $$('form.cf').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();if(!f.reportValidity())return;
   const b=$('button[type=submit]',f),s=$('.sent',f),bt=b.innerHTML;b.disabled=true;b.textContent='Sending…';s.style.display='none';s.classList.remove('err');
   sendLead(f).then(()=>{s.textContent="Thanks! We'll be in touch shortly.";s.style.display='block';f.reset()})
-    .catch(er=>{s.textContent=er.message+' You can also email us directly.';s.classList.add('err');s.style.display='block'})
+    .catch(er=>{s.textContent=er.message+(/security check|refresh/.test(er.message)?'':' You can also email us directly.');s.classList.add('err');s.style.display='block'})
     .finally(()=>{b.disabled=false;b.innerHTML=bt})}));
 $$('.news').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const b=$('button',f);b.disabled=true;b.textContent='…';
   sendLead(f).then(()=>{b.textContent='Subscribed ✓';f.reset()}).catch(()=>{b.textContent='Try again';b.disabled=false})}));

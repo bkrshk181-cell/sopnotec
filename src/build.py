@@ -190,6 +190,23 @@ for h, p in HERO_SLIDES:
     slides += f'''<div class="slide"><h1>{e(h)}</h1><p>{e(p)}</p><div class="ctas"><a href="/contact" class="btn btn-primary">Get free consultation {ARROW}</a><a href="/services" class="btn btn-ghost">Explore services</a></div></div>'''
 dots = "".join("<button aria-label='slide'><i></i></button>" for _ in HERO_SLIDES)
 svc_cards = "".join(f'''<a href="{surl(s)}" class="svc rv" data-tilt style="transition-delay:{(i%3)*.1}s"><span class="num">{i+1:02d}</span><div class="ic">{ic(s['icon'])}</div><h3>{e(s['name'])}</h3><p>{e(s['short'])}</p><span class="more">Learn more {ARROW}</span></a>''' for i, s in enumerate([S[x] for x in HOME_SERVICES]))
+ADS = S["meta-and-google-ads-management"]
+def _ads_card(cls, logo, title, sub, items):
+    li = "".join(f"<li>{ic('check')}{x}</li>" for x in items)
+    return f'<div class="ads-card {cls} rv" data-tilt><div class="ads-top"><span class="ads-logo">{logo}</span><div><h3>{title}</h3><small>{sub}</small></div></div><ul>{li}</ul></div>'
+META_LOGO = ic('share')
+GOOGLE_LOGO = ic('search')
+ads_steps = [("Audit","We review your accounts, offer and competitors to find quick wins."),("Launch","Tracking, audiences, ad copy and creatives set up the right way."),("Optimize","Weekly tuning of bids, budgets, keywords and ads to cut cost per lead."),("Report","A clear monthly report on spend, leads and what we changed.")]
+ads_spot = f"""<section class="ads-spot"><div class="glow g1"></div><div class="glow g2"></div><div class="wrap">
+<div class="head"><div class="rv"><div class="eyebrow">New · Paid Ads Management</div><h2>Meta &amp; Google Ads that<br><span class="grad">bring in customers.</span></h2></div>
+<div class="rv"><p class="sub">We plan, launch and manage your paid campaigns on Facebook, Instagram and Google, then track every lead and keep optimizing so your ad budget turns into real business.</p>
+<div class="ads-ctas"><a href="{surl(ADS)}" class="btn btn-primary">Explore ads management {ARROW}</a><a href="/contact?service={ADS['slug']}" class="btn btn-ghost">Get a free consultation</a></div></div></div>
+<div class="ads-grid">
+{_ads_card("meta", META_LOGO, "Meta Ads", "Facebook &amp; Instagram", ["Lead generation &amp; sales campaigns","Retargeting &amp; lookalike audiences","Ad copy and creative testing","Meta Pixel &amp; Conversions API setup"])}
+{_ads_card("google", GOOGLE_LOGO, "Google Ads", "Search, Performance Max &amp; YouTube", ["Keyword research &amp; negative keywords","Search, Display &amp; YouTube campaigns","Performance Max &amp; remarketing","Google Tag &amp; GA4 conversion tracking"])}
+</div>
+<div class="ads-steps stagger">{"".join(f'<div class="ads-step"><span class="n">0{i+1}</span><div><h4>{a}</h4><p>{p}</p></div></div>' for i,(a,p) in enumerate(ads_steps))}</div>
+</div></section>"""
 home = f'''
 <header class="hero"><canvas class="net"></canvas><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
 <div class="wrap"><div><div class="pill"><span class="dot"></span> IT Solutions &amp; Service Agency · 24/7 Support</div>
@@ -198,8 +215,9 @@ home = f'''
 <section><div class="wrap">{about_split(["Website development","Internal networking","Free IT consultation","24/7 partner support"], ("/about","More about us"))}</div></section>
 {pillars_block()}
 <section><div class="wrap"><div class="head"><div class="rv"><div class="eyebrow">What We're Offering</div><h2>Services built to<br><span class="grad">scale with you.</span></h2></div>
-<div class="rv"><p class="sub">SopnoTec offers tailored IT solutions and comprehensive digital development services, addressing diverse business needs and delivering customized, scalable technology.</p><a href="/services" class="btn btn-ghost" style="margin-top:20px">All 10 services {ARROW}</a></div></div>
+<div class="rv"><p class="sub">SopnoTec offers tailored IT solutions and comprehensive digital development services, addressing diverse business needs and delivering customized, scalable technology.</p><a href="/services" class="btn btn-ghost" style="margin-top:20px">All {len(SERVICES)} services {ARROW}</a></div></div>
 <div class="svc-grid">{svc_cards}</div></div></section>
+{ads_spot}
 <section class="tight"><div class="wrap"><div class="banner rv s"><div class="bgimg" data-parallax="0.08" style="background-image:url('{img('p5833775')}')"></div>
 <div class="eyebrow">Do you need a meeting?</div><h2>We're ready to <span class="grad">develop your business!</span></h2>
 <ul class="bullets">{''.join(f"<li>{ic('check')}{t}</li>" for t in ["IT solutions are created by top experts","Receive free consultation for any kind of IT solutions","Support 24/7 for partners during the process"])}</ul>
@@ -231,7 +249,7 @@ steps = [("Plan","We study your goals, audience and market to craft a strategy t
 stp = "".join(f'<div class="step"><div class="n">0{i+1}</div><h4>{a}</h4><p>{b}</p></div>' for i, (a, b) in enumerate(steps))
 services = f'''{phero("Unleashing excellence through our <span class='grad'>specialized services.</span>", "Embark on a journey of innovation and success. From customer-centric support to cutting-edge development, we transform your aspirations into tangible achievements.", [("Services", None)], "i102", "layers")}
 <section><div class="wrap split2">
-<div class="rv l"><div class="eyebrow">What We Offer</div><h2>One partner, <span class="grad">ten specialties.</span></h2>
+<div class="rv l"><div class="eyebrow">What We Offer</div><h2>One partner, <span class="grad">eleven specialties.</span></h2>
 <ul class="bullets">{''.join(f"<li>{ic('check')}{t}</li>" for t in ["SopnoTec delivers personalized solutions, adapting our expertise to meet the unique demands of your business and industry.","Explore a spectrum of services designed to drive innovation, from customer engagement to web development, optimizing every aspect of your business.","Our services are crafted with a focus on tangible outcomes, ensuring your business not only meets but exceeds its goals and aspirations."])}</ul>
 <a href="/about" class="btn btn-ghost">About us {ARROW}</a></div>
 <div class="rv r" style="position:relative"><div class="mask" style="border-radius:28px;overflow:hidden;border:1px solid var(--line)"><img src="{img('p7567595')}" alt="" style="width:100%;height:460px;object-fit:cover"></div>
@@ -304,7 +322,7 @@ page("team.html", "Team — SopnoTec", "Meet the SopnoTec team.", team)
 
 # CONTACT
 opts = "".join(f'<option value="{s["slug"]}">{e(s["name"])}</option>' for s in SERVICES)
-faqs = [("What services does SopnoTec offer?", "Ten specialties: customer service representatives, live chat support, QuickBooks bookkeeping, CRM setup and customization, ticketing desk creation, cold calling / call support, campaign management, digital marketing, social media &amp; LinkedIn engagement, and WordPress development."),
+faqs = [("What services does SopnoTec offer?", "Eleven specialties: customer service representatives, live chat support, QuickBooks bookkeeping, CRM setup and customization, ticketing desk creation, cold calling / call support, campaign management, digital marketing, Meta &amp; Google Ads management, social media &amp; LinkedIn engagement, and WordPress development."),
         ("Is the first consultation free?", "Yes — you can receive a free consultation for any kind of IT solution. Just send us a message or call."),
         ("Do you provide support outside business hours?", "Yes. We provide 24/7 support for partners during the process, and our live chat specialists offer round-the-clock assistance."),
         ("Where are your clients based?", "We have worked with clients across the globe. You can reach us on our Ireland, UK and USA numbers."),
@@ -325,7 +343,7 @@ contact = f'''{phero("Feel free to <span class='grad'>get in touch.</span>", "Wo
 <div class="field"><select id="svcsel" name="service" aria-label="Service"><option value="">Choose a service</option>{opts}</select></div>
 <div class="field full"><input id="sj" name="subject" maxlength="200" placeholder=" "><label for="sj">Subject</label></div>
 <div class="field full"><textarea id="m" name="message" rows="6" maxlength="5000" placeholder=" "></textarea><label for="m">Tell us about your project</label></div>
-<button class="btn btn-primary field full" type="submit">Send message {ARROW}</button><div class="sent" role="status" aria-live="polite">Thanks! We'll be in touch shortly.</div></form>
+<div class="ts-box full"></div><button class="btn btn-primary field full" type="submit">Send message {ARROW}</button><div class="sent" role="status" aria-live="polite">Thanks! We'll be in touch shortly.</div></form>
 </div></section>
 <section id="faq"><div class="wrap"><div class="center" style="margin-bottom:50px"><div class="eyebrow rv">FAQ</div><h2 class="rv">Questions, <span class="grad">answered.</span></h2></div><div class="faq">{fq}</div></div></section>'''
 page("contact.html", "Contact — SopnoTec", "Contact SopnoTec by phone, email or the contact form.", contact)

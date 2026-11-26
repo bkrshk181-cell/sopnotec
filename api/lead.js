@@ -5,7 +5,55 @@
 //   LEAD_TO     inboxes that receive leads     (optional; comma-separated; defaults below)
 //   SMTP_HOST   smtp.hostinger.com             (optional, default shown)
 //   SMTP_PORT   465                            (optional, default shown; SSL)
+// Spam protection (optional but recommended):
+//   TURNSTILE_SITE_KEY  Cloudflare Turnstile site key   -> shows the captcha on the contact form
+//   TURNSTILE_SECRET    Cloudflare Turnstile secret key -> verifies it server-side
+//   FORM_SECRET         any long random string used to sign form tokens (falls back to SMTP_PASS)
 const nodemailer = require('nodemailer');
+const crypto = require('crypto');
+
+// Form tokens: the page asks GET /api/lead for a signed, timestamped token before submitting.
+// Bots that post straight to the endpoint (or replay old pages) don't have a valid one.
+const TOKEN_MIN_AGE = 2000;               // ms — humans don't submit within 2s of starting
+const TOKEN_MAX_AGE = 12 * 60 * 60 * 1000; // 12h
+const formSecret = () => process.env.FORM_SECRET || process.env.SMTP_PASS || '';
+const sign = (ts) => crypto.createHmac('sha256', formSecret()).update('lead:' + ts).digest('base64url').slice(0, 32);
+const makeToken = () => { const ts = Date.now(); return `${ts}.${sign(ts)}`; };
+function checkToken(tok) {
+  const m = /^(\d{13})\.([\w-]{32})$/.exec(String(tok || ''));
+  if (!m || !formSecret()) return 'invalid';
+  const a = Buffer.from(sign(m[1])), b = Buffer.from(m[2]);
+  if (a.length !== b.length || !crypto.timingSafeEqual(a, b)) return 'invalid';
+  const age = Date.now() - Number(m[1]);
+  if (age > TOKEN_MAX_AGE || age < -60000) return 'expired';
+  if (age < TOKEN_MIN_AGE) return 'fast';
+  return 'ok';
+}
+
+async function verifyTurnstile(response, ip) {
+  if (!response) return false;
+  try {
+    const r = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ secret: process.env.TURNSTILE_SECRET, response: String(response).slice(0, 2048), remoteip: ip || '' }),
+    });
+    const j = await r.json();
+    return !!j.success;
+  } catch (err) {
+    console.error('lead: turnstile verify failed', err && err.message);
+    return false;
+  }
+}
+
+// Typical spam signatures: links in name/subject, link-stuffed messages, BBCode/HTML links.
+const URL_RE = /(https?:\/\/|www\.|\[url|<a\s)/i;
+const countLinks = (t) => (String(t).match(/(https?:\/\/|www\.|\[url|<a\s)/gi) || []).length;
+function looksSpammy(lead) {
+  if (URL_RE.test(lead.name) || /\.(com|net|ru|xyz|top|info)\b/i.test(lead.name)) return true;
+  if (URL_RE.test(lead.subject)) return true;
+  return countLinks(lead.message) >= 3 || /\[(url|link)=/i.test(lead.message);
+}
 
 const DEFAULT_LEAD_TO = 'abubakar@sopnotec.com, ab@sopnotec.com, support@sopnotec.com';
 
@@ -19,6 +67,7 @@ const SERVICE_NAMES = {
   'crm-setup-and-customization': 'CRM Setup and Customization',
   'ticketing-desk-creation': 'Ticketing Desk Creation',
   'campaign-management': 'Campaign Management',
+  'meta-and-google-ads-management': 'Meta & Google Ads Management',
   'cold-caller-call-support': 'Cold Caller / Call Support',
   'social-media-and-linkedin-engagement': 'Social Media and LinkedIn Engagement',
   'wordpress-development': 'WordPress Development',
@@ -83,19 +132,34 @@ ${!isNews ? `<div style="padding:12px 20px"><div style="color:#6b7280;font-size:
 
 module.exports = async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
-  if (req.method !== 'POST') { res.setHeader('Allow', 'POST'); return res.status(405).json({ ok: false, error: 'Method not allowed' }); }
+  if (req.method === 'GET') {
+    return res.status(200).json({ ok: true, token: makeToken(), sitekey: process.env.TURNSTILE_SECRET ? (process.env.TURNSTILE_SITE_KEY || '') : '' });
+  }
+  if (req.method !== 'POST') { res.setHeader('Allow', 'GET, POST'); return res.status(405).json({ ok: false, error: 'Method not allowed' }); }
 
   const b = await readBody(req);
+  const ip = oneLine(String(req.headers['x-forwarded-for'] || '').split(',')[0]);
+  const drop = (why) => { console.warn('lead: dropped spam (' + why + ')', ip); return res.status(200).json({ ok: true }); };
+
   // Spam traps: hidden "website" field must be empty; real people take more than ~2s to fill the form.
-  if (clean(b.website, 200) || (b.elapsed !== undefined && Number(b.elapsed) < 2000)) {
-    return res.status(200).json({ ok: true });
-  }
+  if (clean(b.website, 200)) return drop('honeypot');
+  if (b.elapsed === undefined || Number(b.elapsed) < 2000) return drop('elapsed');
+  const tok = checkToken(b.token);
+  if (tok === 'fast') return drop('too fast');
+  if (tok !== 'ok') return res.status(400).json({ ok: false, error: 'Your session expired. Please refresh the page and try again.' });
 
   const lead = { form: b.form === 'newsletter' ? 'newsletter' : 'contact' };
   for (const k of Object.keys(LIMITS)) lead[k] = clean(b[k], LIMITS[k]);
 
   if (!EMAIL_RE.test(lead.email)) return res.status(400).json({ ok: false, error: 'Please enter a valid email address.' });
   if (lead.form === 'contact' && !lead.name) return res.status(400).json({ ok: false, error: 'Please enter your name.' });
+
+  if (lead.form === 'contact' && process.env.TURNSTILE_SECRET && process.env.TURNSTILE_SITE_KEY) {
+    if (!(await verifyTurnstile(b['cf-turnstile-response'], ip))) {
+      return res.status(400).json({ ok: false, error: 'Please complete the security check and try again.' });
+    }
+  }
+  if (looksSpammy(lead)) return drop('content');
 
   if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
     console.error('lead: SMTP_USER / SMTP_PASS not configured');
@@ -104,7 +168,7 @@ module.exports = async function handler(req, res) {
 
   const meta = {
     when: new Date().toLocaleString('en-US', { timeZone: 'Asia/Karachi', dateStyle: 'medium', timeStyle: 'short' }) + ' (PKT)',
-    ip: oneLine(String(req.headers['x-forwarded-for'] || '').split(',')[0]),
+    ip,
     ua: oneLine(String(req.headers['user-agent'] || '')).slice(0, 200),
   };
   const { subject, html, text } = buildEmail(lead, meta);
@@ -124,3 +188,4 @@ module.exports = async function handler(req, res) {
 };
 
 module.exports.buildEmail = buildEmail;
+module.exports._test = { makeToken, checkToken, looksSpammy };
