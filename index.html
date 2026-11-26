@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SopnoTec CCTV Monitoring — 24/7 Remote Video Monitoring for U.S. Businesses</title>
+<meta name="description" content="SopnoTec remote CCTV monitoring: trained operators watch your existing cameras 24/7, verify every alert and respond in seconds with talk-downs, sirens and police dispatch.">
+<meta name="theme-color" content="#050912">
+<meta property="og:title" content="SopnoTec CCTV Monitoring">
+<meta property="og:description" content="SopnoTec remote CCTV monitoring: trained operators watch your existing cameras 24/7, verify every alert and respond in seconds with talk-downs, sirens and police dispatch.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cctv.sopnotec.com/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://cctv.sopnotec.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#050912}
+*{box-sizing:border-box}
+a{color:#2DD4BF}a:hover{color:#E6EDF7}
+@keyframes rv{from{opacity:0;transform:translateY(48px) scale(.97)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){.rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% cover 28%}}
+@keyframes blink{50%{opacity:.15}}
+.blink{animation:blink 1.1s steps(2) infinite}
+@keyframes scan{from{transform:translateY(-100%)}to{transform:translateY(100%)}}
+.scan{animation:scan 3.2s linear infinite}
+.card{transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+.card:hover{transform:translateY(-6px);border-color:#2DD4BF}
+.btn{transition:transform .2s ease,filter .2s ease}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+input,textarea,select{font:inherit}
+input:focus,textarea:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid #2DD4BF;outline-offset:2px}
+@media (max-width:820px){.navl{display:none}.hide-s{display:none}}
+@media (prefers-reduced-motion: reduce){.rv,.blink,.scan{animation:none}}
+</style>
+<style>html{scroll-behavior:smooth;scroll-padding-top:80px}body{-webkit-font-smoothing:antialiased}button:disabled{opacity:.6;cursor:wait}</style>
+<script src="three.min.js"></script>
+</head>
+<body>
+<div id="top" style="background: #050912; color: #E6EDF7; font-family: 'Inter', sans-serif; min-width: 0"><header style="position: sticky; top: 0; z-index: 20; background: rgba(5,9,18,.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid #1C2A40">
+<div style="max-width: 1240px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #E6EDF7"><svg width="40" height="40" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="mfs" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2DD4BF"></stop><stop offset="1" stop-color="#8B5CF6"></stop></linearGradient><radialGradient id="mfe" cx=".36" cy=".3" r=".85"><stop offset="0" stop-color="#FFFFFF"></stop><stop offset=".3" stop-color="#5EEAD4"></stop><stop offset="1" stop-color="#6D28D9"></stop></radialGradient></defs><path d="M32 4 L56 13 V31 C56 46 45.5 56 32 60 C18.5 56 8 46 8 31 V13 Z" fill="none" stroke="url(#mfs)" stroke-width="4.5" stroke-linejoin="round"></path><g transform="rotate(-20 32 32)"><path d="M12 32 A20 7.5 0 0 1 52 32" fill="none" stroke="#8B5CF6" stroke-width="2.4" opacity=".4"></path></g><circle cx="32" cy="32" r="11" fill="url(#mfe)"></circle><circle cx="32" cy="32" r="4.8" fill="#140F2E"></circle><circle cx="34.6" cy="29.6" r="1.7" fill="#FFFFFF"></circle><g transform="rotate(-20 32 32)"><path d="M12 32 A20 7.5 0 0 0 52 32" fill="none" stroke="#8B5CF6" stroke-width="2.4" stroke-linecap="round"></path></g><circle cx="50.5" cy="25" r="2.8" fill="#2DD4BF"></circle></svg><span style="display: flex; flex-direction: column; line-height: 1"><span style="font: 700 18px/1 'Space Grotesk', sans-serif; letter-spacing: .06em">SOPNOTEC</span><span style="font: 600 10px/1.4 'IBM Plex Mono', monospace; letter-spacing: .26em; color: #2DD4BF; margin-top: 4px">CCTV MONITORING</span></span></a>
+<nav class="navl" aria-label="Main" style="display: flex; gap: 28px; font: 500 15px/1 'Inter', sans-serif">
+<a href="#why" style="color: #9AAAC0; text-decoration: none">Why monitor</a>
+<a href="#detect" style="color: #9AAAC0; text-decoration: none">3D demos</a>
+<a href="#how" style="color: #9AAAC0; text-decoration: none">How it works</a>
+<a href="#services" style="color: #9AAAC0; text-decoration: none">Services</a>
+<a href="#save" style="color: #9AAAC0; text-decoration: none">Save money</a>
+<a href="#industries" style="color: #9AAAC0; text-decoration: none">Industries</a>
+</nav>
+<a class="btn" href="#contact" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #2DD4BF; color: #03121A; text-decoration: none; font: 600 15px/1 'Inter', sans-serif">Free assessment</a>
+</div>
+</header><section style="position: relative; height: 900px; overflow: hidden; background: #050912">
+<canvas data-ref="heroRef" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block"></canvas>
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(5,9,18,.94) 0%, rgba(5,9,18,.62) 40%, rgba(5,9,18,0) 66%)"></div>
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 160px; pointer-events: none; background: linear-gradient(180deg, rgba(5,9,18,0), #050912)"></div>
+<div aria-hidden="true" class="hide-s" style="position: absolute; top: 40px; right: 40px; display: flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid #1C2A40; border-radius: 10px; background: rgba(5,9,18,.6); font: 500 13px/1 'IBM Plex Mono', monospace; letter-spacing: .1em; color: #E6EDF7"><span class="blink" style="width: 9px; height: 9px; border-radius: 50%; background: #FF5C7A"></span>REC · CAM 03 · MAIN ST LOT · <span data-t="clock"></span></div>
+<div aria-live="polite" class="hide-s" style="position: absolute; bottom: 64px; right: 40px">
+<div data-if="alertOn" style="display: contents"><div style="display: flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 10px; border: 1px solid #FF5C7A; background: rgba(40,6,14,.75); font: 600 13px/1 'IBM Plex Mono', monospace; letter-spacing: .1em; color: #FFD5DE"><span class="blink" style="width: 9px; height: 9px; border-radius: 50%; background: #FF5C7A"></span>PERSON DETECTED · PARKING LOT · OPERATOR VERIFYING</div></div>
+<div data-if="clear" style="display: contents"><div style="display: flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 10px; border: 1px solid #1C2A40; background: rgba(5,9,18,.62); font: 600 13px/1 'IBM Plex Mono', monospace; letter-spacing: .1em; color: #2DD4BF"><span style="width: 9px; height: 9px; border-radius: 50%; background: #2DD4BF"></span>ALL ZONES CLEAR · SWEEPING</div></div>
+</div>
+<div style="position: relative; z-index: 2; max-width: 1240px; height: 100%; margin: 0 auto; padding: 72px 24px 110px; display: flex; flex-direction: column; justify-content: center; gap: 28px">
+<p style="margin: 0; display: inline-flex; align-self: flex-start; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 999px; border: 1px solid #1C2A40; background: rgba(11,19,34,.7); font: 600 12px/1 'IBM Plex Mono', monospace; letter-spacing: .16em; text-transform: uppercase; color: #2DD4BF"><span class="blink" style="width: 8px; height: 8px; border-radius: 50%; background: #2DD4BF"></span>24/7 remote CCTV monitoring · U.S. sites</p>
+<h1 style="margin: 0; max-width: 720px; font: 700 clamp(44px, 7vw, 88px)/1.0 'Space Grotesk', sans-serif; letter-spacing: -.035em; color: #E6EDF7"><span style="display: block">Your cameras record.</span><span style="display: block; color: #2DD4BF">We make them respond.</span></h1>
+<p style="margin: 0; max-width: 560px; font: 400 19px/1.6 'Inter', sans-serif; color: #9AAAC0">Trained operators watch your existing cameras live, verify every alert and act within seconds — voice warnings, sirens and police dispatch — before damage is done.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px">
+<a class="btn" href="#contact" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; background: #2DD4BF; color: #03121A; text-decoration: none; font: 700 16px/1 'Inter', sans-serif">Get a free site assessment</a>
+<a class="btn" href="#how" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #1C2A40; color: #E6EDF7; text-decoration: none; font: 600 16px/1 'Inter', sans-serif">See how it works</a>
+</div><ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px 24px"><li style="display: flex; align-items: center; gap: 8px; font: 500 15px/1.4 'Inter', sans-serif; color: #9AAAC0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Works with your existing cameras</li><li style="display: flex; align-items: center; gap: 8px; font: 500 15px/1.4 'Inter', sans-serif; color: #9AAAC0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Every alert verified by a person</li><li style="display: flex; align-items: center; gap: 8px; font: 500 15px/1.4 'Inter', sans-serif; color: #9AAAC0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Pay only for the hours you need</li></ul><p class="hide-s" style="margin: 8px 0 0; display: flex; align-items: center; gap: 10px; font: 500 13px/1 'IBM Plex Mono', monospace; letter-spacing: .12em; color: #9AAAC0">SCROLL TO WATCH THE CAMERAS WORK <span aria-hidden="true" style="color: #2DD4BF">↓</span></p>
+</div></section><section id="why" style="padding: 128px 24px; background: #050912">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+<div class="rv" style="max-width: 780px; display: flex; flex-direction: column; gap: 18px"><p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: #2DD4BF">Why monitoring matters</p><h2 style="margin: 0; font: 700 clamp(34px, 5vw, 58px)/1.06 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #E6EDF7">A camera on its own is a witness. Not a guard.</h2><p style="margin: 0; font: 400 18px/1.65 'Inter', sans-serif; color: #9AAAC0">Most CCTV only gets watched after something has gone wrong. Live monitoring turns the cameras you already own into an active defence that sees, decides and acts while it still matters.</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px"><div class="card rv" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none"><span style="display: inline-flex; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 14px; background: #08101D; border: 1px solid #1C2A40"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path><path d="M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z"></path></svg></span><h3 style="margin: 0; font: 600 22px/1.25 'Space Grotesk', sans-serif; color: #E6EDF7">Recorded is not prevented</h3><p style="margin: 0; font: 400 16px/1.6 'Inter', sans-serif; color: #9AAAC0">Footage usually gets reviewed the morning after. By then the stock is gone, the damage is done and all you have is evidence.</p></div><div class="card rv" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none"><span style="display: inline-flex; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 14px; background: #08101D; border: 1px solid #1C2A40"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></span><h3 style="margin: 0; font: 600 22px/1.25 'Space Grotesk', sans-serif; color: #E6EDF7">Unverified alarms get ignored</h3><p style="margin: 0; font: 400 16px/1.6 'Inter', sans-serif; color: #9AAAC0">Wind, rain, animals and headlights set off motion alerts all night. After a week of false alarms, nobody responds to the real one.</p></div><div class="card rv" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none"><span style="display: inline-flex; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 14px; background: #08101D; border: 1px solid #1C2A40"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 1 0 0 8a4 4 0 1 0 0-8z"></path><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"></path></svg></span><h3 style="margin: 0; font: 600 22px/1.25 'Space Grotesk', sans-serif; color: #E6EDF7">Guards cover one spot</h3><p style="margin: 0; font: 400 16px/1.6 'Inter', sans-serif; color: #9AAAC0">An on-site guard sees one area for one shift. Your cameras see the whole site at once — they just need someone watching them.</p></div></div>
+<div class="rv" style="display: flex; flex-wrap: wrap; gap: 20px"><div style="flex: 1 1 420px; min-width: 0; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none"><p style="margin: 0 0 6px; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .16em; text-transform: uppercase; color: #9AAAC0">Example night · without monitoring</p><h3 style="margin: 0 0 14px; font: 600 24px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">The camera saw everything. Nobody acted.</h3><div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-top: 1px solid #1C2A40"><span style="font: 500 14px/1.5 'IBM Plex Mono', monospace; color: #9AAAC0; min-width: 74px">02:14</span><span style="flex: 1; font: 400 16px/1.5 'Inter', sans-serif; color: #E6EDF7">Intruder climbs the back fence</span><span style="display: inline-flex; align-items: center; gap: 6px; font: 600 13px/1.5 'IBM Plex Mono', monospace; color: #FF5C7A; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5C7A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg>Recorded</span></div><div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-top: 1px solid #1C2A40"><span style="font: 500 14px/1.5 'IBM Plex Mono', monospace; color: #9AAAC0; min-width: 74px">02:31</span><span style="flex: 1; font: 400 16px/1.5 'Inter', sans-serif; color: #E6EDF7">Stockroom door forced open</span><span style="display: inline-flex; align-items: center; gap: 6px; font: 600 13px/1.5 'IBM Plex Mono', monospace; color: #FF5C7A; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5C7A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg>Recorded</span></div><div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-top: 1px solid #1C2A40"><span style="font: 500 14px/1.5 'IBM Plex Mono', monospace; color: #9AAAC0; min-width: 74px">08:40</span><span style="flex: 1; font: 400 16px/1.5 'Inter', sans-serif; color: #E6EDF7">Staff discover the damage</span><span style="display: inline-flex; align-items: center; gap: 6px; font: 600 13px/1.5 'IBM Plex Mono', monospace; color: #FF5C7A; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5C7A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg>Police report filed</span></div></div><div style="flex: 1 1 420px; min-width: 0; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #2DD4BF; box-shadow: none"><p style="margin: 0 0 6px; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .16em; text-transform: uppercase; color: #2DD4BF">Same night · with SopnoTec monitoring</p><h3 style="margin: 0 0 14px; font: 600 24px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">Stopped in about a minute, before the door.</h3><div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-top: 1px solid #1C2A40"><span style="font: 500 14px/1.5 'IBM Plex Mono', monospace; color: #9AAAC0; min-width: 74px">02:14:05</span><span style="flex: 1; font: 400 16px/1.5 'Inter', sans-serif; color: #E6EDF7">Motion in Zone 2 — alert sent</span><span style="display: inline-flex; align-items: center; gap: 6px; font: 600 13px/1.5 'IBM Plex Mono', monospace; color: #2DD4BF; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Detected</span></div><div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-top: 1px solid #1C2A40"><span style="font: 500 14px/1.5 'IBM Plex Mono', monospace; color: #9AAAC0; min-width: 74px">02:14:20</span><span style="flex: 1; font: 400 16px/1.5 'Inter', sans-serif; color: #E6EDF7">Operator verifies on the live feed</span><span style="display: inline-flex; align-items: center; gap: 6px; font: 600 13px/1.5 'IBM Plex Mono', monospace; color: #2DD4BF; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Verified</span></div><div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-top: 1px solid #1C2A40"><span style="font: 500 14px/1.5 'IBM Plex Mono', monospace; color: #9AAAC0; min-width: 74px">02:14:35</span><span style="flex: 1; font: 400 16px/1.5 'Inter', sans-serif; color: #E6EDF7">Voice warning and siren on site</span><span style="display: inline-flex; align-items: center; gap: 6px; font: 600 13px/1.5 'IBM Plex Mono', monospace; color: #2DD4BF; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Deterred</span></div><div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-top: 1px solid #1C2A40"><span style="font: 500 14px/1.5 'IBM Plex Mono', monospace; color: #9AAAC0; min-width: 74px">02:15:10</span><span style="flex: 1; font: 400 16px/1.5 'Inter', sans-serif; color: #E6EDF7">Owner and police called; clip saved</span><span style="display: inline-flex; align-items: center; gap: 6px; font: 600 13px/1.5 'IBM Plex Mono', monospace; color: #2DD4BF; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Reported</span></div></div></div></div></section><section id="detect" style="position: relative; height: 2900px; background: #04070E">
+<div style="position: sticky; top: 72px; height: 660px; overflow: hidden; border-top: 1px solid #1C2A40; border-bottom: 1px solid #1C2A40">
+<canvas data-ref="c1Ref" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block"></canvas>
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(4,7,14,.9) 0%, rgba(4,7,14,.5) 32%, rgba(4,7,14,0) 54%)"></div>
+<div style="position: relative; z-index: 2; max-width: 1240px; height: 100%; margin: 0 auto; padding: 40px 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; pointer-events: none">
+<div style="max-width: 520px; display: flex; flex-direction: column; gap: 12px"><p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: #2DD4BF">Person detection · scroll</p><h2 style="margin: 0; font: 700 clamp(30px, 4.2vw, 50px)/1.05 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #E6EDF7">Watch AI spot an intruder — and a person stop them.</h2></div>
+<ol aria-label="Scroll steps" style="max-width: 460px; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
+<div data-for="ph1" style="display: contents"></div>
+</ol>
+</div>
+<div aria-hidden="true" class="hide-s" style="position: absolute; right: 32px; bottom: 28px; z-index: 2; display: flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid #1C2A40; border-radius: 10px; background: rgba(5,9,18,.66); font: 500 12px/1 'IBM Plex Mono', monospace; letter-spacing: .1em; color: #E6EDF7"><span class="blink" style="width: 8px; height: 8px; border-radius: 50%; background: #FF5C7A"></span>CAM 12 · REAR LOT · <span data-t="clock"></span></div>
+<div aria-hidden="true" class="hide-s" style="position: absolute; right: 32px; top: 28px; z-index: 2; width: 180px; height: 4px; border-radius: 4px; background: #1C2A40; overflow: hidden"><div data-style="height: 100%; width: [[ph1Prog]]; background: linear-gradient(90deg, #2DD4BF, #8B5CF6); transition: width .4s ease" style="height: 100%; width: 0; background: linear-gradient(90deg, #2DD4BF, #8B5CF6); transition: width .4s ease"></div></div>
+</div></section><section id="how" data-ref="stRef" style="position: relative; height: 2100px; background: #08101D">
+<div style="position: sticky; top: 72px; padding: 72px 24px 48px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 22px"><p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: #2DD4BF">How it works · scroll to follow an alert</p><h2 style="margin: 0; font: 700 clamp(34px, 5vw, 58px)/1.06 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #E6EDF7">From motion to response in under a minute.</h2>
+<div aria-hidden="true" style="height: 4px; border-radius: 4px; background: #1C2A40; overflow: hidden"><div data-style="height: 100%; width: [[prog]]; background: linear-gradient(90deg, #2DD4BF, #8B5CF6); transition: width .5s ease" style="height: 100%; width: 0; background: linear-gradient(90deg, #2DD4BF, #8B5CF6); transition: width .5s ease"></div></div>
+<div role="group" aria-label="Monitoring steps" style="display: flex; flex-wrap: wrap; gap: 8px">
+<div data-for="steps" style="display: contents"></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; min-height: 220px">
+<div style="display: flex; align-items: baseline; gap: 16px"><span style="font: 700 64px/1 'Space Grotesk', sans-serif; color: #2DD4BF"><span data-t="curN"></span></span><h3 style="margin: 0; font: 700 32px/1.1 'Space Grotesk', sans-serif; color: #E6EDF7"><span data-t="curT"></span></h3></div>
+<p style="margin: 0; font: 400 17px/1.65 'Inter', sans-serif; color: #9AAAC0"><span data-t="curD"></span></p>
+</div>
+</div>
+<div class="hide-s" style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 18px; border-radius: 20px; background: #070D18; border: 1px solid #1C2A40">
+<div style="display: flex; justify-content: space-between; font: 500 12px/1 'IBM Plex Mono', monospace; letter-spacing: .14em; color: #9AAAC0"><span>SOPNOTEC CONTROL ROOM</span><span style="color: #2DD4BF">STEP <span data-t="curN"></span> · <span data-t="curT"></span></span></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px"><div style="position: relative; overflow: hidden; aspect-ratio: 16 / 10; border-radius: 10px; border: 1px solid #1C2A40; background: repeating-linear-gradient(0deg, rgba(45,212,191,.05) 0 2px, transparent 2px 4px), linear-gradient(160deg, #0d1a2c, #060b14)"><div class="scan" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: 40%; background: linear-gradient(180deg, transparent, rgba(45,212,191,.12), transparent)"></div><span style="position: absolute; top: 10px; left: 12px; font: 500 11px/1 'IBM Plex Mono', monospace; letter-spacing: .14em; color: #9AAAC0">CAM 01</span><span style="position: absolute; bottom: 10px; right: 12px; font: 500 11px/1 'IBM Plex Mono', monospace; color: #9AAAC0"><span data-t="clock"></span></span></div><div style="position: relative; overflow: hidden; aspect-ratio: 16 / 10; border-radius: 10px; border: 1px solid #2DD4BF; background: repeating-linear-gradient(0deg, rgba(45,212,191,.05) 0 2px, transparent 2px 4px), linear-gradient(160deg, #0d1a2c, #060b14)"><div class="scan" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: 40%; background: linear-gradient(180deg, transparent, rgba(45,212,191,.12), transparent)"></div><span style="position: absolute; top: 10px; left: 12px; font: 500 11px/1 'IBM Plex Mono', monospace; letter-spacing: .14em; color: #9AAAC0">CAM 02</span><span style="position: absolute; bottom: 10px; right: 12px; font: 500 11px/1 'IBM Plex Mono', monospace; color: #9AAAC0"><span data-t="clock"></span></span><span style="position: absolute; left: 38%; top: 30%; width: 22%; height: 52%; border: 2px solid #2DD4BF; border-radius: 4px"></span><span style="position: absolute; left: 38%; top: calc(30% - 20px); font: 600 10px/1 'IBM Plex Mono', monospace; letter-spacing: .1em; color: #2DD4BF">PERSON 0.97</span></div><div style="position: relative; overflow: hidden; aspect-ratio: 16 / 10; border-radius: 10px; border: 1px solid #1C2A40; background: repeating-linear-gradient(0deg, rgba(45,212,191,.05) 0 2px, transparent 2px 4px), linear-gradient(160deg, #0d1a2c, #060b14)"><div class="scan" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: 40%; background: linear-gradient(180deg, transparent, rgba(45,212,191,.12), transparent)"></div><span style="position: absolute; top: 10px; left: 12px; font: 500 11px/1 'IBM Plex Mono', monospace; letter-spacing: .14em; color: #9AAAC0">CAM 03</span><span style="position: absolute; bottom: 10px; right: 12px; font: 500 11px/1 'IBM Plex Mono', monospace; color: #9AAAC0"><span data-t="clock"></span></span></div><div style="position: relative; overflow: hidden; aspect-ratio: 16 / 10; border-radius: 10px; border: 1px solid #1C2A40; background: repeating-linear-gradient(0deg, rgba(45,212,191,.05) 0 2px, transparent 2px 4px), linear-gradient(160deg, #0d1a2c, #060b14)"><div class="scan" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: 40%; background: linear-gradient(180deg, transparent, rgba(45,212,191,.12), transparent)"></div><span style="position: absolute; top: 10px; left: 12px; font: 500 11px/1 'IBM Plex Mono', monospace; letter-spacing: .14em; color: #9AAAC0">CAM 04</span><span style="position: absolute; bottom: 10px; right: 12px; font: 500 11px/1 'IBM Plex Mono', monospace; color: #9AAAC0"><span data-t="clock"></span></span></div></div></div></div></div></section><section id="building" style="position: relative; height: 2900px; background: #04070E">
+<div style="position: sticky; top: 72px; height: 660px; overflow: hidden; border-top: 1px solid #1C2A40; border-bottom: 1px solid #1C2A40">
+<canvas data-ref="c2Ref" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block"></canvas>
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(4,7,14,.9) 0%, rgba(4,7,14,.5) 32%, rgba(4,7,14,0) 54%)"></div>
+<div style="position: relative; z-index: 2; max-width: 1240px; height: 100%; margin: 0 auto; padding: 40px 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; pointer-events: none">
+<div style="max-width: 520px; display: flex; flex-direction: column; gap: 12px"><p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: #2DD4BF">Building security · scroll</p><h2 style="margin: 0; font: 700 clamp(30px, 4.2vw, 50px)/1.05 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #E6EDF7">An office tower, guarded floor by floor after hours.</h2></div>
+<ol aria-label="Scroll steps" style="max-width: 460px; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
+<div data-for="ph2" style="display: contents"></div>
+</ol>
+</div>
+<div aria-hidden="true" class="hide-s" style="position: absolute; right: 32px; bottom: 28px; z-index: 2; display: flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid #1C2A40; border-radius: 10px; background: rgba(5,9,18,.66); font: 500 12px/1 'IBM Plex Mono', monospace; letter-spacing: .1em; color: #E6EDF7"><span class="blink" style="width: 8px; height: 8px; border-radius: 50%; background: #FF5C7A"></span>SITE 1200 · 6 CAMERAS · <span data-t="clock"></span></div>
+<div aria-hidden="true" class="hide-s" style="position: absolute; right: 32px; top: 28px; z-index: 2; width: 180px; height: 4px; border-radius: 4px; background: #1C2A40; overflow: hidden"><div data-style="height: 100%; width: [[ph2Prog]]; background: linear-gradient(90deg, #2DD4BF, #8B5CF6); transition: width .4s ease" style="height: 100%; width: 0; background: linear-gradient(90deg, #2DD4BF, #8B5CF6); transition: width .4s ease"></div></div>
+</div></section><section id="services" style="padding: 128px 24px; background: #08101D">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+<div class="rv" style="max-width: 760px; display: flex; flex-direction: column; gap: 18px"><p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: #2DD4BF">Services</p><h2 style="margin: 0; font: 700 clamp(34px, 5vw, 58px)/1.06 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #E6EDF7">One control room. Every kind of watch.</h2><p style="margin: 0; font: 400 18px/1.65 'Inter', sans-serif; color: #9AAAC0">Pick a single service or combine them. Everything runs from our monitoring centre and connects to the cameras, speakers and alarms you already have.</p></div><div style="display: flex; flex-wrap: wrap; gap: 20px"><div class="card rv" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none; flex-basis: 320px"><span style="display: inline-flex; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 14px; background: #08101D; border: 1px solid #1C2A40"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.75 12h3.632a1 1 0 0 1 .894 1.447l-2.034 4.069a1 1 0 0 1-1.708.134l-2.124-2.97"></path><path d="M17.106 9.053a1 1 0 0 1 .447 1.341l-3.106 6.211a1 1 0 0 1-1.342.447L3.61 12.3a2.92 2.92 0 0 1-1.3-3.91L3.69 5.6a2.92 2.92 0 0 1 3.92-1.3z"></path><path d="M2 19h3.76a2 2 0 0 0 1.8-1.1L9 15"></path><path d="M2 21v-4"></path><path d="M7 9h.01"></path></svg></span><h3 style="margin: 0; font: 600 21px/1.25 'Space Grotesk', sans-serif; color: #E6EDF7">Remote CCTV monitoring</h3><p style="margin: 0; font: 400 16px/1.6 'Inter', sans-serif; color: #9AAAC0">Operators watch your cameras live during the hours you choose and act on every real threat.</p></div><div class="card rv" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none; flex-basis: 320px"><span style="display: inline-flex; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 14px; background: #08101D; border: 1px solid #1C2A40"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path><path d="M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z"></path></svg></span><h3 style="margin: 0; font: 600 21px/1.25 'Space Grotesk', sans-serif; color: #E6EDF7">Live video monitoring</h3><p style="margin: 0; font: 400 16px/1.6 'Inter', sans-serif; color: #9AAAC0">Continuous eyes on high-risk sites — yards, gates, car lots and construction sites.</p></div><div class="card rv" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none; flex-basis: 320px"><span style="display: inline-flex; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 14px; background: #08101D; border: 1px solid #1C2A40"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 1 0 0 8a4 4 0 1 0 0-8z"></path><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"></path></svg></span><h3 style="margin: 0; font: 600 21px/1.25 'Space Grotesk', sans-serif; color: #E6EDF7">Virtual guard & doorman</h3><p style="margin: 0; font: 400 16px/1.6 'Inter', sans-serif; color: #9AAAC0">Remote gate and door control, visitor checks and patrol tours, without a person on site.</p></div><div class="card rv" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none; flex-basis: 320px"><span style="display: inline-flex; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 14px; background: #08101D; border: 1px solid #1C2A40"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span><h3 style="margin: 0; font: 600 21px/1.25 'Space Grotesk', sans-serif; color: #E6EDF7">Remote concierge & reception</h3><p style="margin: 0; font: 400 16px/1.6 'Inter', sans-serif; color: #9AAAC0">A friendly live voice for visitors, deliveries and after-hours entry at your front desk.</p></div><div class="card rv" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none; flex-basis: 320px"><span style="display: inline-flex; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 14px; background: #08101D; border: 1px solid #1C2A40"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></span><h3 style="margin: 0; font: 600 21px/1.25 'Space Grotesk', sans-serif; color: #E6EDF7">Fire & safety monitoring</h3><p style="margin: 0; font: 400 16px/1.6 'Inter', sans-serif; color: #9AAAC0">Early eyes on smoke, flames, flooding and unsafe behaviour, with escalation to your team.</p></div><div class="card rv" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none; flex-basis: 320px"><span style="display: inline-flex; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 14px; background: #08101D; border: 1px solid #1C2A40"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></span><h3 style="margin: 0; font: 600 21px/1.25 'Space Grotesk', sans-serif; color: #E6EDF7">Night-vision monitoring</h3><p style="margin: 0; font: 400 16px/1.6 'Inter', sans-serif; color: #9AAAC0">Infrared and low-light coverage for perimeters, so nights are as watched as days.</p></div><div class="card rv" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none; flex-basis: 320px"><span style="display: inline-flex; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 14px; background: #08101D; border: 1px solid #1C2A40"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><path d="M12 19v3"></path></svg></span><h3 style="margin: 0; font: 600 21px/1.25 'Space Grotesk', sans-serif; color: #E6EDF7">Two-way audio deterrence</h3><p style="margin: 0; font: 400 16px/1.6 'Inter', sans-serif; color: #9AAAC0">Operators speak directly through on-site speakers — most intruders leave the moment they are addressed.</p></div><div class="card rv" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none; flex-basis: 320px"><span style="display: inline-flex; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 14px; background: #08101D; border: 1px solid #1C2A40"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M8 21h8M12 17v4"></path></svg></span><h3 style="margin: 0; font: 600 21px/1.25 'Space Grotesk', sans-serif; color: #E6EDF7">Workplace & screen monitoring</h3><p style="margin: 0; font: 400 16px/1.6 'Inter', sans-serif; color: #9AAAC0">Incident reporting and compliance checks for workplaces, stores and staff areas.</p></div><div class="card rv" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none; flex-basis: 320px"><span style="display: inline-flex; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 14px; background: #08101D; border: 1px solid #1C2A40"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21H3z"></path><path d="M9 21v-6h6v6"></path></svg></span><h3 style="margin: 0; font: 600 21px/1.25 'Space Grotesk', sans-serif; color: #E6EDF7">Homes & specialty sites</h3><p style="margin: 0; font: 400 16px/1.6 'Inter', sans-serif; color: #9AAAC0">Private residences, nanny cams, stables and remote properties, watched by real people.</p></div></div></div></section><section id="warehouse" style="position: relative; height: 2900px; background: #04070E">
+<div style="position: sticky; top: 72px; height: 660px; overflow: hidden; border-top: 1px solid #1C2A40; border-bottom: 1px solid #1C2A40">
+<canvas data-ref="c3Ref" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block"></canvas>
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(4,7,14,.9) 0%, rgba(4,7,14,.5) 32%, rgba(4,7,14,0) 54%)"></div>
+<div style="position: relative; z-index: 2; max-width: 1240px; height: 100%; margin: 0 auto; padding: 40px 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; pointer-events: none">
+<div style="max-width: 520px; display: flex; flex-direction: column; gap: 12px"><p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: #2DD4BF">Warehouse security · threat recording</p><h2 style="margin: 0; font: 700 clamp(30px, 4.2vw, 50px)/1.05 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #E6EDF7">A yard break-in, tracked and recorded as evidence.</h2></div>
+<ol aria-label="Scroll steps" style="max-width: 460px; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
+<div data-for="ph3" style="display: contents"></div>
+</ol>
+</div>
+<div aria-hidden="true" class="hide-s" style="position: absolute; right: 32px; bottom: 28px; z-index: 2; display: flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid #1C2A40; border-radius: 10px; background: rgba(5,9,18,.66); font: 500 12px/1 'IBM Plex Mono', monospace; letter-spacing: .1em; color: #E6EDF7"><span class="blink" style="width: 8px; height: 8px; border-radius: 50%; background: #FF5C7A"></span>CAM 07 · YARD PTZ · <span data-t="clock"></span></div>
+<div aria-hidden="true" class="hide-s" style="position: absolute; right: 32px; top: 28px; z-index: 2; width: 180px; height: 4px; border-radius: 4px; background: #1C2A40; overflow: hidden"><div data-style="height: 100%; width: [[ph3Prog]]; background: linear-gradient(90deg, #2DD4BF, #8B5CF6); transition: width .4s ease" style="height: 100%; width: 0; background: linear-gradient(90deg, #2DD4BF, #8B5CF6); transition: width .4s ease"></div></div>
+</div></section><section id="save" style="padding: 128px 24px; background: #050912">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+<div class="rv" style="max-width: 780px; display: flex; flex-direction: column; gap: 18px"><p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: #2DD4BF">Save money · add value</p><h2 style="margin: 0; font: 700 clamp(34px, 5vw, 58px)/1.06 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #E6EDF7">Security that pays for itself.</h2><p style="margin: 0; font: 400 18px/1.65 'Inter', sans-serif; color: #9AAAC0">Remote monitoring costs a fraction of a full-time guard, covers far more ground, and cuts the losses, repairs and false-alarm fees that quietly add up.</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div class="card rv" style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 20px; padding: 32px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none">
+<p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .16em; text-transform: uppercase; color: #9AAAC0">On-site guard</p>
+<p style="margin: 0; font: 700 40px/1 'Space Grotesk', sans-serif; color: #E6EDF7">[GUARD COST]<span style="font: 500 16px/1 'Inter', sans-serif; color: #9AAAC0"> / month</span></p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px"><li style="display: flex; gap: 12px; align-items: flex-start; font: 400 16px/1.55 'Inter', sans-serif; color: #E6EDF7"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AAAC0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg><span>Covers one location at a time</span></li><li style="display: flex; gap: 12px; align-items: flex-start; font: 400 16px/1.55 'Inter', sans-serif; color: #E6EDF7"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AAAC0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg><span>One shift — nights and weekends cost more</span></li><li style="display: flex; gap: 12px; align-items: flex-start; font: 400 16px/1.55 'Inter', sans-serif; color: #E6EDF7"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AAAC0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg><span>Sick days, breaks and staff turnover</span></li><li style="display: flex; gap: 12px; align-items: flex-start; font: 400 16px/1.55 'Inter', sans-serif; color: #E6EDF7"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AAAC0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg><span>Can be overpowered or distracted</span></li></ul></div>
+<div class="card rv" style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 20px; padding: 32px; border-radius: 16px; background: #0B1322; border: 2px solid #2DD4BF; box-shadow: none">
+<p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .16em; text-transform: uppercase; color: #2DD4BF">SopnoTec remote monitoring</p>
+<p style="margin: 0; font: 700 40px/1 'Space Grotesk', sans-serif; color: #E6EDF7">From [YOUR PRICE]<span style="font: 500 16px/1 'Inter', sans-serif; color: #9AAAC0"> / camera / month</span></p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px"><li style="display: flex; gap: 12px; align-items: flex-start; font: 400 16px/1.55 'Inter', sans-serif; color: #E6EDF7"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Watches every camera on the site at once</span></li><li style="display: flex; gap: 12px; align-items: flex-start; font: 400 16px/1.55 'Inter', sans-serif; color: #E6EDF7"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Pay only for the hours you choose</span></li><li style="display: flex; gap: 12px; align-items: flex-start; font: 400 16px/1.55 'Inter', sans-serif; color: #E6EDF7"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Every alert verified by a trained person</span></li><li style="display: flex; gap: 12px; align-items: flex-start; font: 400 16px/1.55 'Inter', sans-serif; color: #E6EDF7"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Uses the cameras you already own</span></li></ul></div>
+</div>
+<div class="rv" style="display: flex; flex-direction: column; gap: 18px; padding: 32px; border-radius: 16px; background: #08101D; border: 1px solid #1C2A40">
+<h3 style="margin: 0; font: 600 24px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">Choose when we watch</h3>
+<div role="group" aria-label="Monitoring hours" style="display: flex; flex-wrap: wrap; gap: 10px">
+<div data-for="hours" style="display: contents"></div>
+</div>
+<p style="margin: 0; font: 400 17px/1.6 'Inter', sans-serif; color: #9AAAC0"><span data-t="hoursDesc"></span></p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<h3 class="rv" style="margin: 0; font: 600 24px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">More than security: value you get every day</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 28px"><div class="rv" style="flex: 1 1 230px; min-width: 0; display: flex; gap: 14px; align-items: flex-start"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18z"></path><path d="M12 7v5l3 2"></path></svg><div style="display: flex; flex-direction: column; gap: 6px"><h4 style="margin: 0; font: 600 17px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">Opening & closing checks</h4><p style="margin: 0; font: 400 15px/1.55 'Inter', sans-serif; color: #9AAAC0">Confirm your site opened on time and was locked up properly.</p></div></div><div class="rv" style="flex: 1 1 230px; min-width: 0; display: flex; gap: 14px; align-items: flex-start"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 1 0 0 8a4 4 0 1 0 0-8z"></path><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"></path></svg><div style="display: flex; flex-direction: column; gap: 6px"><h4 style="margin: 0; font: 600 17px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">Lone-worker safety</h4><p style="margin: 0; font: 400 15px/1.55 'Inter', sans-serif; color: #9AAAC0">Staff working late have someone watching over them.</p></div></div><div class="rv" style="flex: 1 1 230px; min-width: 0; display: flex; gap: 14px; align-items: flex-start"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><div style="display: flex; flex-direction: column; gap: 6px"><h4 style="margin: 0; font: 600 17px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">Delivery verification</h4><p style="margin: 0; font: 400 15px/1.55 'Inter', sans-serif; color: #9AAAC0">See who arrived, when, and what they dropped off.</p></div></div><div class="rv" style="flex: 1 1 230px; min-width: 0; display: flex; gap: 14px; align-items: flex-start"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg><div style="display: flex; flex-direction: column; gap: 6px"><h4 style="margin: 0; font: 600 17px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">Evidence-ready clips</h4><p style="margin: 0; font: 400 15px/1.55 'Inter', sans-serif; color: #9AAAC0">Organised footage for police reports and insurance claims.</p></div></div></div></div></div></section><section id="site" style="position: relative; height: 860px; overflow: hidden; background: #0D1015">
+<div aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(#262D39 1px, transparent 1px), linear-gradient(90deg, #262D39 1px, transparent 1px); background-size: 48px 48px; opacity: .35"></div>
+<canvas data-ref="siteRef" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block"></canvas>
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(13,16,21,.95) 0%, rgba(13,16,21,.55) 40%, rgba(13,16,21,0) 62%)"></div>
+<div aria-live="polite" class="hide-s" style="position: absolute; right: 40px; bottom: 44px; width: 420px; display: flex; flex-direction: column; gap: 8px; padding: 18px 20px; border-radius: 8px; border: 1px solid #262D39; background: rgba(13,16,21,.84); font: 500 13px/1.5 'IBM Plex Mono', monospace; color: #9AAAC0">
+<div style="display: flex; justify-content: space-between; color: #E6EDF7"><span>EVENT LOG · GAS STATION 014</span><span><span data-t="clock"></span></span></div>
+<div data-if="siteOn" style="display: contents"><div style="display: flex; flex-direction: column; gap: 4px"><span style="color: #F59E0B">▲ <span data-t="siteCam"></span> · person in <span data-t="siteZone"></span></span><span>› operator opening live feed…</span><span>› talk-down ready · call list armed</span></div></div>
+<div data-if="siteClear" style="display: contents"><div style="display: flex; flex-direction: column; gap: 4px"><span style="color: #2DD4BF">● 4 cameras live · all zones clear</span><span>› sweeping pumps, store and lot</span><span>› next report 07:00</span></div></div>
+</div>
+<div style="position: relative; z-index: 2; max-width: 1240px; height: 100%; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; justify-content: center; gap: 22px"><p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: #2DD4BF">Site twin · coverage map</p><h2 style="margin: 0; font: 700 clamp(34px, 5vw, 58px)/1.06 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #E6EDF7; max-width: 620px">Every zone. Every camera. Every minute.</h2><p style="margin: 0; max-width: 520px; font: 400 18px/1.65 'Inter', sans-serif; color: #9AAAC0">Before we go live, we map your property into alert zones — pumps, store entrance, parking rows, the back fence — so each camera knows exactly what to watch and when to call for help.</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px"><li style="display: flex; align-items: center; gap: 10px; font: 500 16px/1.4 'Inter', sans-serif; color: #E6EDF7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Overlapping camera sectors, no blind spots</li><li style="display: flex; align-items: center; gap: 10px; font: 500 16px/1.4 'Inter', sans-serif; color: #E6EDF7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Separate rules for open hours and after-hours</li><li style="display: flex; align-items: center; gap: 10px; font: 500 16px/1.4 'Inter', sans-serif; color: #E6EDF7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Every event logged with time, zone and clip</li></ul></div></section><section id="industries" style="padding: 128px 24px; background: #08101D">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px">
+<div class="rv" style="max-width: 760px; display: flex; flex-direction: column; gap: 18px"><p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: #2DD4BF">Industries</p><h2 style="margin: 0; font: 700 clamp(34px, 5vw, 58px)/1.06 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #E6EDF7">Built for sites that can’t afford a blind spot.</h2><p style="margin: 0; font: 400 18px/1.65 'Inter', sans-serif; color: #9AAAC0">Each site gets its own alert zones, call list and response plan — matched to how that business actually runs.</p></div><div class="rv" style="display: flex; flex-wrap: wrap; gap: 12px"><span class="card" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0B1322; border: 1px solid #1C2A40; font: 500 16px/1 'Inter', sans-serif; color: #E6EDF7; box-shadow: none"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2DD4BF"></span>Parking lots</span><span class="card" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0B1322; border: 1px solid #1C2A40; font: 500 16px/1 'Inter', sans-serif; color: #E6EDF7; box-shadow: none"><span style="width: 8px; height: 8px; border-radius: 50%; background: #A78BFA"></span>Pharmacies</span><span class="card" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0B1322; border: 1px solid #1C2A40; font: 500 16px/1 'Inter', sans-serif; color: #E6EDF7; box-shadow: none"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2DD4BF"></span>Gas stations</span><span class="card" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0B1322; border: 1px solid #1C2A40; font: 500 16px/1 'Inter', sans-serif; color: #E6EDF7; box-shadow: none"><span style="width: 8px; height: 8px; border-radius: 50%; background: #A78BFA"></span>Schools & campuses</span><span class="card" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0B1322; border: 1px solid #1C2A40; font: 500 16px/1 'Inter', sans-serif; color: #E6EDF7; box-shadow: none"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2DD4BF"></span>Car dealerships</span><span class="card" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0B1322; border: 1px solid #1C2A40; font: 500 16px/1 'Inter', sans-serif; color: #E6EDF7; box-shadow: none"><span style="width: 8px; height: 8px; border-radius: 50%; background: #A78BFA"></span>Warehouses & logistics</span><span class="card" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0B1322; border: 1px solid #1C2A40; font: 500 16px/1 'Inter', sans-serif; color: #E6EDF7; box-shadow: none"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2DD4BF"></span>Construction sites</span><span class="card" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0B1322; border: 1px solid #1C2A40; font: 500 16px/1 'Inter', sans-serif; color: #E6EDF7; box-shadow: none"><span style="width: 8px; height: 8px; border-radius: 50%; background: #A78BFA"></span>Retail stores</span><span class="card" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0B1322; border: 1px solid #1C2A40; font: 500 16px/1 'Inter', sans-serif; color: #E6EDF7; box-shadow: none"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2DD4BF"></span>Offices</span><span class="card" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0B1322; border: 1px solid #1C2A40; font: 500 16px/1 'Inter', sans-serif; color: #E6EDF7; box-shadow: none"><span style="width: 8px; height: 8px; border-radius: 50%; background: #A78BFA"></span>Homes & estates</span><span class="card" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0B1322; border: 1px solid #1C2A40; font: 500 16px/1 'Inter', sans-serif; color: #E6EDF7; box-shadow: none"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2DD4BF"></span>Property management</span><span class="card" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0B1322; border: 1px solid #1C2A40; font: 500 16px/1 'Inter', sans-serif; color: #E6EDF7; box-shadow: none"><span style="width: 8px; height: 8px; border-radius: 50%; background: #A78BFA"></span>Farms & stables</span></div></div></section><section id="setup" style="padding: 128px 24px; background: #050912">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+<div class="rv" style="max-width: 760px; display: flex; flex-direction: column; gap: 18px"><p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: #2DD4BF">Getting started</p><h2 style="margin: 0; font: 700 clamp(34px, 5vw, 58px)/1.06 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #E6EDF7">From first call to fully watched.</h2><p style="margin: 0; font: 400 18px/1.65 'Inter', sans-serif; color: #9AAAC0">No big equipment purchase. If an old camera needs upgrading, we tell you — and only then.</p></div><div style="display: flex; flex-wrap: wrap; gap: 24px"><div class="rv" style="flex: 1 1 190px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid #1C2A40"><span style="font: 600 14px/1 'IBM Plex Mono', monospace; color: #2DD4BF">01</span><h3 style="margin: 0; font: 600 20px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">Review</h3><p style="margin: 0; font: 400 15px/1.55 'Inter', sans-serif; color: #9AAAC0">We check your cameras, recorder and internet connection.</p></div><div class="rv" style="flex: 1 1 190px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid #1C2A40"><span style="font: 600 14px/1 'IBM Plex Mono', monospace; color: #2DD4BF">02</span><h3 style="margin: 0; font: 600 20px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">Plan</h3><p style="margin: 0; font: 400 15px/1.55 'Inter', sans-serif; color: #9AAAC0">Together we set hours, alert zones and who to call.</p></div><div class="rv" style="flex: 1 1 190px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid #1C2A40"><span style="font: 600 14px/1 'IBM Plex Mono', monospace; color: #2DD4BF">03</span><h3 style="margin: 0; font: 600 20px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">Connect</h3><p style="margin: 0; font: 400 15px/1.55 'Inter', sans-serif; color: #9AAAC0">Cameras and alerts link securely to our control room.</p></div><div class="rv" style="flex: 1 1 190px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid #1C2A40"><span style="font: 600 14px/1 'IBM Plex Mono', monospace; color: #2DD4BF">04</span><h3 style="margin: 0; font: 600 20px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">Test</h3><p style="margin: 0; font: 400 15px/1.55 'Inter', sans-serif; color: #9AAAC0">We trigger test events and confirm every contact is reachable.</p></div><div class="rv" style="flex: 1 1 190px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid #2DD4BF"><span style="font: 600 14px/1 'IBM Plex Mono', monospace; color: #2DD4BF">05</span><h3 style="margin: 0; font: 600 20px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">Go live</h3><p style="margin: 0; font: 400 15px/1.55 'Inter', sans-serif; color: #9AAAC0">Monitoring starts, with reports on every alert handled.</p></div></div></div></section><section id="faq" style="padding: 128px 24px; background: #08101D">
+<div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<div class="rv" style="display: flex; flex-direction: column; gap: 18px"><p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: #2DD4BF">FAQ</p><h2 style="margin: 0; font: 700 clamp(34px, 5vw, 58px)/1.06 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #E6EDF7">Straight answers.</h2></div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div data-for="faqs" style="display: contents"></div>
+</div></div></section><section id="contact" style="padding: 128px 24px; background: #050912">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+<div class="rv" style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 20px"><div aria-hidden="true" style="position: relative; height: 300px; margin-bottom: 8px"><canvas data-ref="logoRef" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block"></canvas></div><p style="margin: 0; font: 600 13px/1.2 'IBM Plex Mono', monospace; letter-spacing: .2em; text-transform: uppercase; color: #2DD4BF">Free site assessment</p><h2 style="margin: 0; font: 700 clamp(34px, 5vw, 58px)/1.06 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #E6EDF7">Let’s look at your cameras together.</h2><p style="margin: 0; font: 400 18px/1.65 'Inter', sans-serif; color: #9AAAC0">Tell us about your site. We’ll check what you already have, suggest coverage hours and send a written quote — no obligation.</p>
+<div style="display: flex; flex-direction: column; gap: 14px; margin-top: 8px">
+<a href="mailto:abubakar@sopnotec.com" style="display: flex; align-items: center; gap: 12px; min-height: 44px; font: 500 17px/1.4 'Inter', sans-serif; color: #E6EDF7; text-decoration: none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path><path d="M22 7l-10 6L2 7"></path></svg>abubakar@sopnotec.com</a><span style="display: flex; align-items: center; gap: 12px; min-height: 44px; font: 500 17px/1.4 'Inter', sans-serif; color: #E6EDF7"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>[YOUR PHONE]</span><span style="display: flex; align-items: center; gap: 12px; min-height: 44px; font: 500 17px/1.4 'Inter', sans-serif; color: #E6EDF7"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18z"></path><path d="M12 7v5l3 2"></path></svg>Control room online 24/7</span>
+</div></div>
+<form id="lead-form" action="send.php" method="post" class="rv" aria-label="Request a free assessment" style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px; padding: 32px; border-radius: 16px; background: #0B1322; border: 1px solid #1C2A40; box-shadow: none">
+<div style="display: flex; flex-wrap: wrap; gap: 16px"><label for="f-name" style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 8px; font: 500 14px/1.3 'Inter', sans-serif; color: #9AAAC0">Your name<input id="f-name" name="name" type="text" required autocomplete="name" style="min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid #1C2A40; background: #050912; color: #E6EDF7; font-size: 16px"></label><label for="f-biz" style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 8px; font: 500 14px/1.3 'Inter', sans-serif; color: #9AAAC0">Business name<input id="f-biz" name="business" type="text" autocomplete="organization" style="min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid #1C2A40; background: #050912; color: #E6EDF7; font-size: 16px"></label></div><div style="display: flex; flex-wrap: wrap; gap: 16px"><label for="f-mail" style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 8px; font: 500 14px/1.3 'Inter', sans-serif; color: #9AAAC0">Email<input id="f-mail" name="email" type="email" required autocomplete="email" style="min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid #1C2A40; background: #050912; color: #E6EDF7; font-size: 16px"></label><label for="f-tel" style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 8px; font: 500 14px/1.3 'Inter', sans-serif; color: #9AAAC0">Phone<input id="f-tel" name="phone" type="tel" autocomplete="tel" style="min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid #1C2A40; background: #050912; color: #E6EDF7; font-size: 16px"></label></div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label for="f-type" style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 8px; font: 500 14px/1.3 'Inter', sans-serif; color: #9AAAC0">Type of site<select id="f-type" name="site_type" style="min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1px solid #1C2A40; background: #050912; color: #E6EDF7; font-size: 16px"><option>Retail store</option><option>Warehouse</option><option>Parking lot</option><option>Gas station</option><option>Construction site</option><option>Office</option><option>Home</option><option>Other</option></select></label>
+<label for="f-cams" style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 8px; font: 500 14px/1.3 'Inter', sans-serif; color: #9AAAC0">Number of cameras<input id="f-cams" name="cameras" type="number" min="1" style="min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid #1C2A40; background: #050912; color: #E6EDF7; font-size: 16px"></label>
+</div>
+<label for="f-msg" style="display: flex; flex-direction: column; gap: 8px; font: 500 14px/1.3 'Inter', sans-serif; color: #9AAAC0">What would you like us to watch?<textarea id="f-msg" name="message" rows="4" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #1C2A40; background: #050912; color: #E6EDF7; font-size: 16px; resize: vertical"></textarea></label>
+<div aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden"><label for="f-web">Website</label><input id="f-web" name="website" type="text" tabindex="-1" autocomplete="off"></div><button class="btn" type="submit" style="min-height: 52px; border: 0; border-radius: 999px; cursor: pointer; background: #2DD4BF; color: #03121A; font: 700 16px/1 'Inter', sans-serif">Request my free assessment</button><p id="lead-status" role="status" aria-live="polite" style="margin: 0; min-height: 22px; font: 500 15px/1.5 'Inter', sans-serif; color: #9AAAC0"></p>
+</form>
+</div></section>
+<footer style="padding: 48px 24px; background: #08101D; border-top: 1px solid #1C2A40">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
+<div style="display: flex; align-items: center; gap: 12px"><svg width="40" height="40" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="mfs" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2DD4BF"></stop><stop offset="1" stop-color="#8B5CF6"></stop></linearGradient><radialGradient id="mfe" cx=".36" cy=".3" r=".85"><stop offset="0" stop-color="#FFFFFF"></stop><stop offset=".3" stop-color="#5EEAD4"></stop><stop offset="1" stop-color="#6D28D9"></stop></radialGradient></defs><path d="M32 4 L56 13 V31 C56 46 45.5 56 32 60 C18.5 56 8 46 8 31 V13 Z" fill="none" stroke="url(#mfs)" stroke-width="4.5" stroke-linejoin="round"></path><g transform="rotate(-20 32 32)"><path d="M12 32 A20 7.5 0 0 1 52 32" fill="none" stroke="#8B5CF6" stroke-width="2.4" opacity=".4"></path></g><circle cx="32" cy="32" r="11" fill="url(#mfe)"></circle><circle cx="32" cy="32" r="4.8" fill="#140F2E"></circle><circle cx="34.6" cy="29.6" r="1.7" fill="#FFFFFF"></circle><g transform="rotate(-20 32 32)"><path d="M12 32 A20 7.5 0 0 0 52 32" fill="none" stroke="#8B5CF6" stroke-width="2.4" stroke-linecap="round"></path></g><circle cx="50.5" cy="25" r="2.8" fill="#2DD4BF"></circle></svg><span style="font: 500 14px/1.5 'Inter', sans-serif; color: #9AAAC0">SopnoTec CCTV Monitoring · a service of SopnoTec IT &amp; Finance</span></div>
+<span style="font: 500 14px/1.5 'IBM Plex Mono', monospace; color: #9AAAC0">cctv.sopnotec.com</span>
+</div></footer></div>
+<script>
+
+const E = (v) => String(v == null ? '' : v).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+let APP = null;
+function __render(c) {
+  const v = c.renderVals(); c.__v = v;
+  document.querySelectorAll('[data-t]').forEach((el) => { const x = String(v[el.dataset.t] == null ? '' : v[el.dataset.t]); if (el.textContent !== x) el.textContent = x; });
+  document.querySelectorAll('[data-style]').forEach((el) => { const x = el.dataset.style.replace(/\[\[(\w+)\]\]/g, (m, k) => (v[k] == null ? '' : v[k])); if (el.__s !== x) { el.__s = x; el.setAttribute('style', x); } });
+  document.querySelectorAll('[data-if]').forEach((el) => { const d = v[el.dataset.if] ? 'contents' : 'none'; if (el.style.display !== d) el.style.display = d; });
+  document.querySelectorAll('[data-for]').forEach((el) => { const k = el.dataset.for; const h = (v[k] || []).map((it, i) => TPL[k](it, i)).join(''); if (el.__h !== h) { el.__h = h; el.innerHTML = h; } });
+}
+class DCLogic {
+  constructor(props) { this.props = props || {}; this.state = {}; this.__q = false; }
+  setState(o) { Object.assign(this.state, typeof o === 'function' ? o(this.state) : o); if (!this.__q) { this.__q = true; requestAnimationFrame(() => { this.__q = false; __render(this); }); } }
+  forceUpdate() { __render(this); }
+}
+const TPL = {
+  "ph1": (it, i) => `<li style="display: flex; gap: 14px; padding: 12px 16px; border-left: 3px solid ${E(it.bc)}; border-radius: 0 12px 12px 0; background: rgba(5,9,18,.62); opacity: ${E(it.op)}; transition: opacity .4s ease, border-color .4s ease"><span style="font: 600 13px/1.5 'IBM Plex Mono', monospace; color: ${E(it.nc)}">${E(it.n)}</span><span style="display: flex; flex-direction: column; gap: 4px"><span style="font: 600 18px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">${E(it.t)}</span>${it.active ? `<span style="font: 400 15px/1.55 'Inter', sans-serif; color: #9AAAC0">${E(it.d)}</span>` : ''}</span></li>`,
+  "steps": (it, i) => `<button type="button" data-act="pick" data-i="${i}" aria-pressed="${E(it.pressed)}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 16px; border-radius: 12px; cursor: pointer; border: 1px solid ${E(it.bc)}; background: ${E(it.bg)}; color: ${E(it.fg)}; font: 600 15px/1 'Inter', sans-serif; transition: all .3s"><span style="font: 600 12px/1 'IBM Plex Mono', monospace; color: ${E(it.nc)}">${E(it.n)}</span>${E(it.t)}</button>`,
+  "ph2": (it, i) => `<li style="display: flex; gap: 14px; padding: 12px 16px; border-left: 3px solid ${E(it.bc)}; border-radius: 0 12px 12px 0; background: rgba(5,9,18,.62); opacity: ${E(it.op)}; transition: opacity .4s ease, border-color .4s ease"><span style="font: 600 13px/1.5 'IBM Plex Mono', monospace; color: ${E(it.nc)}">${E(it.n)}</span><span style="display: flex; flex-direction: column; gap: 4px"><span style="font: 600 18px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">${E(it.t)}</span>${it.active ? `<span style="font: 400 15px/1.55 'Inter', sans-serif; color: #9AAAC0">${E(it.d)}</span>` : ''}</span></li>`,
+  "ph3": (it, i) => `<li style="display: flex; gap: 14px; padding: 12px 16px; border-left: 3px solid ${E(it.bc)}; border-radius: 0 12px 12px 0; background: rgba(5,9,18,.62); opacity: ${E(it.op)}; transition: opacity .4s ease, border-color .4s ease"><span style="font: 600 13px/1.5 'IBM Plex Mono', monospace; color: ${E(it.nc)}">${E(it.n)}</span><span style="display: flex; flex-direction: column; gap: 4px"><span style="font: 600 18px/1.3 'Space Grotesk', sans-serif; color: #E6EDF7">${E(it.t)}</span>${it.active ? `<span style="font: 400 15px/1.55 'Inter', sans-serif; color: #9AAAC0">${E(it.d)}</span>` : ''}</span></li>`,
+  "hours": (it, i) => `<button type="button" data-act="pick" data-i="${i}" aria-pressed="${E(it.pressed)}" style="min-height: 44px; padding: 0 20px; border-radius: 999px; cursor: pointer; font: 600 15px/1 'Inter', sans-serif; border: 1px solid ${E(it.bc)}; background: ${E(it.bg)}; color: ${E(it.fg)}">${E(it.label)}</button>`,
+  "faqs": (it, i) => `
+<div style="border-radius: 16px; background: #0B1322; border: 1px solid ${E(it.bc)}; box-shadow: none">
+<button type="button" data-act="toggle" data-i="${i}" aria-expanded="${E(it.expanded)}" style="width: 100%; min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; background: none; border: 0; cursor: pointer; text-align: left; font: 600 18px/1.4 'Space Grotesk', sans-serif; color: #E6EDF7"><span>${E(it.q)}</span><span aria-hidden="true" style="font: 500 26px/1 'Inter', sans-serif; color: #2DD4BF">${E(it.sign)}</span></button>
+${it.open ? `<p style="margin: 0; padding: 0 24px 22px; font: 400 16px/1.65 'Inter', sans-serif; color: #9AAAC0">${E(it.a)}</p>` : ''}
+</div>
+`
+};
+
+class Component extends DCLogic {
+  constructor(...a) {
+    super(...a);
+    this.state = { step: 0, faq: 0, hours: 2, clock: '00:00:00', alert: -1, salert: -1, ph1: 0, ph2: 0, ph3: 0 };
+    this._cvs = {}; this._refs = {};
+    ['hero', 'c1', 'c2', 'c3', 'site', 'logo'].forEach((k) => { this._refs[k] = (el) => { if (el) this._cvs[k] = el; }; });
+    this._st = (el) => { this.stepsEl = el; };
+  }
+  componentDidMount() {
+    this._scroll = () => this._tick();
+    document.addEventListener('scroll', this._scroll, true);
+    window.addEventListener('scroll', this._scroll, { passive: true });
+    const f = (n) => String(n).padStart(2, '0');
+    const tick = () => { const d = new Date(); this.setState({ clock: f(d.getHours()) + ':' + f(d.getMinutes()) + ':' + f(d.getSeconds()) }); };
+    tick(); this._clk = setInterval(tick, 1000);
+    this._boot(0);
+  }
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this._scroll, true); window.removeEventListener('scroll', this._scroll);
+    clearInterval(this._clk); clearTimeout(this._bt); cancelAnimationFrame(this._raf);
+    if (this._io) this._io.disconnect(); if (this._pm) window.removeEventListener('pointermove', this._pm);
+    (this._S || []).forEach((o) => { if (o.r) o.r.dispose(); });
+  }
+  _boot(n) {
+    if (!window.THREE && n === 6 && !document.querySelector('script[data-three]')) { const sc = document.createElement('script'); sc.src = 'three.min.js'; sc.setAttribute('data-three', '1'); document.head.appendChild(sc); }
+    if (!window.THREE || !this._cvs.hero) { if (n < 150) this._bt = setTimeout(() => this._boot(n + 1), 120); return; }
+    try { this._engine(window.THREE); } catch (e) { console.warn('3D engine failed', e); }
+  }
+  _tick() {
+    const el = this.stepsEl; if (!el) return;
+    const r = el.getBoundingClientRect(); const vh = window.innerHeight || 800;
+    const p = (vh * 0.4 - r.top) / Math.max(1, r.height - vh * 0.7);
+    if (p < 0 || p > 1.05) return;
+    const s = Math.min(4, Math.floor(p * 5));
+    if (s !== this.state.step) this.setState({ step: s });
+  }
+  _ph(k, v) { if (this.state[k] !== v) { const o = {}; o[k] = v; this.setState(o); } }
+  renderVals() {
+    const s = this.state;
+    const steps = [
+      { n: '01', t: 'Detect', d: 'Motion inside a zone you marked — a fence line, a gate, a stockroom door — sends an instant alert from your camera to our control room.' },
+      { n: '02', t: 'Classify', d: 'AI analytics separate people and vehicles from wind, rain, animals and headlights, so operators only see events that matter.' },
+      { n: '03', t: 'Verify', d: 'A trained operator opens the live feed and nearby cameras and decides in seconds: false alarm, or real threat.' },
+      { n: '04', t: 'Respond', d: 'A live voice warning through your speakers, lights or siren — then a call to your guard, your manager or the police, following the call list you set.' },
+      { n: '05', t: 'Report', d: 'You receive the video clip and a written incident report, plus a daily summary of every alert we handled.' },
+    ].map((x, i) => Object.assign({}, x, { pick: () => this.setState({ step: i }), pressed: i === s.step ? 'true' : 'false',
+      bc: i === s.step ? '#2DD4BF' : '#1C2A40', bg: i === s.step ? '#0F1B2E' : 'transparent', fg: i === s.step ? '#E6EDF7' : '#9AAAC0', nc: i <= s.step ? '#2DD4BF' : '#9AAAC0' }));
+    const cur = steps[s.step];
+    const hrs = [
+      { label: 'Nights', d: 'Evening to morning, every day — ideal for shops, pharmacies and offices that sit empty overnight.' },
+      { label: 'Weekends & holidays', d: 'Full coverage while you are closed: Friday evening to Monday morning, plus public holidays.' },
+      { label: 'All after-hours', d: 'Every hour your business is closed — nights, weekends and holidays combined. Our most popular plan.' },
+      { label: '24/7', d: 'Round-the-clock live monitoring for high-value sites such as car lots, warehouses, construction yards and gas stations.' },
+    ];
+    const hours = hrs.map((h, i) => ({ label: h.label, pick: () => this.setState({ hours: i }), pressed: i === s.hours ? 'true' : 'false',
+      bc: i === s.hours ? '#2DD4BF' : '#1C2A40', bg: i === s.hours ? '#2DD4BF' : 'transparent', fg: i === s.hours ? '#03121A' : '#E6EDF7' }));
+    const qa = [
+      ['Do I need to buy new cameras?', 'Usually not. Most IP cameras and recorders from major brands can be connected. We review your system first and only recommend an upgrade when a camera genuinely can’t give operators a clear picture.'],
+      ['What happens if my internet goes down?', 'Your recorder keeps saving footage locally, and we’re alerted that the site went offline. For important sites we recommend a 4G backup line.'],
+      ['Can an operator physically stop an intruder?', 'No — a control room deters remotely with voice, lights and sirens, and calls your guard or the police. For large or high-value sites we’ll tell you honestly if you still need someone on site.'],
+      ['How is pricing worked out?', 'Monthly, per site or per camera, based on the hours you want covered. You get the exact figure in writing before anything starts.'],
+      ['How quickly can we go live?', 'Once your cameras pass the connection check and we’ve agreed your call list, we run a test night and then switch on monitoring.'],
+    ];
+    const faqs = qa.map((q, i) => ({ q: q[0], a: q[1], open: i === s.faq, sign: i === s.faq ? '−' : '+', expanded: i === s.faq ? 'true' : 'false',
+      bc: i === s.faq ? '#2DD4BF' : '#1C2A40', toggle: () => this.setState({ faq: s.faq === i ? -1 : i }) }));
+    const P = {
+      ph1: [['Motion in the dark', 'A figure crosses the lot at 2 a.m. The camera’s motion sensor fires an instant alert to our control room.'], ['AI identifies a person', 'Analytics lock onto the shape — a person, not a cat or a swaying branch — and track every step, joint by joint.'], ['Zone breach', 'The moment they step into the restricted zone by the staff door, the operator’s screen turns red.'], ['Live talk-down', 'Floodlights snap on and a live voice speaks through the speaker. Most intruders leave right here.']],
+      ph2: [['After-hours lockdown', 'As the last floor goes dark, monitoring takes over every entrance, stairwell and parking level.'], ['Perimeter watch', 'Rooftop and corner cameras sweep the plaza, loading bay and garage ramps in overlapping zones.'], ['Access-control alerts', 'A side door forced open at 11:48 p.m. is flagged instantly, and the nearest camera locks onto it.'], ['Virtual guard tours', 'Operators run scheduled camera patrols, checkpoint by checkpoint, and log every one in your report.']],
+      ph3: [['Perimeter breach', 'Someone climbs the yard fence. The PTZ camera swings onto them and starts tracking automatically.'], ['Threat recording', 'Every second is recorded and tagged, building an evidence-ready clip while it is still happening.'], ['Operator response', 'Yard lights flood on, the strobe fires and a live warning plays — while the police are called.'], ['Clip saved & reported', 'The incident clip and written report reach your inbox before you have even woken up.']],
+    };
+    const ph = (k) => P[k].map((x, i) => ({ n: '0' + (i + 1), t: x[0], d: x[1], active: i === s[k], op: i === s[k] ? '1' : '0.42', bc: i === s[k] ? '#2DD4BF' : 'rgba(255,255,255,0.14)', nc: i <= s[k] ? '#2DD4BF' : '#9AAAC0' }));
+    return {
+      heroRef: this._refs.hero, c1Ref: this._refs.c1, c2Ref: this._refs.c2, c3Ref: this._refs.c3, siteRef: this._refs.site, logoRef: this._refs.logo, stRef: this._st,
+      steps: steps, curN: cur.n, curT: cur.t, curD: cur.d, prog: ((s.step + 1) / 5 * 100) + '%',
+      hours: hours, hoursDesc: hrs[s.hours].d, faqs: faqs, clock: s.clock,
+      alertOn: s.alert >= 0, clear: s.alert < 0,
+      siteOn: s.salert >= 0, siteClear: s.salert < 0, siteCam: 'CAM 0' + (s.salert + 1), siteZone: ['ZONE A · BACK FENCE', 'ZONE B · PUMPS', 'ZONE C · LOT', 'ZONE D · STORE'][Math.max(0, s.salert)] || 'ZONE A',
+      ph1: ph('ph1'), ph2: ph('ph2'), ph3: ph('ph3'),
+      ph1Prog: ((s.ph1 + 1) * 25) + '%', ph2Prog: ((s.ph2 + 1) * 25) + '%', ph3Prog: ((s.ph3 + 1) * 25) + '%',
+    };
+  }
+  _kit(T) {
+    const K = {};
+    K.rnd = (a, b) => a + Math.random() * (b - a);
+    K.pick = (a) => a[Math.floor(Math.random() * a.length)];
+    K.clamp = (v, a, b) => Math.min(b == null ? 1 : b, Math.max(a == null ? 0 : a, v));
+    K.std = (c, ro, me, ex) => new T.MeshStandardMaterial(Object.assign({ color: c, roughness: ro == null ? 0.8 : ro, metalness: me || 0 }, ex || {}));
+    K.phys = (c, ro, ex) => new T.MeshPhysicalMaterial(Object.assign({ color: c, roughness: ro == null ? 0.3 : ro, clearcoat: 1, clearcoatRoughness: 0.1 }, ex || {}));
+    K.glow = (c, k) => new T.MeshStandardMaterial({ color: c, emissive: c, emissiveIntensity: k == null ? 1.5 : k });
+    K.flat = (c, o, add) => new T.MeshBasicMaterial({ color: c, transparent: o != null, opacity: o == null ? 1 : o, depthWrite: o == null, side: T.DoubleSide, blending: add ? T.AdditiveBlending : T.NormalBlending, toneMapped: false });
+    K.cnv = (w, h, draw) => { const c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'), w, h); const t = new T.CanvasTexture(c); t.encoding = T.sRGBEncoding; t.anisotropy = 4; return t; };
+    K.rep = (tex, rx, ry) => { const t = tex.clone(); t.wrapS = t.wrapT = T.RepeatWrapping; t.repeat.set(rx, ry); t.needsUpdate = true; return t; };
+    K.box = (w, h, d, m, x, y, z, par) => { const o = new T.Mesh(new T.BoxGeometry(w, h, d), m); o.position.set(x || 0, y || 0, z || 0); if (par) par.add(o); return o; };
+    K.cyl = (rt, rb, h, m, x, y, z, par, seg) => { const o = new T.Mesh(new T.CylinderGeometry(rt, rb, h, seg || 16), m); o.position.set(x || 0, y || 0, z || 0); if (par) par.add(o); return o; };
+    K.plane = (w, h, m, par) => { const o = new T.Mesh(new T.PlaneGeometry(w, h), m); if (par) par.add(o); return o; };
+    K.floor = (w, h, m, x, y, z, par) => { const o = K.plane(w, h, m, par); o.rotation.x = -Math.PI / 2; o.position.set(x || 0, y || 0, z || 0); return o; };
+    K.shadows = (g, cast, recv) => { g.traverse((o) => { if (o.isMesh) { o.castShadow = cast !== false; o.receiveShadow = !!recv; } }); return g; };
+    K.renderer = (cv, sh) => {
+      const r = new T.WebGLRenderer({ canvas: cv, antialias: true, alpha: true, powerPreference: 'high-performance' });
+      r.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75)); r.outputEncoding = T.sRGBEncoding; r.toneMapping = T.ACESFilmicToneMapping; r.toneMappingExposure = 1.15;
+      if (sh) { r.shadowMap.enabled = true; r.shadowMap.type = T.PCFSoftShadowMap; }
+      return r;
+    };
+    K.env = (r, base, L) => {
+      const pm = new T.PMREMGenerator(r); const es = new T.Scene();
+      es.add(new T.Mesh(new T.SphereGeometry(12, 32, 16), new T.MeshBasicMaterial({ color: base, side: T.BackSide })));
+      L.forEach((l) => { const m = new T.Mesh(new T.PlaneGeometry(l[5], l[6]), new T.MeshBasicMaterial({ color: new T.Color(l[0]).multiplyScalar(l[1]), side: T.DoubleSide })); m.position.set(l[2], l[3], l[4]); m.lookAt(0, 0, 0); es.add(m); });
+      const tex = pm.fromScene(es, 0.04).texture; pm.dispose(); return tex;
+    };
+    K.nightEnv = (r) => K.env(r, 0x0a1020, [[0xffffff, 2.2, 0, 8, 3, 8, 3], [0x2dd4bf, 3, -8, 1, 2, 2, 6], [0x8b5cf6, 3, 8, 1, -1, 2, 6], [0xffc37a, 1.5, 0, -2, 8, 6, 2]]);
+    K.sky = (stops) => K.cnv(2, 512, (g, w, h) => { const gr = g.createLinearGradient(0, 0, 0, h); stops.forEach((s) => gr.addColorStop(s[0], s[1])); g.fillStyle = gr; g.fillRect(0, 0, w, h); });
+    K.nightSky = () => K.sky([[0, '#02040a'], [0.5, '#081028'], [0.82, '#171a44'], [1, '#2a1f52']]);
+    K.stars = (n, R) => {
+      const p = new Float32Array(n * 3);
+      for (let i = 0; i < n; i++) { const th = Math.random() * Math.PI * 2, ph = 0.08 + Math.random() * 0.42 * Math.PI; p[i * 3] = R * Math.cos(th) * Math.cos(ph); p[i * 3 + 1] = R * Math.sin(ph); p[i * 3 + 2] = R * Math.sin(th) * Math.cos(ph); }
+      const g = new T.BufferGeometry(); g.setAttribute('position', new T.BufferAttribute(p, 3));
+      return new T.Points(g, new T.PointsMaterial({ color: 0xcfe0ff, size: 1.6, sizeAttenuation: false, transparent: true, opacity: 0.75, fog: false }));
+    };
+    K.rr = (g, x, y, w, h, r) => { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); };
+
+    // ---------- shared textures ----------
+    K.poolTex = K.cnv(128, 128, (g) => { const gr = g.createRadialGradient(64, 64, 0, 64, 64, 64); gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(0.35, 'rgba(255,255,255,0.4)'); gr.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = gr; g.fillRect(0, 0, 128, 128); });
+    K.pool = (c, sx, sz, o) => { const m = new T.MeshBasicMaterial({ map: K.poolTex, color: c, transparent: true, opacity: o == null ? 0.5 : o, depthWrite: false, blending: T.AdditiveBlending, toneMapped: false }); const p = new T.Mesh(new T.PlaneGeometry(sx, sz || sx), m); p.rotation.x = -Math.PI / 2; return p; };
+    K.asphaltTex = K.cnv(256, 256, (g, W, H) => { g.fillStyle = '#16191f'; g.fillRect(0, 0, W, H); for (let i = 0; i < 3200; i++) { const v = Math.floor(K.rnd(16, 50)); g.fillStyle = 'rgb(' + v + ',' + v + ',' + (v + 5) + ')'; g.fillRect(Math.random() * W, Math.random() * H, 1.6, 1.6); } for (let i = 0; i < 6; i++) { g.strokeStyle = 'rgba(8,9,12,0.55)'; g.lineWidth = 1.2; g.beginPath(); let x = Math.random() * W, y = Math.random() * H; g.moveTo(x, y); for (let k = 0; k < 6; k++) { x += K.rnd(-30, 30); y += K.rnd(-30, 30); g.lineTo(x, y); } g.stroke(); } });
+    K.asphalt = (w, d, s) => { const m = new T.Mesh(new T.PlaneGeometry(w, d), K.std(0xffffff, 0.92, 0, { map: K.rep(K.asphaltTex, w / (s || 6), d / (s || 6)) })); m.rotation.x = -Math.PI / 2; m.receiveShadow = true; return m; };
+    K.concreteTex = K.cnv(256, 256, (g, W, H) => { g.fillStyle = '#5b6068'; g.fillRect(0, 0, W, H); for (let i = 0; i < 2400; i++) { const v = Math.floor(K.rnd(80, 110)); g.fillStyle = 'rgba(' + v + ',' + v + ',' + (v + 4) + ',0.5)'; g.fillRect(Math.random() * W, Math.random() * H, 2, 2); } g.fillStyle = 'rgba(30,32,36,0.8)'; g.fillRect(0, 0, W, 2); g.fillRect(0, 0, 2, H); });
+    K.brickTex = K.cnv(256, 256, (g, W, H) => { g.fillStyle = '#3d2c27'; g.fillRect(0, 0, W, H); const bh = 16, bw = 48; for (let y = 0; y < H / bh; y++) for (let x = -1; x < W / bw + 1; x++) { const v = K.rnd(0.72, 1.1); g.fillStyle = 'rgb(' + Math.floor(128 * v) + ',' + Math.floor(64 * v) + ',' + Math.floor(50 * v) + ')'; g.fillRect(x * bw + (y % 2) * bw / 2 + 2, y * bh + 2, bw - 4, bh - 4); } });
+    K.tiltTex = K.cnv(512, 256, (g, W, H) => { g.fillStyle = '#9ea3aa'; g.fillRect(0, 0, W, H); for (let i = 0; i < 4000; i++) { const v = Math.floor(K.rnd(140, 175)); g.fillStyle = 'rgba(' + v + ',' + v + ',' + (v + 3) + ',0.45)'; g.fillRect(Math.random() * W, Math.random() * H, 2, 2); } g.fillStyle = '#6b7079'; for (let x = 0; x < W; x += 64) g.fillRect(x, 0, 3, H); g.fillStyle = '#c4c8ce'; g.fillRect(0, 22, W, 10); g.fillStyle = 'rgba(40,44,50,0.25)'; for (let x = 0; x < W; x += 64) { const gr = g.createLinearGradient(0, 120, 0, H); gr.addColorStop(0, 'rgba(0,0,0,0)'); gr.addColorStop(1, 'rgba(0,0,0,0.18)'); g.fillStyle = gr; g.fillRect(x + 3, 120, 61, H - 120); } });
+    K.rollTex = K.cnv(64, 128, (g, W, H) => { g.fillStyle = '#c9ccd1'; g.fillRect(0, 0, W, H); g.fillStyle = '#9aa0a8'; for (let y = 0; y < H; y += 8) g.fillRect(0, y, W, 2); g.fillStyle = '#3f444c'; g.fillRect(0, H - 10, W, 10); });
+    K.fenceTex = K.cnv(128, 128, (g) => { g.clearRect(0, 0, 128, 128); g.strokeStyle = 'rgba(190,198,210,0.9)'; g.lineWidth = 2.2; for (let i = -128; i < 256; i += 16) { g.beginPath(); g.moveTo(i, 0); g.lineTo(i + 128, 128); g.stroke(); g.beginPath(); g.moveTo(i + 128, 0); g.lineTo(i, 128); g.stroke(); } });
+    K.trailerTex = K.cnv(512, 128, (g, W, H) => { g.fillStyle = '#eef1f5'; g.fillRect(0, 0, W, H); g.fillStyle = '#c3c8cf'; for (let x = 6; x < W; x += 14) g.fillRect(x, 0, 2, H); g.fillStyle = '#8a9099'; g.fillRect(0, H - 6, W, 6); g.fillRect(0, 0, W, 4); });
+    K.signTex = (txt, bg, fg, w, h, font) => K.cnv(w || 512, h || 128, (g, W, H) => { g.fillStyle = bg; g.fillRect(0, 0, W, H); g.fillStyle = fg; let fs = Math.round(H * 0.56); g.font = '700 ' + fs + 'px Arial, Helvetica, sans-serif'; while (g.measureText(txt).width > W * 0.88 && fs > 10) { fs -= 2; g.font = '700 ' + fs + 'px Arial, Helvetica, sans-serif'; } g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(txt, W / 2, H / 2 + 2); });
+    K.signMat = (tex, k) => new T.MeshStandardMaterial({ map: tex, emissiveMap: tex, emissive: 0xffffff, emissiveIntensity: k == null ? 0.9 : k, roughness: 0.6 });
+    K.flagTex = K.cnv(380, 200, (g, W, H) => {
+      const sh = H / 13; for (let i = 0; i < 13; i++) { g.fillStyle = i % 2 ? '#ffffff' : '#b31942'; g.fillRect(0, i * sh, W, sh + 1); }
+      const cw = W * 0.4, ch = sh * 7; g.fillStyle = '#0a3161'; g.fillRect(0, 0, cw, ch); g.fillStyle = '#ffffff';
+      const star = (cx, cy, r) => { g.beginPath(); for (let k = 0; k < 10; k++) { const rr = k % 2 ? r * 0.4 : r; const a = -Math.PI / 2 + k * Math.PI / 5; g.lineTo(cx + Math.cos(a) * rr, cy + Math.sin(a) * rr); } g.closePath(); g.fill(); };
+      for (let row = 0; row < 9; row++) { const n = row % 2 ? 5 : 6; for (let c = 0; c < n; c++) star(cw / 12 * (row % 2 ? 2 + c * 2 : 1 + c * 2), ch / 10 * (row + 1), sh * 0.32); }
+    });
+
+    // ---------- labels / AI overlays ----------
+    K.label = (txt, col, scale) => {
+      const c = document.createElement('canvas'); c.width = 512; c.height = 112; const g = c.getContext('2d');
+      const tex = new T.CanvasTexture(c); tex.encoding = T.sRGBEncoding;
+      const sp = new T.Sprite(new T.SpriteMaterial({ map: tex, transparent: true, depthTest: false, depthWrite: false, toneMapped: false }));
+      sp.renderOrder = 12; const s = scale || 1; sp.scale.set(2.6 * s, 0.57 * s, 1);
+      sp.set = (t, cl) => {
+        if (sp._t === t && sp._c === cl) return; sp._t = t; sp._c = cl;
+        g.clearRect(0, 0, 512, 112); g.fillStyle = 'rgba(5,9,18,0.84)'; K.rr(g, 4, 8, 504, 96, 20); g.fill();
+        g.strokeStyle = cl; g.lineWidth = 4; K.rr(g, 4, 8, 504, 96, 20); g.stroke();
+        g.fillStyle = cl; g.beginPath(); g.arc(44, 56, 11, 0, Math.PI * 2); g.fill();
+        let fs = 42; g.font = '600 ' + fs + 'px "IBM Plex Mono", Menlo, Consolas, monospace';
+        while (g.measureText(t).width > 410 && fs > 18) { fs -= 2; g.font = '600 ' + fs + 'px "IBM Plex Mono", Menlo, Consolas, monospace'; }
+        g.fillStyle = '#F4F7FB'; g.textBaseline = 'middle'; g.fillText(t, 72, 58); tex.needsUpdate = true;
+      };
+      sp.set(txt, col || '#2DD4BF'); return sp;
+    };
+    K.brackets = (w, h, d, col) => {
+      const G = new T.Group(); const m = new T.MeshBasicMaterial({ color: col || 0x2dd4bf, transparent: true, opacity: 1, depthTest: false, depthWrite: false, toneMapped: false });
+      const c = Math.min(w, h, d) * 0.38, t = Math.max(0.03, Math.min(w, h, d) * 0.035);
+      [-1, 1].forEach((sx) => [-1, 1].forEach((sy) => [-1, 1].forEach((sz) => {
+        const x = sx * w / 2, y = sy * h / 2, z = sz * d / 2;
+        K.box(c, t, t, m, x - sx * c / 2, y, z, G); K.box(t, c, t, m, x, y - sy * c / 2, z, G); K.box(t, t, c, m, x, y, z - sz * c / 2, G);
+      })));
+      G.children.forEach((o) => { o.renderOrder = 11; }); G.userData.m = m; return G;
+    };
+    K.skeleton = (p, col) => {
+      const J = p.joints(); const pairs = [[0, 1], [0, 3], [1, 2], [3, 4], [1, 5], [3, 7], [5, 7], [5, 6], [7, 8]];
+      const pos = new Float32Array(pairs.length * 6); const g = new T.BufferGeometry(); g.setAttribute('position', new T.BufferAttribute(pos, 3));
+      const mat = new T.LineBasicMaterial({ color: col || 0x5eead4, transparent: true, opacity: 0, depthTest: false });
+      const lines = new T.LineSegments(g, mat); lines.renderOrder = 11; lines.frustumCulled = false;
+      const dm = new T.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0, depthTest: false, toneMapped: false });
+      const dots = J.map(() => { const d = new T.Mesh(new T.SphereGeometry(0.05, 8, 6), dm); d.renderOrder = 12; return d; });
+      const W = J.map(() => new T.Vector3());
+      return { lines: lines, dots: dots, mat: mat, dm: dm, add: (sc) => { sc.add(lines); dots.forEach((d) => sc.add(d)); },
+        update: () => { J.forEach((j, i) => { j.getWorldPosition(W[i]); dots[i].position.copy(W[i]); }); pairs.forEach((q, i) => { W[q[0]].toArray(pos, i * 6); W[q[1]].toArray(pos, i * 6 + 3); }); g.attributes.position.needsUpdate = true; },
+        alpha: (a) => { mat.opacity = a; dm.opacity = a; } };
+    };
+    K.ripples = (n, col, par) => { const R = []; for (let i = 0; i < n; i++) { const m = new T.Mesh(new T.RingGeometry(0.48, 0.56, 48), K.flat(col, 0, true)); m.rotation.x = -Math.PI / 2; par.add(m); R.push(m); } return { set: (x, z, t, a, sz) => { R.forEach((m, i) => { const k = (t * 0.8 + i / n) % 1; m.position.set(x, 0.05, z); m.scale.setScalar(0.6 + k * (sz || 3)); m.material.opacity = a * (1 - k); }); } }; };
+    K.waves = (n, col, par) => { const R = []; for (let i = 0; i < n; i++) { const m = new T.Mesh(new T.TorusGeometry(0.5, 0.035, 8, 56), K.flat(col, 0, true)); par.add(m); R.push(m); } return { set: (pos, dir, t, a) => { R.forEach((m, i) => { const k = (t * 0.9 + i / n) % 1; m.position.copy(pos).addScaledVector(dir, k * 5); m.lookAt(m.position.x + dir.x, m.position.y + dir.y, m.position.z + dir.z); m.scale.setScalar(0.5 + k * 3.2); m.material.opacity = a * (1 - k); }); } }; };
+    K.coneMat = (col) => new T.ShaderMaterial({ transparent: true, depthWrite: false, side: T.DoubleSide, blending: T.AdditiveBlending,
+      uniforms: { uT: { value: 0 }, uO: { value: 1 }, uC: { value: new T.Color(col || 0x2dd4bf) } },
+      vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }',
+      fragmentShader: 'uniform float uT; uniform float uO; uniform vec3 uC; varying vec2 vUv; void main(){ float a = pow(vUv.y, 1.6) * 0.3; float f = fract(vUv.y * 14.0 - uT * 0.9); a += smoothstep(0.0, 0.06, f) * (1.0 - smoothstep(0.06, 0.14, f)) * 0.12 * vUv.y; gl_FragColor = vec4(uC, a * uO); }' });
+
+    // ---------- CCTV bullet camera ----------
+    K.bullet = (L, R, plate) => {
+      const shell = K.phys(0xeef2f8, 0.3, { metalness: 0.15 }), dark = K.phys(0x111723, 0.35, { metalness: 0.7, clearcoat: 0.5 }), glass = K.phys(0x020308, 0.02, { metalness: 0.2 });
+      const rig = new T.Group();
+      if (plate !== false) K.box(0.95, 1.35, 0.2, dark, 0, 0.9, -1.7, rig);
+      const armG = new T.CylinderGeometry(0.09, 0.12, 1.3, 20); armG.rotateX(Math.PI / 2); const arm = new T.Mesh(armG, shell); arm.position.set(0, 0.9, -1.0); rig.add(arm);
+      const head = new T.Group(); head.rotation.order = 'YXZ'; head.position.set(0, 0.9, -0.35); rig.add(head);
+      head.add(new T.Mesh(new T.SphereGeometry(0.22, 24, 12), dark));
+      const body = new T.Group(); body.position.set(0, 0.5, 0); head.add(body);
+      const bg = new T.CylinderGeometry(0.42, 0.42, 2.3, 40); bg.rotateX(Math.PI / 2); const bm = new T.Mesh(bg, shell); bm.position.z = 0.65; body.add(bm);
+      const hg = new T.CylinderGeometry(0.53, 0.53, 2.75, 40, 1, true, Math.PI / 2, Math.PI); hg.rotateX(Math.PI / 2);
+      const hood = new T.Mesh(hg, K.phys(0xf8fafc, 0.25, { side: T.DoubleSide })); hood.position.z = 0.8; body.add(hood);
+      const zg = new T.CylinderGeometry(0.44, 0.44, 0.14, 40); zg.rotateX(Math.PI / 2); const bez = new T.Mesh(zg, dark); bez.position.z = 1.82; body.add(bez);
+      const lens = new T.Mesh(new T.SphereGeometry(0.31, 40, 24), glass); lens.scale.set(1, 1, 0.45); lens.position.z = 1.88; body.add(lens);
+      const ring = new T.Mesh(new T.TorusGeometry(0.345, 0.03, 12, 64), K.glow(0x2dd4bf, 2.2)); ring.position.z = 1.9; body.add(ring);
+      const iris = new T.Mesh(new T.CircleGeometry(0.11, 32), new T.MeshBasicMaterial({ color: 0xa78bfa, toneMapped: false })); iris.position.z = 2.03; body.add(iris);
+      for (let i = 0; i < 8; i++) { const a = i / 8 * Math.PI * 2; const m = new T.Mesh(new T.SphereGeometry(0.028, 10, 6), K.glow(0xff2d55, 0.6)); m.position.set(Math.cos(a) * 0.395, Math.sin(a) * 0.395, 1.9); body.add(m); }
+      const tally = new T.Mesh(new T.SphereGeometry(0.05, 12, 8), K.glow(0xff2d55, 3)); tally.position.set(0.25, 0.42, -0.35); body.add(tally);
+      let cone = null, coneM = null;
+      if (L) { const cg = new T.ConeGeometry(R, L, 56, 1, true); cg.translate(0, -L / 2, 0); cg.rotateX(-Math.PI / 2); coneM = K.coneMat(); cone = new T.Mesh(cg, coneM); cone.position.z = 1.95; body.add(cone); }
+      const o = { rig: rig, head: head, body: body, cone: cone, coneM: coneM, tally: tally, L: L, R: R, half: L ? Math.atan(R / L) : 0, ring: ring };
+      const v = new T.Vector3(), f = new T.Vector3(), tl = new T.Vector3();
+      o.lens = (out) => o.body.localToWorld(out.set(0, 0, 1.95));
+      o.fwd = (out) => out.set(0, 0, 1).transformDirection(o.body.matrixWorld);
+      o.sees = (p, maxD) => { o.lens(v); o.fwd(f); tl.copy(p).sub(v); const d = tl.length(); return d < maxD && tl.normalize().angleTo(f) < o.half * 1.05; };
+      o.aimAt = (p, k) => { tl.copy(p); rig.worldToLocal(tl); tl.sub(head.position); tl.y -= 0.5; const yaw = Math.atan2(tl.x, tl.z), pitch = Math.atan2(-tl.y, Math.hypot(tl.x, tl.z)); head.rotation.y += (yaw - head.rotation.y) * k; head.rotation.x += (pitch - head.rotation.x) * k; };
+      return o;
+    };
+
+    // ---------- people ----------
+    K.person = (shirt, skinC) => {
+      const G = new T.Group(); const cloth = K.std(shirt == null ? 0x23262e : shirt, 0.85), skin = K.std(skinC || 0x9c7457, 0.7), pants = K.std(0x1b2230, 0.9), shoe = K.std(0x0b0d10, 0.7);
+      const body = new T.Group(); G.add(body);
+      const torso = new T.Mesh(new T.CapsuleGeometry(0.2, 0.42, 4, 12), cloth); torso.position.y = 1.22; torso.scale.z = 0.72; body.add(torso);
+      const head = new T.Group(); head.position.y = 1.66; body.add(head);
+      head.add(new T.Mesh(new T.SphereGeometry(0.12, 16, 12), skin));
+      const hood = new T.Mesh(new T.SphereGeometry(0.138, 16, 12, Math.PI * 0.15, Math.PI * 1.7), cloth); hood.position.x = -0.02; head.add(hood);
+      const limb = (r, len, mat, x, y, z) => { const p = new T.Group(); p.position.set(x, y, z); body.add(p); const m = new T.Mesh(new T.CapsuleGeometry(r, len, 4, 10), mat); m.position.y = -len / 2 - r * 0.6; p.add(m); const end = new T.Object3D(); end.position.y = -len - r * 1.2; p.add(end); return { p: p, end: end }; };
+      const aL = limb(0.06, 0.5, cloth, 0, 1.44, 0.27), aR = limb(0.06, 0.5, cloth, 0, 1.44, -0.27);
+      const lL = limb(0.085, 0.64, pants, 0, 0.94, 0.11), lR = limb(0.085, 0.64, pants, 0, 0.94, -0.11);
+      [lL, lR].forEach((l) => { const s = new T.Mesh(new T.BoxGeometry(0.27, 0.09, 0.12), shoe); s.position.set(0.06, -0.86, 0); l.p.add(s); });
+      G.userData = { body: body, head: head, aL: aL, aR: aR, lL: lL, lR: lR };
+      G.walk = (ph, amp, run) => { const a = amp == null ? 0.5 : amp; const s = Math.sin(ph); lL.p.rotation.z = s * a; lR.p.rotation.z = -s * a; aL.p.rotation.z = -s * a * 0.9; aR.p.rotation.z = s * a * 0.9; aL.p.rotation.x = 0; aR.p.rotation.x = 0; body.position.y = Math.abs(Math.cos(ph)) * 0.04 * (run ? 2 : 1); body.rotation.z = run ? -0.22 : -0.04; head.rotation.z = 0; };
+      G.reach = (k) => { aL.p.rotation.z = 2.6 * k; aR.p.rotation.z = 2.4 * k; aL.p.rotation.x = -0.15; aR.p.rotation.x = 0.15; lL.p.rotation.z = 0.5 * k; lR.p.rotation.z = -0.2 * k; body.rotation.z = 0; };
+      G.lookUp = (k) => { head.rotation.z = 0.45 * k; };
+      G.joints = () => [head, aL.p, aL.end, aR.p, aR.end, lL.p, lL.end, lR.p, lR.end];
+      G.face = (dx, dz) => { if (Math.abs(dx) + Math.abs(dz) > 1e-5) G.rotation.y = Math.atan2(-dz, dx); };
+      return G;
+    };
+
+    // ---------- vehicles ----------
+    const carCols = [0xe5e7eb, 0x1f2937, 0x9ca3af, 0x7f1d1d, 0x1e3a8a, 0x0f172a, 0xf8fafc, 0x334155, 0xb91c1c, 0x475569, 0x0f766e];
+    K.car = (type, color) => {
+      const G = new T.Group(); const paint = K.phys(color == null ? K.pick(carCols) : color, 0.32, { metalness: 0.55 });
+      const glass = K.std(0x070b12, 0.08, 0.9), tire = K.std(0x0a0a0a, 0.9), hl = K.flat(0xfff6dd), tl = K.flat(0xff2a3a);
+      let L = 2.3; const W = 0.98;
+      if (type === 'pickup') {
+        L = 2.75; K.box(L, 0.5, W, paint, 0, 0.5, 0, G);
+        K.box(0.95, 0.46, W * 0.94, glass, 0.2, 0.98, 0, G); K.box(0.97, 0.06, W * 0.96, paint, 0.2, 1.22, 0, G);
+        K.box(1.1, 0.3, 0.06, paint, -0.8, 0.9, W / 2 - 0.03, G); K.box(1.1, 0.3, 0.06, paint, -0.8, 0.9, -W / 2 + 0.03, G); K.box(0.06, 0.3, W, paint, -L / 2 + 0.03, 0.9, 0, G);
+      } else if (type === 'suv') {
+        L = 2.45; K.box(L, 0.58, W * 1.03, paint, 0, 0.52, 0, G); K.box(1.62, 0.5, W * 0.95, glass, -0.18, 1.05, 0, G); K.box(1.64, 0.06, W, paint, -0.18, 1.32, 0, G);
+      } else {
+        K.box(L, 0.46, W, paint, 0, 0.45, 0, G); K.box(1.15, 0.4, W * 0.9, glass, -0.08, 0.88, 0, G); K.box(1.0, 0.05, W * 0.86, paint, -0.12, 1.1, 0, G);
+      }
+      [[1, 1], [1, -1], [-1, 1], [-1, -1]].forEach((q) => { const wg = new T.CylinderGeometry(0.19, 0.19, 0.18, 16); wg.rotateX(Math.PI / 2); const wm = new T.Mesh(wg, tire); wm.position.set(q[0] * L * 0.32, 0.19, q[1] * (W / 2 - 0.03)); G.add(wm); });
+      [-1, 1].forEach((s) => { K.box(0.04, 0.1, 0.22, hl, L / 2 + 0.01, 0.56, s * (W / 2 - 0.18), G); K.box(0.04, 0.1, 0.24, tl, -L / 2 - 0.01, 0.58, s * (W / 2 - 0.18), G); });
+      G.userData.L = L; G.scale.setScalar(1.9); return G;
+    };
+    K.trailer = (len) => {
+      const G = new T.Group(); const L = len || 16; const trM = K.std(0xffffff, 0.6, 0.15, { map: K.trailerTex }); const tire = K.std(0x0a0a0a, 0.9), steel = K.std(0x3b4048, 0.6, 0.6);
+      K.box(L, 2.9, 2.6, [trM, K.std(0xd5d9de, 0.6), K.std(0xe8ebef, 0.6), steel, trM, trM], -L / 2, 2.75, 0, G);
+      K.box(L * 0.9, 0.25, 2.2, steel, -L / 2, 1.18, 0, G);
+      [-L + 1.6, -L + 2.8].forEach((x) => [-1, 1].forEach((s) => { const wg = new T.CylinderGeometry(0.52, 0.52, 0.5, 18); wg.rotateX(Math.PI / 2); const w = new T.Mesh(wg, tire); w.position.set(x, 0.52, s * 0.95); G.add(w); }));
+      [-1, 1].forEach((s) => K.box(0.12, 1.1, 0.12, steel, -3.2, 0.6, s * 0.9, G));
+      for (let x = -L + 0.4; x < -0.2; x += 3.2) [-1, 1].forEach((s) => K.box(0.12, 0.06, 0.05, K.flat(0xfbbf24), x, 4.18, s * 1.31, G));
+      K.box(0.05, 0.12, 0.3, K.flat(0xff2a3a), -L - 0.02, 1.4, 0.95, G); K.box(0.05, 0.12, 0.3, K.flat(0xff2a3a), -L - 0.02, 1.4, -0.95, G);
+      return G;
+    };
+    K.tractor = (col) => {
+      const G = new T.Group(); const paint = K.phys(col || K.pick([0xb91c1c, 0x1e3a8a, 0xf8fafc, 0x111827, 0x15803d]), 0.3, { metalness: 0.5 }); const chrome = K.std(0xd1d5db, 0.15, 1), tire = K.std(0x0a0a0a, 0.9), glass = K.std(0x070b12, 0.08, 0.9);
+      K.box(2.3, 1.3, 2.35, paint, 2.75, 1.45, 0, G); K.box(2.4, 2.6, 2.5, paint, 0.6, 2.25, 0, G); K.box(1.2, 2.0, 2.5, paint, -1.2, 2.0, 0, G);
+      K.box(0.06, 0.9, 2.2, glass, 1.82, 2.85, 0, G); K.box(0.12, 1.0, 1.3, chrome, 3.92, 1.4, 0, G); K.box(0.35, 0.3, 2.6, chrome, 4.0, 0.7, 0, G);
+      [-1, 1].forEach((s) => { K.cyl(0.09, 0.09, 2.8, chrome, -0.65, 3.4, s * 1.18, G, 10); K.box(0.05, 0.16, 0.35, K.flat(0xfff6dd), 3.92, 1.6, s * 0.95, G); });
+      [3.0, -0.6, -1.8].forEach((x) => [-1, 1].forEach((s) => { const wg = new T.CylinderGeometry(0.52, 0.52, 0.5, 18); wg.rotateX(Math.PI / 2); const w = new T.Mesh(wg, tire); w.position.set(x, 0.52, s * 1.0); G.add(w); }));
+      return G;
+    };
+
+    // ---------- street furniture ----------
+    K.streetlight = (h, arm, warm, two) => {
+      const G = new T.Group(); const pole = K.std(0x5b6472, 0.5, 0.6); K.cyl(0.1, 0.15, h, pole, 0, h / 2, 0, G, 10);
+      const pools = [];
+      (two ? [1, -1] : [1]).forEach((s) => {
+        K.box(arm, 0.1, 0.1, pole, s * arm / 2, h - 0.1, 0, G); K.box(0.9, 0.2, 0.42, pole, s * arm, h - 0.16, 0, G);
+        const lens = new T.Mesh(new T.PlaneGeometry(0.75, 0.32), K.flat(warm ? 0xffd8a0 : 0xeaf4ff)); lens.rotation.x = Math.PI / 2; lens.position.set(s * arm, h - 0.27, 0); G.add(lens);
+        const pl = K.pool(warm ? 0xffc37a : 0xdbeafe, h * 1.5, h * 1.5, 0.4); pl.position.set(s * arm, 0.05, 0); G.add(pl); pools.push(pl);
+      });
+      G.userData.pools = pools; return G;
+    };
+    K.tree = (s) => { const G = new T.Group(); K.cyl(0.12 * s, 0.18 * s, 1.6 * s, K.std(0x3b2f26, 0.9), 0, 0.8 * s, 0, G, 7); const fm = new T.MeshStandardMaterial({ color: 0x1d4a3c, roughness: 0.9, flatShading: true }); [[0, 2.3, 0, 1.15], [0.55, 1.85, 0.3, 0.8], [-0.5, 1.95, -0.25, 0.85], [0.1, 2.95, -0.1, 0.75]].forEach((q) => { const m = new T.Mesh(new T.IcosahedronGeometry(q[3] * s, 0), fm); m.position.set(q[0] * s, q[1] * s, q[2] * s); G.add(m); }); return G; };
+    K.fence = (len, h) => {
+      const G = new T.Group(); const m = new T.MeshStandardMaterial({ map: K.rep(K.fenceTex, len / 1.3, h / 1.3), transparent: true, alphaTest: 0.25, side: T.DoubleSide, metalness: 0.6, roughness: 0.4 });
+      const p = new T.Mesh(new T.PlaneGeometry(len, h), m); p.position.y = h / 2; G.add(p);
+      const post = K.std(0x8b95a5, 0.4, 0.7); for (let x = -len / 2; x <= len / 2 + 0.01; x += 3) K.cyl(0.05, 0.05, h + 0.35, post, x, (h + 0.35) / 2, 0, G, 8);
+      const rail = K.cyl(0.04, 0.04, len, post, 0, h, 0, G, 6); rail.rotation.z = Math.PI / 2;
+      const wire = K.cyl(0.015, 0.015, len, K.std(0xaab3c0, 0.3, 0.8), 0, h + 0.3, 0.12, G, 4); wire.rotation.z = Math.PI / 2;
+      return G;
+    };
+    K.stripe = (w, d, c, x, z, par, ry) => { const m = K.floor(w, d, K.std(c, 0.6, 0, { emissive: c, emissiveIntensity: 0.14 }), x, 0.025, z, par); if (ry) m.rotation.z = ry; return m; };
+
+    // ---------- US buildings ----------
+    K.facade = (o) => K.cnv(o.W || 256, o.H || 512, (g, W, H) => {
+      g.fillStyle = o.wall; g.fillRect(0, 0, W, H); const cw = W / o.cols, rh = H / o.rows;
+      for (let y = 0; y < o.rows; y++) { const fl = Math.random() < (o.fl == null ? 0.85 : o.fl);
+        for (let x = 0; x < o.cols; x++) { const lit = fl && Math.random() < o.lit; g.fillStyle = lit ? K.pick(o.lights || ['#ffd27a', '#ffe2a6', '#fff1d1', '#cfe6ff']) : o.glass; g.fillRect(x * cw + cw * o.mx, y * rh + rh * o.my, cw * (1 - 2 * o.mx), rh * (1 - 2 * o.my)); } }
+      if (o.mull) { g.fillStyle = o.mull; for (let x = 0; x <= o.cols; x++) g.fillRect(x * cw - 1, 0, 2, H); }
+    });
+    const roofM = K.std(0x232a36, 0.9);
+    K.towerMats = [];
+    for (let i = 0; i < 6; i++) { const tx = K.facade({ cols: 8, rows: 24, wall: K.pick(['#161c27', '#1a1f2b', '#1d2330', '#141a24', '#22252c']), glass: '#0a0e16', lit: K.rnd(0.18, 0.45), mx: 0.16, my: 0.2 }); K.towerMats.push(new T.MeshStandardMaterial({ map: tx, emissiveMap: tx, emissive: 0xffffff, emissiveIntensity: 0.95, roughness: 0.6, metalness: 0.25 })); }
+    K.waterTower = (G, x, y, z, s) => { const wood = K.std(0x5b4636, 0.9), leg = K.std(0x3a3f48, 0.6, 0.6); for (let i = 0; i < 4; i++) { const a = i * Math.PI / 2 + Math.PI / 4; K.cyl(0.06 * s, 0.06 * s, 1.6 * s, leg, x + Math.cos(a) * 0.6 * s, y + 0.8 * s, z + Math.sin(a) * 0.6 * s, G, 6); } K.cyl(0.78 * s, 0.78 * s, 1.5 * s, wood, x, y + 2.35 * s, z, G, 18); const cn = new T.Mesh(new T.ConeGeometry(0.86 * s, 0.7 * s, 18), wood); cn.position.set(x, y + 3.45 * s, z); G.add(cn); };
+    K.tower = (w, h, d, style, mat) => {
+      const G = new T.Group(); const m = mat || K.pick(K.towerMats); const mats = [m, m, roofM, roofM, m, m];
+      const seg = (sw, sh, sd, y) => { const o = new T.Mesh(new T.BoxGeometry(sw, sh, sd), mats); o.position.y = y + sh / 2; G.add(o); return y + sh; };
+      let top;
+      if (style === 'setback') { top = seg(w, h * 0.6, d, 0); top = seg(w * 0.76, h * 0.22, d * 0.76, top); top = seg(w * 0.5, h * 0.14, d * 0.5, top); const sp = new T.Mesh(new T.ConeGeometry(w * 0.1, h * 0.22, 8), K.std(0xa3acb9, 0.35, 0.85)); sp.position.y = top + h * 0.11; G.add(sp); top += h * 0.22; }
+      else if (style === 'slant') { top = seg(w, h, d, 0); const cap = new T.Mesh(new T.CylinderGeometry(0.01, w * 0.62, h * 0.16, 4), K.std(0x3b4659, 0.4, 0.7)); cap.rotation.y = Math.PI / 4; cap.position.y = top + h * 0.08; G.add(cap); top += h * 0.16; }
+      else { top = seg(w, h, d, 0); K.box(w * 1.02, 0.3, d * 1.02, roofM, 0, top + 0.15, 0, G); if (Math.random() < 0.5 && h < 34) K.waterTower(G, K.rnd(-w * 0.2, w * 0.2), top + 0.3, K.rnd(-d * 0.2, d * 0.2), Math.min(1.3, w / 5)); else K.box(w * 0.35, 1.2, d * 0.35, K.std(0x2c3441), K.rnd(-w * 0.2, w * 0.2), top + 0.9, 0, G); }
+      if (h > 30) { K.cyl(0.05, 0.08, 4, K.std(0x9aa3b2, 0.4, 0.8), 0, top + 2, 0, G, 6); const bl = new T.Mesh(new T.SphereGeometry(0.3, 8, 6), K.flat(0xff2d3d)); bl.position.y = top + 4.1; G.add(bl); G.userData.blink = bl; }
+      return G;
+    };
+    K.skyline = (n, place, hMin, hMax) => {
+      const G = new T.Group(); G.userData.blinks = [];
+      for (let i = 0; i < n; i++) { const h = K.rnd(hMin, hMax); const w = K.rnd(5, 12), d = K.rnd(5, 12); const st = h > hMax * 0.72 ? K.pick(['setback', 'slant', 'box']) : 'box'; const t = K.tower(w, h, d, st); const p = place(i); t.position.set(p[0], 0, p[1]); t.rotation.y = K.pick([0, 0, Math.PI / 2, 0.1]); G.add(t); if (t.userData.blink) G.userData.blinks.push(t.userData.blink); }
+      G.tick = (t) => { G.userData.blinks.forEach((b, i) => { b.visible = Math.sin(t * 3 + i * 1.7) > 0.2; }); };
+      return G;
+    };
+    K.stripMall = (names) => {
+      const G = new T.Group(); const U = 3.4, n = names.length, W = U * n, H = 3.6, D = 6;
+      const stucco = K.std(0xb9a688, 0.95), trim = K.std(0x8c7b63, 0.9), dark = K.std(0x1a1d23, 0.6, 0.3), colM = K.std(0xa89577, 0.9);
+      K.box(W, H, D, stucco, 0, H / 2, 0, G);
+      K.box(W + 0.3, 1.1, 0.4, trim, 0, H + 0.45, D / 2 - 0.1, G);
+      K.box(W + 0.3, 0.14, 1.8, trim, 0, 2.75, D / 2 + 0.9, G);
+      for (let i = 0; i <= n; i++) K.box(0.22, 2.75, 0.22, colM, -W / 2 + i * U, 1.375, D / 2 + 1.7, G);
+      const glassCols = [0xffe6b3, 0xdff1ff, 0xfff4dc, 0xffd8a8, 0xe9f7ff, 0xfff0c2, 0xffe0f0];
+      const signCols = ['#ff5c7a', '#5eead4', '#fbbf24', '#a78bfa', '#93c5fd', '#f9fafb', '#fb923c'];
+      G.userData.glass = [];
+      names.forEach((nm, i) => {
+        const x = -W / 2 + U * (i + 0.5); const lit = i % 4 !== 3;
+        const gm = new T.MeshStandardMaterial({ color: 0x0c1118, emissive: glassCols[i % glassCols.length], emissiveIntensity: lit ? 0.6 : 0.04, roughness: 0.15, metalness: 0.6 });
+        K.box(U * 0.86, 2.2, 0.06, gm, x, 1.2, D / 2 + 0.02, G); G.userData.glass.push(gm);
+        K.box(0.08, 2.2, 0.1, dark, x - U * 0.16, 1.2, D / 2 + 0.06, G); K.box(U * 0.86, 0.08, 0.1, dark, x, 2.32, D / 2 + 0.06, G);
+        const st = K.signTex(nm, '#0d1118', signCols[i % signCols.length], 512, 128);
+        K.box(U * 0.82, 0.62, 0.08, [dark, dark, dark, dark, K.signMat(st, lit ? 1.15 : 0.12), dark], x, H + 0.45, D / 2 + 0.14, G);
+        const pl = K.pool(glassCols[i % glassCols.length], U * 1.1, 2.6, lit ? 0.35 : 0); pl.position.set(x, 0.04, D / 2 + 1.4); G.add(pl);
+      });
+      for (let i = 0; i < n; i++) K.box(0.9, 0.55, 0.9, K.std(0x8a9099, 0.6, 0.4), -W / 2 + U * (i + 0.5) + K.rnd(-0.6, 0.6), H + 0.28, K.rnd(-1.5, 1), G);
+      G.userData.W = W; G.userData.D = D; return G;
+    };
+    K.gasStation = () => {
+      const G = new T.Group(); const white = K.std(0xeef1f5, 0.5), steel = K.std(0x9aa3b2, 0.35, 0.7), conc = K.std(0x4a4f58, 0.95);
+      K.box(8, 0.7, 5, white, 0, 4.35, 0, G); K.box(8.06, 0.22, 5.06, K.glow(0x14b8a6, 0.9), 0, 4.05, 0, G);
+      const led = K.plane(7.4, 4.4, K.flat(0xf8fbff), G); led.rotation.x = Math.PI / 2; led.position.y = 3.93;
+      const ft = K.signTex('FUEL · 24 HR', '#ffffff', '#0f766e', 1024, 128); const fp = K.plane(4, 0.5, K.signMat(ft, 0.7), G); fp.position.set(0, 4.42, 2.54);
+      [-2, 2].forEach((x) => { K.box(0.7, 0.22, 3.2, conc, x, 0.11, 0, G); K.box(0.32, 3.9, 0.32, steel, x, 1.95, 0, G);
+        [-1, 1].forEach((s) => { K.box(0.5, 1.5, 0.75, K.std(0xe5e7eb, 0.4), x, 0.97, s * 1.05, G); [1, -1].forEach((q) => { const sc = K.plane(0.3, 0.22, K.flat(0x5eead4), G); sc.position.set(x + q * 0.26, 1.35, s * 1.05); sc.rotation.y = q * Math.PI / 2; }); }); });
+      const pool = K.pool(0xeaf6ff, 12, 9, 0.6); pool.position.y = 0.04; G.add(pool);
+      const pl = new T.PointLight(0xf1f7ff, 1.6, 16, 2); pl.position.y = 3.6; G.add(pl);
+      const store = new T.Group(); store.position.z = -7; G.add(store);
+      K.box(9, 3.6, 5, K.std(0xd6d0c4, 0.9), 0, 1.8, 0, store); K.box(9.2, 0.9, 0.3, K.std(0x0f766e, 0.6), 0, 3.95, 2.45, store);
+      K.box(7, 2.2, 0.06, new T.MeshStandardMaterial({ color: 0x0c1118, emissive: 0xfff1d6, emissiveIntensity: 0.65, roughness: 0.15, metalness: 0.5 }), 0, 1.2, 2.53, store);
+      const ms = K.plane(3.6, 0.6, K.signMat(K.signTex('FOOD MART', '#0f766e', '#ffffff', 512, 96), 1), store); ms.position.set(0, 3.95, 2.62);
+      const sp = K.pool(0xfff1d6, 9, 4, 0.35); sp.position.set(0, 0.04, 3.6); store.add(sp);
+      const py = new T.Group(); py.position.set(6, 0, 4); G.add(py); K.box(0.35, 5.5, 0.35, steel, 0, 2.75, 0, py);
+      const pt = K.cnv(256, 384, (g, W, H) => { g.fillStyle = '#0b0f16'; g.fillRect(0, 0, W, H); g.fillStyle = '#0f766e'; g.fillRect(0, 0, W, 96); g.fillStyle = '#fff'; g.font = '800 62px Arial'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('FUEL', W / 2, 50); [['REGULAR', '3.49'], ['PLUS', '3.89'], ['DIESEL', '4.19']].forEach((r, i) => { const y = 145 + i * 86; g.fillStyle = '#cbd5e1'; g.font = '600 28px Arial'; g.textAlign = 'left'; g.fillText(r[0], 16, y); g.fillStyle = '#ff4d4d'; g.font = '700 54px "Courier New", monospace'; g.textAlign = 'right'; g.fillText(r[1], W - 12, y); }); });
+      const pm = K.signMat(pt, 1); const pd = K.std(0x111827, 0.5); K.box(1.9, 2.85, 0.35, [pd, pd, pd, pd, pm, pm], 0, 6.6, 0, py);
+      return G;
+    };
+    return K;
+  }
+
+  _engine(T) {
+    const K = this._kit(T); this.K = K;
+    const defs = { hero: this._sHero, c1: this._sPerson, c2: this._sBuilding, c3: this._sWarehouse, site: this._sSite, logo: this._sLogo };
+    const S = []; this._S = S;
+    Object.keys(defs).forEach((k) => { const cv = this._cvs[k]; if (cv) S.push({ k: k, cv: cv, fn: defs[k], built: false, vis: false }); });
+    const build = (o) => { o.built = true; try { const res = o.fn.call(this, o.cv, T, K); o.r = res.r; o.frame = res.frame; } catch (err) { console.warn('3D scene ' + o.k + ' failed', err); } };
+    this._io = new IntersectionObserver((es) => es.forEach((e) => { const o = S.find((x) => x.cv === e.target); if (!o) return; o.vis = e.isIntersecting; if (o.vis && !o.built) build(o); }), { rootMargin: '300px 0px' });
+    S.forEach((o) => this._io.observe(o.cv));
+    let tx = 0, ty = 0; const P = { x: 0, y: 0 };
+    this._pm = (e) => { tx = e.clientX / (window.innerWidth || 1) * 2 - 1; ty = e.clientY / (window.innerHeight || 1) * 2 - 1; };
+    window.addEventListener('pointermove', this._pm, { passive: true });
+    const t0 = performance.now(); let last = t0;
+    const go = () => {
+      this._raf = requestAnimationFrame(go);
+      const now = performance.now(); const t = (now - t0) / 1000; const dt = Math.min(0.05, (now - last) / 1000); last = now;
+      P.x += (tx - P.x) * 0.05; P.y += (ty - P.y) * 0.05;
+      const vh = window.innerHeight || 800;
+      for (let i = 0; i < S.length; i++) {
+        const o = S[i]; if (!o.vis || !o.frame) continue;
+        const w = o.cv.clientWidth, h = o.cv.clientHeight; if (!w || !h) continue;
+        let resized = false; if (w !== o.w || h !== o.h) { o.w = w; o.h = h; o.r.setSize(w, h, false); resized = true; }
+        const rc = o.cv.getBoundingClientRect(); const sec = o.cv.closest('section'); const sr = sec ? sec.getBoundingClientRect() : rc;
+        const span = sr.height - vh;
+        const p = span > 400 ? K.clamp(-sr.top / span) : ((t * 0.045) % 1);
+        const sp = K.clamp(-rc.top / Math.max(1, rc.height));
+        try { o.frame({ t: t, dt: dt, px: P.x, py: P.y, w: w, h: h, a: w / h, resized: resized, p: p, sp: sp }); } catch (err) { console.warn('3D frame ' + o.k, err); o.frame = null; }
+      }
+    };
+    go();
+  }
+
+  // ============ HERO: U.S. commercial street at night ============
+  _sHero(cv, T, K) {
+    const self = this; const r = K.renderer(cv, false); r.toneMappingExposure = 1.25;
+    const scene = new T.Scene(); scene.background = K.nightSky(); scene.fog = new T.Fog(0x0d1230, 60, 340);
+    scene.environment = K.nightEnv(r);
+    scene.add(new T.HemisphereLight(0x5566aa, 0x05060a, 0.65));
+    const moon = new T.DirectionalLight(0x9fb4ff, 0.55); moon.position.set(-30, 40, 20); scene.add(moon);
+    scene.add(K.stars(600, 260));
+    const city = K.skyline(85, () => [K.rnd(-180, 180), K.rnd(-80, -175)], 16, 90); scene.add(city);
+    K.floor(900, 900, K.std(0x0a0d14, 0.95), 0, -0.02, 0, scene);
+    const road = K.asphalt(440, 8.4, 5); road.position.set(0, 0.01, 14); scene.add(road);
+    [-0.12, 0.12].forEach((dz) => K.stripe(440, 0.1, 0xfacc15, 0, 14 + dz, scene));
+    [10.1, 17.9].forEach((z) => K.stripe(440, 0.1, 0xe5e7eb, 0, z, scene));
+    for (let i = 0; i < 7; i++) K.stripe(0.5, 3, 0xe5e7eb, -2 + i * 1.0, 14, scene);
+    const walk = K.std(0x30343c, 0.95); K.box(440, 0.16, 2.6, walk, 0, 0.08, 8.5, scene); K.box(440, 0.16, 2.6, walk, 0, 0.08, 19.5, scene);
+    const lot = K.asphalt(76, 18, 5); lot.position.set(-2, 0.012, -0.3); scene.add(lot);
+    for (let x = -28.6; x <= 6; x += 2.8) { K.stripe(0.1, 4.8, 0xe5e7eb, x, -3.8, scene); K.stripe(0.1, 4.8, 0xe5e7eb, x, 4.0, scene); }
+    const mall = K.stripMall(['PHARMACY', 'PIZZA', 'NAILS & SPA', 'CELL REPAIR', 'DONUTS', 'LAUNDROMAT']); mall.scale.setScalar(1.6); mall.position.set(-11, 0, -14); scene.add(mall);
+    const gas = K.gasStation(); gas.scale.setScalar(1.3); gas.position.set(19, 0, -0.5); scene.add(gas);
+    [-44, -22, 0, 22, 44].forEach((x) => { const s = K.streetlight(8.5, 2.6, false); s.position.set(x, 0, 9.3); s.rotation.y = -Math.PI / 2; scene.add(s); });
+    [[-17, 0.2], [1, 0.2]].forEach((q) => { const s = K.streetlight(9, 2.2, true, true); s.position.set(q[0], 0, q[1]); scene.add(s); });
+    for (let x = -60; x <= 60; x += 9.5) if (Math.random() < 0.7) { const tr = K.tree(K.rnd(1.1, 1.6)); tr.position.set(x + K.rnd(-2, 2), 0, 21.8 + K.rnd(0, 1.5)); scene.add(tr); }
+    [-31, 9].forEach((x) => { const tr = K.tree(1.3); tr.position.set(x, 0, 0.2); scene.add(tr); });
+    const types = ['sedan', 'sedan', 'suv', 'suv', 'pickup'];
+    for (let i = 0; i < 13; i++) { const x = -27.2 + i * 2.8; if (Math.random() < 0.62) { const c = K.car(K.pick(types)); c.position.set(x, 0, -3.8); c.rotation.y = Math.PI / 2; scene.add(c); } if (Math.random() < 0.45) { const c = K.car(K.pick(types)); c.position.set(x, 0, 4.0); c.rotation.y = -Math.PI / 2; scene.add(c); } }
+    const gc = K.car('suv', 0x1e3a8a); gc.position.set(19, 0, -0.5); gc.rotation.y = Math.PI / 2; scene.add(gc);
+    const movers = [];
+    for (let i = 0; i < 6; i++) { const dir = i % 2 ? -1 : 1; const c = K.car(K.pick(types)); c.rotation.y = dir > 0 ? 0 : Math.PI; const beam = K.pool(0xfff3d6, 3.4, 1.8, 0.55); beam.position.set(2.9, 0.02, 0); c.add(beam); const tail = K.pool(0xff3344, 1.2, 1.2, 0.5); tail.position.set(-1.5, 0.02, 0); c.add(tail); scene.add(c); movers.push({ c: c, dir: dir, x: K.rnd(-150, 150), v: K.rnd(9, 13), z: dir > 0 ? 12.1 : 15.9 }); }
+    const man = K.person(0x3b3f4a); scene.add(man);
+    const path = new T.CatmullRomCurve3([[-30, 6.3], [-14, 6.6], [-4, 0.3], [-8, -7.4], [-20, -7.6], [-29, -1.5]].map((q) => new T.Vector3(q[0], 0, q[1])), true);
+    const plen = path.getLength(); let u = 0.12;
+    const br = K.brackets(1.0, 2.05, 1.0, 0xff3b5c); scene.add(br);
+    const lab = K.label('PERSON · 0.97', '#FF5C7A', 1.25); scene.add(lab);
+    const rip = K.ripples(3, 0xff3b5c, scene);
+    K.cyl(0.18, 0.24, 9.2, K.std(0x5b6472, 0.5, 0.6), 11, 4.6, 22.75, scene, 12);
+    const cc = K.bullet(30, 8.5); cc.rig.position.set(11, 7.4, 21); cc.rig.rotation.y = Math.PI; scene.add(cc.rig);
+    cc.head.rotation.set(0.31, 0.66, 0);
+    const cam = new T.PerspectiveCamera(34, 1, 0.1, 600); const look = new T.Vector3(-3, 3, 0); const base = new T.Vector3(2, 7.5, 44);
+    const red = new T.Color(0xff3b5c), teal = new T.Color(0x2dd4bf), P = new T.Vector3(), D = new T.Vector3(), tgt = new T.Vector3();
+    let mode = 0, timer = 0, cool = 0, ph = 0, vis = 0;
+    return { r: r, frame: (st) => {
+      const t = st.t, dt = st.dt;
+      if (st.resized) { cam.aspect = st.a; if (st.a < 0.95) { cam.fov = 56; base.set(4, 13, 64); look.set(0, 2, 0); } else { cam.fov = 34; base.set(2, 7.5, 44); look.set(-3, 3, 0); } cam.updateProjectionMatrix(); }
+      cam.position.set(base.x + st.px * 2.5, base.y - st.py * 1.2 - st.sp * 2.5, base.z - st.sp * 12); cam.lookAt(look);
+      u = (u + dt * 1.35 / plen) % 1; path.getPointAt(u, P); path.getTangentAt(u, D); ph += dt * 1.35 * 4.2;
+      man.position.copy(P); man.face(D.x, D.z); man.walk(ph, 0.55);
+      movers.forEach((m) => { m.x += m.dir * m.v * dt; if (m.x > 170) m.x = -170; if (m.x < -170) m.x = 170; m.c.position.set(m.x, 0, m.z); });
+      scene.updateMatrixWorld();
+      tgt.copy(P); tgt.y += 1;
+      const seen = cc.sees(tgt, 46);
+      if (mode === 0) { cc.head.rotation.y += ((0.66 + Math.sin(t * 0.35) * 0.55) - cc.head.rotation.y) * 0.04; cc.head.rotation.x += (0.31 - cc.head.rotation.x) * 0.04; cool -= dt; if (seen && cool <= 0) { mode = 1; timer = 7; } }
+      else { cc.aimAt(tgt, 0.08); timer -= dt; if (timer <= 0) { mode = 0; cool = 6; } }
+      const on = mode === 1;
+      vis += ((on ? 1 : 0) - vis) * 0.12;
+      br.position.set(P.x, 1.03, P.z); br.userData.m.opacity = vis; br.visible = vis > 0.02;
+      lab.position.set(P.x, 2.85, P.z); lab.material.opacity = vis; lab.visible = vis > 0.02;
+      rip.set(P.x, P.z, t, vis * 0.8, 3);
+      cc.coneM.uniforms.uT.value = t; cc.coneM.uniforms.uC.value.lerp(on ? red : teal, 0.08);
+      cc.tally.material.emissiveIntensity = Math.sin(t * 6) > 0 ? 3 : 0.2;
+      city.tick(t);
+      self._ph('alert', on ? 0 : -1);
+      r.render(scene, cam);
+    } };
+  }
+
+  // ============ CHAPTER 1: person detection ============
+  _sPerson(cv, T, K) {
+    const self = this; const r = K.renderer(cv, true); r.toneMappingExposure = 1.2;
+    const scene = new T.Scene(); scene.background = K.sky([[0, '#02040a'], [0.7, '#0a1128'], [1, '#191c42']]); scene.fog = new T.Fog(0x0a0f22, 24, 110);
+    scene.environment = K.nightEnv(r);
+    scene.add(new T.HemisphereLight(0x5060a0, 0x040508, 0.55));
+    const moon = new T.DirectionalLight(0xa9bbff, 0.6); moon.position.set(-14, 22, 16); moon.castShadow = true; moon.shadow.mapSize.set(1024, 1024); Object.assign(moon.shadow.camera, { left: -20, right: 20, top: 20, bottom: -20, near: 1, far: 80 }); scene.add(moon);
+    scene.add(K.stars(300, 200));
+    const city = K.skyline(36, () => [K.rnd(-120, 120), K.rnd(-60, -130)], 14, 70); scene.add(city);
+    K.floor(400, 400, K.std(0x0a0d14, 0.95), 0, -0.02, 0, scene);
+    const lot = K.asphalt(70, 40, 5); lot.position.set(0, 0.01, 12); scene.add(lot);
+    for (let x = 4; x <= 20; x += 2.8) K.stripe(0.1, 4.8, 0xe5e7eb, x, 4.4, scene);
+    const bm = K.std(0xffffff, 0.92, 0, { map: K.rep(K.brickTex, 9, 2.6) });
+    const bld = K.box(32, 7, 12, [bm, bm, K.std(0x202530), bm, bm, bm], 0, 3.5, -9, scene); bld.receiveShadow = true; bld.castShadow = true;
+    K.box(32.4, 0.5, 12.4, K.std(0x4a3a34, 0.9), 0, 7.2, -9, scene);
+    const doorM = new T.MeshStandardMaterial({ color: 0x3b4452, roughness: 0.5, metalness: 0.4, emissive: 0xffc37a, emissiveIntensity: 0.0 });
+    K.box(1.4, 2.4, 0.12, doorM, 2, 1.2, -2.95, scene); K.box(1.7, 0.12, 0.3, K.std(0x6b7280, 0.5, 0.5), 2, 2.5, -2.85, scene);
+    const so = K.plane(1.5, 0.38, K.signMat(K.signTex('STAFF ONLY', '#b91c1c', '#ffffff', 512, 128), 0.8), scene); so.position.set(2, 2.85, -2.88);
+    const wp = K.box(0.5, 0.35, 0.25, K.glow(0xffd8a0, 1.2), 2, 3.4, -2.85, scene); const wpp = K.pool(0xffc37a, 6, 6, 0.3); wpp.position.set(2, 0.03, -1.2); scene.add(wpp);
+    const dump = K.box(2.6, 1.5, 1.5, K.std(0x14532d, 0.7, 0.3), -8, 0.75, -2.1, scene); dump.castShadow = true; K.box(2.7, 0.12, 1.6, K.std(0x0f3b22, 0.6), -8, 1.55, -2.1, scene);
+    for (let i = 0; i < 4; i++) K.box(0.4, 0.25, 0.4, K.std(0x5b6472), -14 + i * 1.2, 7.6, -6, scene);
+    const truck = K.car('pickup', 0x1f2937); truck.position.set(10, 0, 4.4); truck.rotation.y = Math.PI / 2; K.shadows(truck); scene.add(truck);
+    const car2 = K.car('sedan', 0x9ca3af); car2.position.set(15.6, 0, 4.4); car2.rotation.y = Math.PI / 2; K.shadows(car2); scene.add(car2);
+    const sl = K.streetlight(9, 2.2, true, true); sl.position.set(-4, 0, 13); scene.add(sl);
+    [-18, 22].forEach((x) => { const tr = K.tree(1.5); tr.position.set(x, 0, 6); K.shadows(tr); scene.add(tr); });
+    const cc = K.bullet(22 / 0.6, 7 / 0.6); cc.rig.scale.setScalar(0.6); cc.rig.position.set(-1.6, 4.9, -2.0); scene.add(cc.rig); cc.head.rotation.set(0.45, 0.3, 0);
+    const spk = K.box(0.8, 0.55, 0.35, K.std(0xe5e7eb, 0.5), 6, 4.4, -2.8, scene); const grill = new T.Mesh(new T.CircleGeometry(0.2, 24), K.std(0x111827, 0.6)); grill.position.set(6, 4.4, -2.61); scene.add(grill);
+    const fl = K.box(1.0, 0.5, 0.4, K.std(0x9aa3b2, 0.4, 0.6), 0.4, 5.8, -2.75, scene); const flLens = K.plane(0.9, 0.4, K.flat(0x30343c), scene); flLens.position.set(0.4, 5.8, -2.54);
+    const spot = new T.SpotLight(0xf3f7ff, 0, 45, 0.8, 0.5, 1.1); spot.position.set(0.4, 5.6, -2.3); spot.target.position.set(-1, 0, 6); spot.castShadow = true; scene.add(spot, spot.target);
+    const beamG = new T.ConeGeometry(7, 9, 40, 1, true); beamG.translate(0, -4.5, 0); const beamM = K.coneMat(0xf3f7ff); const beam = new T.Mesh(beamG, beamM); beam.position.set(0.4, 5.6, -2.3); beam.lookAt(-1, 0, 6); beam.rotateX(-Math.PI / 2); scene.add(beam);
+    const zone = K.floor(8, 5.4, K.flat(0xff3b5c, 0.0), 2, 0.03, -0.25, scene);
+    const zEdge = new T.LineSegments(new T.EdgesGeometry(new T.BoxGeometry(8, 2.4, 5.4)), new T.LineBasicMaterial({ color: 0xff3b5c, transparent: true, opacity: 0 })); zEdge.position.set(2, 1.2, -0.25); scene.add(zEdge);
+    const wallTex = K.cnv(4, 128, (g, w, h) => { const gr = g.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, 'rgba(255,255,255,0)'); gr.addColorStop(1, 'rgba(255,255,255,1)'); g.fillStyle = gr; g.fillRect(0, 0, w, h); });
+    const zWallM = new T.MeshBasicMaterial({ map: wallTex, color: 0xff3b5c, transparent: true, opacity: 0, depthWrite: false, side: T.DoubleSide, blending: T.AdditiveBlending, toneMapped: false });
+    [[2, 2.45, 8, 0], [-2, -0.25, 5.4, Math.PI / 2], [6, -0.25, 5.4, Math.PI / 2]].forEach((q) => { const m = K.plane(q[2], 2.4, zWallM, scene); m.position.set(q[0], 1.2, q[1]); m.rotation.y = q[3]; });
+    const zl = K.label('ZONE A · STAFF DOOR', '#FF5C7A', 1.0); zl.position.set(2, 2.9, 2.45); scene.add(zl);
+    const man = K.person(0x2b2f38); K.shadows(man); scene.add(man);
+    const sk = K.skeleton(man); sk.add(scene);
+    const br = K.brackets(1.0, 2.05, 1.0, 0x2dd4bf); scene.add(br);
+    const lab = K.label('MOTION', '#2DD4BF', 1.15); scene.add(lab);
+    const vbr = K.brackets(2.2, 2.2, 5.4, 0xa78bfa); vbr.position.set(10, 1.1, 4.4); scene.add(vbr);
+    const vlab = K.label('VEHICLE · 94%', '#A78BFA', 1.0); vlab.position.set(10, 2.75, 4.4); scene.add(vlab);
+    const rip = K.ripples(3, 0x2dd4bf, scene);
+    const waves = K.waves(4, 0x5eead4, scene);
+    const op = K.label('LIVE: “You are on camera.”', '#5EEAD4', 1.35); op.position.set(6, 5.6, -2.2); scene.add(op);
+    const curve = new T.CatmullRomCurve3([new T.Vector3(-15, 0, 12), new T.Vector3(-8, 0, 8), new T.Vector3(-2, 0, 3.5), new T.Vector3(1.9, 0, -1.7)]);
+    const clen = curve.getLength(); const B = new T.Vector3(1.9, 0, -1.7), E = new T.Vector3(-16, 0, 15);
+    const cam = new T.PerspectiveCamera(36, 1, 0.1, 400); const P = new T.Vector3(), D = new T.Vector3(), tg = new T.Vector3(), spPos = new T.Vector3(6, 4.4, -2.5), wd = new T.Vector3();
+    const tealC = '#2DD4BF', redC = '#FF5C7A', purC = '#A78BFA';
+    const red = new T.Color(0xff3b5c), teal = new T.Color(0x2dd4bf);
+    let pf = 0;
+    return { r: r, frame: (st) => {
+      const t = st.t; pf += (st.p - pf) * 0.12; const p = pf;
+      const phase = p < 0.25 ? 0 : p < 0.5 ? 1 : p < 0.75 ? 2 : 3; self._ph('ph1', phase);
+      if (st.resized) { cam.aspect = st.a; cam.fov = st.a < 0.95 ? 58 : 36; if (st.a >= 0.95) cam.setViewOffset(st.w, st.h, -st.w * 0.16, 0, st.w, st.h); else cam.clearViewOffset(); cam.updateProjectionMatrix(); }
+      let run = false;
+      if (p < 0.72) { const u = p / 0.72; curve.getPointAt(u, P); curve.getTangentAt(u, D); man.position.copy(P); man.face(D.x, D.z); man.walk(u * clen * 4.2, 0.55); man.lookUp(0); }
+      else if (p < 0.8) { man.position.copy(B); man.face(-0.3, 1); man.walk(0, 0); man.lookUp(K.clamp((p - 0.72) / 0.04)); }
+      else { const u = (p - 0.8) / 0.2; P.lerpVectors(B, E, u); man.position.copy(P); D.subVectors(E, B); man.face(D.x, D.z); man.walk(u * 22 * 4.2, 0.95, true); run = true; }
+      scene.updateMatrixWorld();
+      const mp = man.position; const k1 = K.clamp((p - 0.22) / 0.06);
+      const inZone = mp.x > -2 && mp.x < 6 && mp.z > -2.95 && mp.z < 2.45;
+      sk.update(); sk.alpha(k1 * (phase === 3 ? 0.6 : 1) * 0.95);
+      const threat = phase >= 2 && inZone;
+      br.position.set(mp.x, 1.03, mp.z); br.userData.m.color.copy(threat || phase === 3 ? red : teal); br.userData.m.opacity = 0.35 + 0.65 * k1;
+      lab.position.set(mp.x, 2.85, mp.z);
+      if (phase === 0) lab.set('MOTION DETECTED', tealC); else if (phase === 1) lab.set('PERSON · 97%', tealC); else if (phase === 2) lab.set(inZone ? 'INTRUSION · ZONE A' : 'PERSON · 97%', inZone ? redC : tealC); else lab.set(run ? 'LEAVING SITE · LOGGED' : 'TALK-DOWN SENT', redC);
+      const v1 = phase >= 1 && phase <= 2 ? 1 : 0; vbr.userData.m.opacity += (v1 - vbr.userData.m.opacity) * 0.1; vlab.material.opacity = vbr.userData.m.opacity; vbr.visible = vlab.visible = vbr.userData.m.opacity > 0.02;
+      rip.set(mp.x, mp.z, t, phase === 0 ? 0.9 : 0.25, 3);
+      const zk = phase >= 2 ? (threat ? 0.32 + Math.sin(t * 8) * 0.12 : 0.14) : 0; zone.material.opacity += (zk - zone.material.opacity) * 0.15; zEdge.material.opacity = zone.material.opacity * 2.4; zWallM.opacity = zone.material.opacity * 1.3; zl.material.opacity = K.clamp(zone.material.opacity * 4); zl.visible = zl.material.opacity > 0.02;
+      const fk = phase === 3 ? K.clamp((p - 0.75) / 0.03) : 0; spot.intensity = fk * 7; beamM.uniforms.uO.value = fk * 0.8; beamM.uniforms.uT.value = t; flLens.material.color.setHex(fk > 0.5 ? 0xffffff : 0x30343c);
+      doorM.emissiveIntensity = threat ? 0.25 + Math.sin(t * 8) * 0.2 : 0;
+      wd.copy(mp).setY(1.5).sub(spPos).normalize(); waves.set(spPos, wd, t, fk);
+      op.material.opacity = fk; op.visible = fk > 0.02;
+      tg.copy(mp); tg.y += 1; cc.aimAt(tg, 0.1); cc.coneM.uniforms.uT.value = t; cc.coneM.uniforms.uC.value.lerp(threat || phase === 3 ? red : teal, 0.1); cc.coneM.uniforms.uO.value = 0.55;
+      cc.tally.material.emissiveIntensity = Math.sin(t * 6) > 0 ? 3 : 0.2;
+      const ang = -0.55 + p * 1.25; const R = st.a < 0.95 ? 30 : 22;
+      cam.position.set(Math.sin(ang) * R + st.px * 1.5 + 2, 6.2 - p * 1.2 - st.py * 0.8, Math.cos(ang) * R + 2); cam.lookAt(mp.x * 0.35 + 1, 1.6, mp.z * 0.35 + 1);
+      city.tick(t);
+      r.render(scene, cam);
+    } };
+  }
+
+  // ============ CHAPTER 2: building security ============
+  _sBuilding(cv, T, K) {
+    const self = this; const r = K.renderer(cv, false); r.toneMappingExposure = 1.2;
+    const scene = new T.Scene(); scene.background = K.nightSky(); scene.fog = new T.Fog(0x0b1026, 70, 260);
+    scene.environment = K.nightEnv(r);
+    scene.add(new T.HemisphereLight(0x5566aa, 0x05060a, 0.6));
+    const moon = new T.DirectionalLight(0xa9bbff, 0.6); moon.position.set(-30, 50, 30); scene.add(moon);
+    scene.add(K.stars(500, 300));
+    const city = K.skyline(90, () => { const a = Math.random() * Math.PI * 2, d = K.rnd(85, 190); return [Math.cos(a) * d, Math.sin(a) * d]; }, 14, 80); scene.add(city);
+    K.floor(900, 900, K.std(0x0a0d14, 0.95), 0, -0.02, 0, scene);
+    const rd = K.asphalt(300, 300, 6); rd.position.y = 0.005; scene.add(rd);
+    const plaza = K.floor(58, 58, K.std(0xffffff, 0.9, 0, { map: K.rep(K.concreteTex, 14, 14) }), 0, 0.03, 0, scene);
+    [[0, 32.5, 300, 0.12], [0, -32.5, 300, 0.12]].forEach((q) => K.stripe(q[2], q[3], 0xfacc15, q[0], q[1], scene));
+    const floors = [];
+    const dark = K.std(0x161c27, 0.8), span = K.std(0x2a3446, 0.4, 0.7);
+    for (let f = 0; f < 10; f++) {
+      const tx = K.facade({ W: 512, H: 64, cols: 14, rows: 1, wall: '#1b2433', glass: '#0e1826', lit: 0.85, mx: 0.05, my: 0.14, mull: '#2a3446', fl: 1, lights: ['#d6ebff', '#e9f3ff', '#fff4dc', '#cfe6ff'] });
+      const m = new T.MeshStandardMaterial({ map: tx, emissiveMap: tx, emissive: 0xffffff, emissiveIntensity: 0.95, roughness: 0.18, metalness: 0.75 });
+      K.box(20, 3.8, 20, [m, m, dark, dark, m, m], 0, 7.2 + f * 3.8 + 1.9, 0, scene); K.box(20.3, 0.4, 20.3, span, 0, 7.2 + f * 3.8, 0, scene); floors.push(m);
+    }
+    const lobbyM = new T.MeshStandardMaterial({ color: 0x0c1118, emissive: 0xfff1d6, emissiveIntensity: 0.55, roughness: 0.12, metalness: 0.6 });
+    K.box(19, 7.2, 19, lobbyM, 0, 3.6, 0, scene);
+    [[-9.7, -9.7], [9.7, -9.7], [-9.7, 9.7], [9.7, 9.7]].forEach((q) => K.box(0.8, 7.2, 0.8, span, q[0], 3.6, q[1], scene));
+    K.box(10, 0.45, 4.5, span, 0, 5.0, 11.8, scene); [-4.6, 4.6].forEach((x) => K.cyl(0.12, 0.12, 5, K.std(0x9aa3b2, 0.3, 0.8), x, 2.5, 13.7, scene, 8));
+    const rev = K.cyl(1.3, 1.3, 3, K.std(0x0c1118, 0.1, 0.8, { emissive: 0xfff1d6, emissiveIntensity: 0.3 }), 0, 1.5, 9.9, scene, 24);
+    const nm = K.plane(8, 1.0, K.signMat(K.signTex('1200 COMMERCE PLAZA', '#0b1322', '#e6edf7', 1024, 128), 0.8), scene); nm.position.set(0, 6.4, 9.52);
+    const top = 7.2 + 38;
+    [[0, 10, 20.6, 0.6], [0, -10, 20.6, 0.6], [10, 0, 0.6, 20.6], [-10, 0, 0.6, 20.6]].forEach((q) => K.box(q[2], 1.2, q[3], span, q[0], top + 0.6, q[1], scene));
+    K.box(9, 3.6, 9, K.std(0x2a3140, 0.8), 2, top + 1.8, -2, scene); K.cyl(0.06, 0.08, 7, K.std(0x9aa3b2, 0.4, 0.8), -5, top + 3.5, 4, scene, 6);
+    const bl = new T.Mesh(new T.SphereGeometry(0.3, 8, 6), K.flat(0xff2d3d)); bl.position.set(-5, top + 7.1, 4); scene.add(bl);
+    K.cyl(0.09, 0.12, 15, K.std(0xd1d5db, 0.2, 0.9), -9, 7.5, 24, scene, 8);
+    const flagG = new T.PlaneGeometry(4.4, 2.3, 24, 12); const fp = flagG.attributes.position; const f0 = Float32Array.from(fp.array);
+    const flag = new T.Mesh(flagG, new T.MeshStandardMaterial({ map: K.flagTex, side: T.DoubleSide, roughness: 0.8, emissive: 0xffffff, emissiveMap: K.flagTex, emissiveIntensity: 0.28 })); flag.position.set(-9 + 2.2, 13.6, 24); scene.add(flag);
+    const fpool = K.pool(0xeaf2ff, 8, 8, 0.25); fpool.position.set(-9, 0.05, 24); scene.add(fpool);
+    for (let i = 0; i < 10; i++) { const a = i / 10 * Math.PI * 2 + 0.3; const tr = K.tree(1.3); tr.position.set(Math.cos(a) * 25, 0, Math.sin(a) * 25); scene.add(tr); K.cyl(1.4, 1.5, 0.6, K.std(0x4b5563, 0.9), Math.cos(a) * 25, 0.3, Math.sin(a) * 25, scene, 14); }
+    [[-36, 0], [36, 0], [0, -36], [0, 36]].forEach((q, i) => { const s = K.streetlight(9, 2.4, false); s.position.set(q[0], 0, q[1]); s.rotation.y = i * Math.PI / 2; scene.add(s); });
+    for (let i = 0; i < 8; i++) { const c = K.car(K.pick(['sedan', 'suv', 'pickup'])); c.position.set(-48 + (i % 4) * 3, 0, -10 + Math.floor(i / 4) * 8); c.rotation.y = Math.PI / 2; scene.add(c); }
+    const cams = [[10.4, 10.4], [-10.4, 10.4], [10.4, -10.4], [-10.4, -10.4]].map((q) => { const s = 0.9; const c = K.bullet(52 / s, 13 / s); c.rig.scale.setScalar(s); c.rig.position.set(q[0], top + 0.3, q[1]); c.rig.rotation.y = Math.atan2(Math.sign(q[0]), Math.sign(q[1])); c.head.rotation.x = 1.0; scene.add(c.rig); return c; });
+    const ent = [-5, 5].map((x) => { const c = K.bullet(20 / 0.5, 6 / 0.5); c.rig.scale.setScalar(0.5); c.rig.position.set(x, 6.2, 10.3); c.head.rotation.x = 0.35; c.head.rotation.y = x < 0 ? -0.3 : 0.3; scene.add(c.rig); return c; });
+    const allC = cams.concat(ent);
+    const doorM = new T.MeshStandardMaterial({ color: 0x2a3446, emissive: 0xf59e0b, emissiveIntensity: 0, roughness: 0.4, metalness: 0.5 });
+    K.box(0.15, 2.8, 1.8, doorM, 9.6, 1.4, -4, scene);
+    const dl = K.label('DOOR 3 · FORCED OPEN', '#F59E0B', 1.6); dl.position.set(11, 4.4, -4); scene.add(dl);
+    const intr = K.person(0x1f2329); intr.position.set(11.2, 0, -4); intr.face(-1, 0); scene.add(intr);
+    const ibr = K.brackets(1.0, 2.05, 1.0, 0xf59e0b); ibr.position.set(11.2, 1.03, -4); scene.add(ibr);
+    const ring = K.floor(2, 2, K.flat(0x2dd4bf, 0, true), 0, 0.06, 0, scene); ring.geometry = new T.RingGeometry(0.97, 1, 160);
+    const tour = new T.CatmullRomCurve3([[-17, -17], [0, -19], [17, -17], [19, 0], [17, 17], [0, 19], [-17, 17], [-19, 0]].map((q) => new T.Vector3(q[0], 0.6, q[1])), true);
+    const dot = new T.Mesh(new T.SphereGeometry(0.45, 20, 12), K.flat(0x5eead4)); scene.add(dot);
+    const dotL = new T.PointLight(0x2dd4bf, 0, 12, 2); scene.add(dotL);
+    const trail = []; for (let i = 0; i < 26; i++) { const m = new T.Mesh(new T.SphereGeometry(0.22, 8, 6), K.flat(0x2dd4bf, 0, true)); scene.add(m); trail.push(m); }
+    const cps = [0, 1, 2, 3, 4, 5].map((i) => { const u = i / 6; const pt = tour.getPointAt(u); const m = new T.Mesh(new T.CylinderGeometry(0.28, 0.28, 1.4, 12), K.std(0x334155, 0.6, 0.3, { emissive: 0x2dd4bf, emissiveIntensity: 0 })); m.position.set(pt.x, 0.7, pt.z); scene.add(m); return { m: m, u: u }; });
+    const tl = K.label('GUARD TOUR · CHECKPOINT 1/6', '#5EEAD4', 1.5); scene.add(tl);
+    const cam = new T.PerspectiveCamera(38, 1, 0.5, 900); const hist = []; const red = new T.Color(0xf59e0b), teal = new T.Color(0x2dd4bf); const dpos = new T.Vector3(10, 1.5, -4), tmp = new T.Vector3();
+    let pf = 0;
+    return { r: r, frame: (st) => {
+      const t = st.t; pf += (st.p - pf) * 0.12; const p = pf;
+      const phase = p < 0.25 ? 0 : p < 0.5 ? 1 : p < 0.75 ? 2 : 3; self._ph('ph2', phase);
+      if (st.resized) { cam.aspect = st.a; cam.fov = st.a < 0.95 ? 60 : 38; if (st.a >= 0.95) cam.setViewOffset(st.w, st.h, -st.w * 0.16, 0, st.w, st.h); else cam.clearViewOffset(); cam.updateProjectionMatrix(); }
+      floors.forEach((m, f) => { const off = K.clamp((p - (9 - f) * 0.022) / 0.02); m.emissiveIntensity = f === 2 ? 0.95 - off * 0.55 : 0.95 * (1 - off) + 0.04; });
+      const cO = phase === 0 ? 0.25 + p * 2 : 1;
+      allC.forEach((c, i) => { c.coneM.uniforms.uT.value = t; c.coneM.uniforms.uO.value = cO; c.tally.material.emissiveIntensity = Math.sin(t * 6 + i) > 0 ? 3 : 0.2; });
+      cams.forEach((c, i) => { if (phase === 2 && i === 2) { c.aimAt(dpos, 0.08); c.coneM.uniforms.uC.value.lerp(red, 0.1); } else { c.head.rotation.y += (Math.sin(t * 0.4 + i * 1.6) * 0.45 - c.head.rotation.y) * 0.05; c.head.rotation.x += (1.0 - c.head.rotation.x) * 0.05; c.coneM.uniforms.uC.value.lerp(teal, 0.1); } });
+      const rk = phase >= 1 ? 1 : 0; const rr = (t * 0.35) % 1; ring.scale.setScalar(14 + rr * 26); ring.material.opacity = rk * 0.75 * (1 - rr);
+      const dk = phase === 2 ? 1 : phase === 3 ? 0.3 : 0; doorM.emissiveIntensity = dk * (0.6 + Math.sin(t * 9) * 0.4); dl.material.opacity = dk; dl.visible = dk > 0.02; intr.visible = phase >= 2; ibr.visible = phase === 2; intr.reach(phase === 2 ? 0.55 + Math.sin(t * 5) * 0.1 : 0);
+      const tk = phase === 3 ? 1 : 0; const u = phase === 3 ? ((p - 0.75) / 0.25 * 1.05) % 1 : 0;
+      const pt = tour.getPointAt(u); dot.position.copy(pt); dot.visible = tk > 0; dotL.position.copy(pt); dotL.intensity = tk * 2.5;
+      hist.unshift(pt.clone()); if (hist.length > 60) hist.pop(); trail.forEach((m, i) => { const h = hist[Math.min(hist.length - 1, i * 2)]; m.position.copy(h); m.material.opacity = tk * 0.6 * (1 - i / trail.length); });
+      let n = 0; cps.forEach((c) => { const on = tk > 0 && u >= c.u; c.m.material.emissiveIntensity = on ? 1.4 : 0.05; if (on) n++; });
+      tl.set('GUARD TOUR · CHECKPOINT ' + Math.max(1, n) + '/6', '#5EEAD4'); tl.position.set(pt.x, 3.2, pt.z); tl.visible = tk > 0;
+      for (let i = 0; i < fp.count; i++) { const x = f0[i * 3]; const k = (x + 2.2) / 4.4; fp.array[i * 3 + 2] = Math.sin(x * 1.7 - t * 4.2) * 0.28 * k + Math.sin(f0[i * 3 + 1] * 2 + t * 3) * 0.06 * k; }
+      fp.needsUpdate = true;
+      bl.visible = Math.sin(t * 3) > 0.2; city.tick(t);
+      const ang = -0.55 + p * 2.3; const R = (st.a < 0.95 ? 96 : 70) - p * 10;
+      cam.position.set(Math.sin(ang) * R + st.px * 3, 26 + Math.sin(p * Math.PI) * 10 - st.py * 3, Math.cos(ang) * R); cam.lookAt(0, 17, 0);
+      r.render(scene, cam);
+    } };
+  }
+
+  // ============ CHAPTER 3: warehouse security & threat recording ============
+  _sWarehouse(cv, T, K) {
+    const self = this; const r = K.renderer(cv, false); r.toneMappingExposure = 1.2;
+    const scene = new T.Scene(); scene.background = K.nightSky(); scene.fog = new T.Fog(0x0a0f22, 60, 260);
+    scene.environment = K.nightEnv(r);
+    scene.add(new T.HemisphereLight(0x5566aa, 0x05060a, 0.7));
+    const moon = new T.DirectionalLight(0xa9bbff, 0.7); moon.position.set(-30, 40, 50); scene.add(moon);
+    scene.add(K.stars(400, 300));
+    const city = K.skyline(50, () => [K.rnd(-200, 200), K.rnd(-90, -190)], 12, 60); scene.add(city);
+    K.floor(900, 900, K.std(0x10140f, 0.98), 0, -0.02, 0, scene);
+    const yard = K.asphalt(80, 29, 5); yard.position.set(0, 0.01, 9.5); scene.add(yard);
+    K.floor(64, 4, K.std(0xffffff, 0.9, 0, { map: K.rep(K.concreteTex, 16, 1) }), 0, 0.02, -3, scene);
+    for (let x = -36; x <= 36; x += 4) K.stripe(0.12, 6, 0xfacc15, x, 8, scene);
+    const tiltM = new T.MeshStandardMaterial({ map: K.rep(K.tiltTex, 8, 1), emissiveMap: K.rep(K.tiltTex, 8, 1), emissive: 0xffffff, emissiveIntensity: 0.1, roughness: 0.9 });
+    const tiltS = new T.MeshStandardMaterial({ map: K.rep(K.tiltTex, 4, 1), emissiveMap: K.rep(K.tiltTex, 4, 1), emissive: 0xffffff, emissiveIntensity: 0.06, roughness: 0.9 });
+    K.box(64, 11, 32, [tiltS, tiltS, K.std(0x2b3038, 0.9), tiltS, tiltM, tiltS], 0, 5.5, -21, scene);
+    const lg = K.plane(18, 2.2, K.signMat(K.signTex('DISTRIBUTION CENTER 7', '#9ea3aa', '#0f766e', 1024, 128), 0.25), scene); lg.position.set(-14, 9.2, -4.94);
+    const doorT = K.rep(K.rollTex, 1, 1); const doorM = K.std(0xffffff, 0.6, 0.3, { map: doorT, emissiveMap: doorT, emissive: 0xffffff, emissiveIntensity: 0.12 });
+    for (let x = -28; x <= 28; x += 7) { const d = K.plane(3.4, 3.6, doorM, scene); d.position.set(x, 3.0, -4.97); [-1.9, 1.9].forEach((dx) => K.box(0.3, 0.6, 0.3, K.std(0x111111, 0.9), x + dx, 1.3, -4.8, scene)); const dlg = K.box(0.4, 0.2, 0.2, K.glow(0xffd8a0, 1.2), x, 5.3, -4.85, scene); const dp = K.pool(0xffc37a, 6, 6, 0.22); dp.position.set(x, 0.03, -2.2); scene.add(dp); }
+    const packs = [];
+    for (let x = -30; x <= 30; x += 12) { K.box(0.6, 0.4, 0.3, K.glow(0xeaf4ff, 1.4), x + 3.5, 8.2, -4.85, scene); const pp = K.pool(0xdbeafe, 14, 14, 0.25); pp.position.set(x + 3.5, 0.04, 1.5); scene.add(pp); packs.push(pp); }
+    for (let i = 0; i < 6; i++) K.box(2, 1, 2, K.std(0x6b7280, 0.6, 0.4), -24 + i * 9, 11.5, -18 + (i % 2) * 6, scene);
+    [-21, -7, 14].forEach((x) => { const tr = K.trailer(16); tr.position.set(x, 0, 11); tr.rotation.y = -Math.PI / 2; scene.add(tr); });
+    const yt = K.trailer(16); yt.position.set(22, 0, 14); scene.add(yt); const trc = K.tractor(0xb91c1c); trc.position.set(23.2, 0, 14); scene.add(trc);
+    const fenceF = K.fence(80, 2.6); fenceF.position.set(0, 0, 24); scene.add(fenceF);
+    [-40, 40].forEach((x) => { const f = K.fence(29, 2.6); f.position.set(x, 0, 9.5); f.rotation.y = Math.PI / 2; scene.add(f); });
+    const poles = [[-26, 15], [0, 17], [26, 4]].map((q) => { const s = K.streetlight(12, 2.2, false, true); s.position.set(q[0], 0, q[1]); scene.add(s); return s; });
+    const flood = [new T.PointLight(0xeaf4ff, 0, 40, 1.6), new T.PointLight(0xeaf4ff, 0, 40, 1.6)]; flood[0].position.set(-6, 10, 14); flood[1].position.set(12, 10, 10); scene.add(flood[0], flood[1]);
+    const strobe = K.box(0.5, 0.5, 0.5, K.glow(0xff2d3d, 0.2), 26, 10, -4.7, scene); const strobeL = new T.PointLight(0xff2d3d, 0, 30, 2); strobeL.position.set(26, 10, -3.5); scene.add(strobeL);
+    K.box(0.8, 0.5, 0.35, K.std(0xe5e7eb, 0.5), 22, 9.2, -4.8, scene);
+    const s = 0.7; const cc = K.bullet(44 / s, 9 / s); cc.rig.scale.setScalar(s); cc.rig.position.set(30, 8.4, -3.9); scene.add(cc.rig); cc.head.rotation.set(0.25, -0.5, 0);
+    const man = K.person(0x111318, 0x7a573f); scene.add(man);
+    const br = K.brackets(1.0, 2.05, 1.0, 0xff3b5c); scene.add(br);
+    const lab = K.label('PERSON · 96%', '#FF5C7A', 1.6); scene.add(lab);
+    const waves = K.waves(4, 0x5eead4, scene);
+    const rt = new T.WebGLRenderTarget(640, 360);
+    const feedCam = new T.PerspectiveCamera(26, 16 / 9, 0.5, 400);
+    const panel = new T.Group(); scene.add(panel);
+    K.box(9.8, 5.9, 0.25, K.std(0x0b1322, 0.5, 0.4), 0, 0, -0.15, panel);
+    const feed = K.plane(9.2, 5.18, new T.MeshBasicMaterial({ map: rt.texture, color: 0xd8f0ff, toneMapped: false }), panel); feed.position.z = 0.0;
+    const ov = document.createElement('canvas'); ov.width = 640; ov.height = 360; const og = ov.getContext('2d'); const ovT = new T.CanvasTexture(ov); ovT.encoding = T.sRGBEncoding;
+    const ovP = K.plane(9.2, 5.18, new T.MeshBasicMaterial({ map: ovT, transparent: true, toneMapped: false, depthWrite: false }), panel); ovP.position.z = 0.02;
+    K.plane(9.2, 0.22, K.flat(0x1c2a40), panel).position.set(0, -2.95, 0.02);
+    const fillG = new T.PlaneGeometry(9.2, 0.22); fillG.translate(4.6, 0, 0); const fill = new T.Mesh(fillG, K.flat(0xff3b5c)); fill.position.set(-4.6, -2.95, 0.03); panel.add(fill);
+    const plab = K.label('INCIDENT #A-2291 · CLIP SAVED', '#2DD4BF', 2.4); plab.position.set(0, 4.0, 0.2); panel.add(plab);
+    let lastSec = -1, lastBlink = -1;
+    const drawOv = (sec, blink, txt) => { og.clearRect(0, 0, 640, 360); const gr = og.createLinearGradient(0, 0, 0, 60); gr.addColorStop(0, 'rgba(0,0,0,0.65)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); og.fillStyle = gr; og.fillRect(0, 0, 640, 60); og.fillStyle = 'rgba(0,0,0,0.55)'; og.fillRect(0, 318, 640, 42); og.font = '600 20px "IBM Plex Mono", Menlo, monospace'; og.fillStyle = '#e6edf7'; og.textBaseline = 'middle'; og.fillText('CAM 07 · YARD PTZ · 4K', 18, 26); og.textAlign = 'right'; og.fillStyle = blink ? '#ff3b5c' : 'rgba(255,59,92,0.35)'; og.fillText('● REC ' + ('0' + Math.floor(sec / 60)).slice(-2) + ':' + ('0' + (sec % 60)).slice(-2), 622, 26); og.textAlign = 'left'; og.fillStyle = '#9aaac0'; og.fillText('2026-11-27  02:14:' + ('0' + (sec % 60)).slice(-2), 18, 340); og.textAlign = 'right'; og.fillStyle = '#ff5c7a'; og.fillText(txt, 622, 340); og.textAlign = 'left'; og.strokeStyle = 'rgba(230,237,247,0.8)'; og.lineWidth = 3; [[20, 70, 1, 1], [620, 70, -1, 1], [20, 300, 1, -1], [620, 300, -1, -1]].forEach((c) => { og.beginPath(); og.moveTo(c[0], c[1] + c[3] * 26); og.lineTo(c[0], c[1]); og.lineTo(c[0] + c[2] * 26, c[1]); og.stroke(); }); ovT.needsUpdate = true; };
+    const A0 = new T.Vector3(-4, 0, 36), A1 = new T.Vector3(-4, 0, 24.7), A2 = new T.Vector3(-4, 0, 23.3), A3 = new T.Vector3(4.6, 0, 13), A4 = new T.Vector3(-4, 0, 36);
+    const cam = new T.PerspectiveCamera(36, 1, 0.5, 900); const P = new T.Vector3(), D = new T.Vector3(), tg = new T.Vector3(), lens = new T.Vector3(), spk = new T.Vector3(22, 9.2, -4.4), wd = new T.Vector3();
+    const panelA = new T.Vector3(), panelB = new T.Vector3(), fv = new T.Vector3(), rv = new T.Vector3(), upV = new T.Vector3(0, 1, 0);
+    let pf = 0;
+    return { r: r, frame: (st) => {
+      const t = st.t; pf += (st.p - pf) * 0.12; const p = pf;
+      const phase = p < 0.3 ? 0 : p < 0.55 ? 1 : p < 0.8 ? 2 : 3; self._ph('ph3', phase);
+      const narrow = st.a < 0.95;
+      if (st.resized) { cam.aspect = st.a; cam.fov = narrow ? 62 : 36; if (!narrow) cam.setViewOffset(st.w, st.h, -st.w * 0.16, 0, st.w, st.h); else cam.clearViewOffset(); cam.updateProjectionMatrix(); }
+      { const ang = 0.55 - p * 1.1; const R = narrow ? 92 : 66; cam.position.set(Math.sin(ang) * R + st.px * 3, 24 - p * 4 - st.py * 2, Math.cos(ang) * R + 6); cam.lookAt(0, 4, 8); cam.updateMatrixWorld(); fv.set(0, 0, -1).transformDirection(cam.matrixWorld); rv.crossVectors(fv, upV).normalize(); }
+      let y = 0, run = false, climb = 0;
+      if (p < 0.2) { P.lerpVectors(A0, A1, p / 0.2); D.subVectors(A1, A0); man.walk(p / 0.2 * 11 * 4.2, 0.5); }
+      else if (p < 0.32) { const u = (p - 0.2) / 0.12; P.lerpVectors(A1, A2, u); y = Math.sin(u * Math.PI) * 2.6; D.subVectors(A2, A1); climb = 1; }
+      else if (p < 0.62) { const u = (p - 0.32) / 0.3; P.lerpVectors(A2, A3, u); D.subVectors(A3, A2); man.walk(u * 14 * 4.2, 0.5); }
+      else if (p < 0.76) { P.copy(A3); D.set(1, 0, 0); climb = 0.5 + Math.sin(t * 6) * 0.08; }
+      else if (p < 0.92) { const u = (p - 0.76) / 0.16; P.lerpVectors(A3, A2, u); D.subVectors(A2, A3); man.walk(u * 14 * 4.2, 0.95, true); run = true; }
+      else { const u = (p - 0.92) / 0.08; P.lerpVectors(A2, A4, u); y = u < 0.25 ? Math.sin(u / 0.25 * Math.PI) * 2.6 : 0; D.subVectors(A4, A2); man.walk(u * 13 * 4.2, 0.95, true); run = true; }
+      man.position.set(P.x, y, P.z); man.face(D.x, D.z); if (climb) man.reach(climb);
+      scene.updateMatrixWorld();
+      const tracking = p > 0.21; tg.set(P.x, y + 1, P.z);
+      if (tracking) cc.aimAt(tg, 0.08); else { cc.head.rotation.y += (-0.45 + Math.sin(t * 0.4) * 0.35 - cc.head.rotation.y) * 0.04; cc.head.rotation.x += (0.22 - cc.head.rotation.x) * 0.04; }
+      cc.coneM.uniforms.uT.value = t; cc.coneM.uniforms.uC.value.setHex(tracking ? 0xff3b5c : 0x2dd4bf); cc.tally.material.emissiveIntensity = Math.sin(t * 6) > 0 ? 3 : 0.2;
+      const bk = tracking ? 1 : 0; br.visible = lab.visible = bk > 0 && p < 0.97; br.position.set(P.x, y + 1.03, P.z); lab.position.set(P.x, y + 3.0, P.z);
+      lab.set(phase === 0 ? 'FENCE CLIMB · ZONE 1' : phase === 1 ? 'PERSON · 96% · TRACKING' : run ? 'FLEEING · TRACKED' : 'TAMPERING · TRAILER 12', '#FF5C7A');
+      const fk = phase >= 2 ? 1 : 0; flood.forEach((l) => { l.intensity += (fk * 2.2 - l.intensity) * 0.1; }); packs.forEach((pp) => { pp.material.opacity = 0.25 + fk * 0.35; }); poles.forEach((pl) => pl.userData.pools.forEach((q) => { q.material.opacity = 0.4 + fk * 0.3; }));
+      const sOn = phase === 2 && Math.sin(t * 14) > 0; strobe.material.emissiveIntensity = sOn ? 4 : 0.2; strobeL.intensity = sOn ? 3 : 0;
+      wd.set(P.x, 1.5, P.z).sub(spk).normalize(); waves.set(spk, wd, t, phase === 2 ? 1 : 0);
+      const pv = p > 0.22; panel.visible = pv;
+      if (pv) {
+        const sec = Math.max(0, Math.floor((Math.min(p, 0.8) - 0.22) * 72)); const blink = Math.floor(t * 2) % 2;
+        if (sec !== lastSec || blink !== lastBlink) { lastSec = sec; lastBlink = blink; drawOv(sec, blink, phase === 3 ? 'CLIP SAVED · SENT' : 'PERSON 96%'); }
+        fill.scale.x = K.clamp((p - 0.22) / 0.58, 0.001, 1); fill.material.color.setHex(phase === 3 ? 0x2dd4bf : 0xff3b5c);
+        const k3 = phase === 3 ? K.clamp((p - 0.8) / 0.08) : 0; const k0 = K.clamp((p - 0.22) / 0.05);
+        panelA.set(0, 4, 8).addScaledVector(rv, narrow ? 0 : 17).addScaledVector(upV, narrow ? 21 : 14); panelB.set(0, 4, 8).addScaledVector(rv, narrow ? 8 : 25).addScaledVector(upV, narrow ? 30 : 22);
+        panel.position.lerpVectors(panelA, panelB, k3); panel.scale.setScalar((narrow ? 1.05 : 1.25) * (0.2 + 0.8 * k0) * (1 - 0.45 * k3)); panel.lookAt(cam.position);
+        plab.visible = k3 > 0.5; plab.material.opacity = K.clamp((k3 - 0.5) * 2);
+        cc.lens(lens); feedCam.position.copy(lens); feedCam.lookAt(tg); feedCam.fov = 26 - K.clamp((p - 0.22) / 0.3) * 12; feedCam.updateProjectionMatrix();
+        panel.visible = false; cc.cone.visible = false; lab.visible = false;
+        r.setRenderTarget(rt); r.render(scene, feedCam); r.setRenderTarget(null);
+        panel.visible = true; cc.cone.visible = true; lab.visible = br.visible;
+      }
+      city.tick(t);
+      r.render(scene, cam);
+    } };
+  }
+
+  // ============ SITE TWIN: isometric gas station + c-store + lot ============
+  _sSite(cv, T, K) {
+    const self = this; const r = K.renderer(cv, true); r.toneMappingExposure = 1.15;
+    const scene = new T.Scene();
+    const cam = new T.OrthographicCamera(-8, 8, 8, -8, 0.1, 200); cam.position.set(15, 14, 15); cam.lookAt(0, 0, 0);
+    scene.add(new T.HemisphereLight(0xc7d2fe, 0x0d1015, 0.75));
+    const dl = new T.DirectionalLight(0xffffff, 1.3); dl.position.set(6, 12, 3); dl.castShadow = true; dl.shadow.mapSize.set(1024, 1024); Object.assign(dl.shadow.camera, { left: -10, right: 10, top: 10, bottom: -10 }); scene.add(dl);
+    scene.environment = K.nightEnv(r);
+    const S = (c, ro, me) => K.std(c, ro == null ? 0.8 : ro, me || 0);
+    const holder = new T.Group(); scene.add(holder); const world = new T.Group(); holder.add(world);
+    const bx = (w, h, d, m, x, y, z, par) => { const o = K.box(w, h, d, m, x, y, z, par || world); o.castShadow = true; o.receiveShadow = true; return o; };
+    bx(14, 0.5, 14, S(0x1a2029), 0, -0.25, 0);
+    const lot = K.asphalt(6, 5.6, 2); lot.position.set(2.8, 0.03, 3); world.add(lot);
+    for (let i = 0; i < 6; i++) { bx(0.06, 0.02, 1.5, S(0x8b93a1), 0.2 + i * 1.1, 0.05, 1.3); bx(0.06, 0.02, 1.5, S(0x8b93a1), 0.2 + i * 1.1, 0.05, 4.7); }
+    const rd = K.asphalt(14, 1.4, 2); rd.position.set(0, 0.03, -0.8); world.add(rd);
+    const wh = S(0x2d3748, 0.7); bx(5, 2.2, 3.2, wh, -3.2, 1.1, -3.6); bx(5.3, 0.16, 3.5, S(0x3b4659), -3.2, 2.25, -3.6);
+    for (let i = 0; i < 3; i++) bx(1.0, 1.3, 0.06, new T.MeshStandardMaterial({ map: K.rollTex, roughness: 0.6 }), -4.7 + i * 1.5, 0.65, -1.98);
+    bx(2.6, 1.4, 2.2, S(0xd6d0c4, 0.8), -4.1, 0.7, 2.6); bx(2.8, 0.24, 0.12, S(0x0f766e, 0.5), -4.1, 1.3, 1.46);
+    bx(1.8, 0.7, 0.04, new T.MeshStandardMaterial({ color: 0x0c1118, emissive: 0xfff1d6, emissiveIntensity: 0.7 }), -4.1, 0.55, 1.5);
+    const mart = K.plane(1.6, 0.2, K.signMat(K.signTex('FOOD MART', '#0f766e', '#ffffff', 512, 64), 1), world); mart.position.set(-4.1, 1.3, 1.53);
+    [[2.3, -4.4], [4.7, -4.4], [2.3, -2.6], [4.7, -2.6]].forEach((q) => { const c = K.cyl(0.08, 0.08, 1.8, S(0x9aa3b2, 0.4, 0.6), q[0], 0.9, q[1], world, 12); c.castShadow = true; });
+    bx(3.0, 0.24, 2.2, S(0xe5e7eb, 0.5), 3.5, 1.9, -3.5); bx(3.04, 0.09, 2.24, new T.MeshStandardMaterial({ color: 0x14b8a6, emissive: 0x14b8a6, emissiveIntensity: 0.5 }), 3.5, 1.76, -3.5);
+    bx(0.3, 0.7, 0.45, S(0xe5e7eb, 0.5), 3.0, 0.35, -3.5); bx(0.3, 0.7, 0.45, S(0xe5e7eb, 0.5), 4.0, 0.35, -3.5);
+    const pyl = K.cyl(0.05, 0.05, 2.4, S(0x9aa3b2, 0.4, 0.6), 6.2, 1.2, -1.6, world, 8);
+    const pt = K.signTex('3.49', '#0b0f16', '#ff4d4d', 256, 128); bx(0.9, 0.7, 0.12, [S(0x111827), S(0x111827), S(0x111827), S(0x111827), K.signMat(pt, 1), K.signMat(pt, 1)], 6.2, 2.6, -1.6);
+    [[0.75, 1.3, 'sedan'], [1.85, 1.3, 'suv'], [4.05, 1.3, 'pickup'], [5.15, 4.7, 'sedan'], [0.75, 4.7, 'suv'], [2.95, 4.7, 'sedan'], [3.0, 1.3, 'sedan']].forEach((q) => { const c = K.car(q[2]); c.scale.setScalar(0.52); c.position.set(q[0], 0, q[1]); c.rotation.y = Math.PI / 2; K.shadows(c); world.add(c); });
+    [[-6.2, 5.8], [-5.6, -0.2], [6.2, -6.0], [-1.2, 5.9], [6.3, 0.9]].forEach((q) => { const tr = K.tree(0.42); tr.position.set(q[0], 0, q[1]); K.shadows(tr); world.add(tr); });
+    const edge = new T.LineSegments(new T.EdgesGeometry(new T.BoxGeometry(13.6, 0.01, 13.6)), new T.LineBasicMaterial({ color: 0x2dd4bf, transparent: true, opacity: 0.6 })); edge.position.y = 0.04; world.add(edge);
+    const RAD = 6.4, HALF = 0.48;
+    const cams = [[-6.4, -6.4], [6.4, -6.4], [6.4, 6.4], [-6.4, 6.4]].map((q, i) => {
+      K.cyl(0.06, 0.08, 2.6, S(0x9aa3b2, 0.4, 0.6), q[0], 1.3, q[1], world, 12).castShadow = true;
+      const rot = new T.Group(); rot.position.set(q[0], 0, q[1]); world.add(rot);
+      bx(0.55, 0.22, 0.24, S(0xf1f5f9, 0.3, 0.2), 0.25, 2.65, 0, rot);
+      const led = new T.Mesh(new T.SphereGeometry(0.05, 10, 8), new T.MeshStandardMaterial({ color: 0x2dd4bf, emissive: 0x2dd4bf, emissiveIntensity: 2 })); led.position.set(0.54, 2.65, 0); rot.add(led);
+      const sg = new T.CircleGeometry(RAD, 40, -HALF, HALF * 2); sg.rotateX(-Math.PI / 2);
+      const sm = new T.MeshBasicMaterial({ color: 0x2dd4bf, transparent: true, opacity: 0.15, depthWrite: false, side: T.DoubleSide });
+      const sec = new T.Mesh(sg, sm); sec.position.y = 0.07; rot.add(sec);
+      return { x: q[0], z: q[1], rot: rot, sm: sm, led: led, base: Math.atan2(q[1], -q[0]), ph: i * 1.7 };
+    });
+    const path = new T.CatmullRomCurve3([[-6.6, -0.8], [-2.5, -0.9], [0.9, -1.0], [1.2, -3.2], [1.1, -6.3], [-2.2, -6.4], [-6.5, -6.3], [-6.7, -3.2]].map((q) => new T.Vector3(q[0], 0, q[1])), true);
+    const man = K.person(0xf8fafc); man.scale.setScalar(0.42); K.shadows(man); world.add(man);
+    const ring = new T.Mesh(new T.RingGeometry(0.3, 0.38, 40), K.flat(0xf59e0b, 0, true)); ring.rotation.x = -Math.PI / 2; ring.position.y = 0.08; world.add(ring);
+    const teal = new T.Color(0x2dd4bf), amb = new T.Color(0xf59e0b), mp = new T.Vector3(), mn = new T.Vector3();
+    let F = 8;
+    return { r: r, frame: (st) => {
+      const t = st.t;
+      if (st.resized) { if (st.a >= 1) { F = 7.6; holder.position.set(3.4, 0, -3.4); } else { F = 7.6 / st.a * 0.62; holder.position.set(0, -4.2, 0); } }
+      cam.left = -F * st.a; cam.right = F * st.a; cam.top = F; cam.bottom = -F; cam.zoom = 1 + st.sp * 0.3; cam.updateProjectionMatrix();
+      world.rotation.y = st.sp * 1.0 + st.px * 0.12 + Math.sin(t * 0.1) * 0.05;
+      const u = (t * 0.028) % 1; path.getPointAt(u, mp); path.getPointAt((u + 0.002) % 1, mn);
+      man.position.copy(mp); man.face(mn.x - mp.x, mn.z - mp.z); man.walk(t * 7, 0.5);
+      let hit = -1;
+      cams.forEach((c, i) => {
+        const a = c.base + Math.sin(t * 0.55 + c.ph) * 0.55; c.rot.rotation.y = a;
+        const dx = mp.x - c.x, dz = mp.z - c.z, d = Math.hypot(dx, dz); let diff = Math.atan2(-dz, dx) - a; diff = Math.atan2(Math.sin(diff), Math.cos(diff));
+        const on = d < RAD && Math.abs(diff) < HALF; if (on && hit < 0) hit = i;
+        c.sm.color.lerp(on ? amb : teal, 0.12); c.sm.opacity += ((on ? 0.3 : 0.14) - c.sm.opacity) * 0.1; c.led.material.color.copy(on ? amb : teal); c.led.material.emissive.copy(on ? amb : teal);
+      });
+      ring.position.x = mp.x; ring.position.z = mp.z;
+      if (hit >= 0) { const k = (t * 1.2) % 1; ring.scale.setScalar(1 + k * 3); ring.material.opacity = 0.85 * (1 - k); } else ring.material.opacity *= 0.9;
+      self._ph('salert', hit);
+      r.render(scene, cam);
+    } };
+  }
+
+  // ============ 3D LOGO: shield + orbit eye ============
+  _sLogo(cv, T, K) {
+    const r = K.renderer(cv, false); r.toneMappingExposure = 1.1;
+    const scene = new T.Scene(); scene.environment = K.env(r, 0x0a1020, [[0xffffff, 3, 0, 6, 4, 6, 3], [0x2dd4bf, 5, -7, 1, 3, 3, 7], [0x8b5cf6, 5, 7, 1, 2, 3, 7]]);
+    scene.add(new T.HemisphereLight(0xffffff, 0x101020, 0.5)); const dl = new T.DirectionalLight(0xffffff, 1.4); dl.position.set(2, 4, 6); scene.add(dl);
+    const tp = (x, y) => [(x - 32) / 10, (32 - y) / 10];
+    const mk = (s) => { const sh = new T.Shape(); const m = (x, y) => tp(x, y).map((v) => v * s); sh.moveTo.apply(sh, m(32, 4)); sh.lineTo.apply(sh, m(56, 13)); sh.lineTo.apply(sh, m(56, 31)); sh.bezierCurveTo.apply(sh, m(56, 46).concat(m(45.5, 56), m(32, 60))); sh.bezierCurveTo.apply(sh, m(18.5, 56).concat(m(8, 46), m(8, 31))); sh.lineTo.apply(sh, m(8, 13)); sh.closePath(); return sh; };
+    const outer = mk(1), inner = mk(0.84); const hole = new T.Path(inner.getPoints(24)); outer.holes.push(hole);
+    const sg = new T.ExtrudeGeometry(outer, { depth: 0.42, bevelEnabled: true, bevelThickness: 0.12, bevelSize: 0.07, bevelSegments: 5, curveSegments: 28 }); sg.center();
+    const G = new T.Group(); scene.add(G);
+    const shield = new T.Mesh(sg, K.phys(0x5eead4, 0.2, { metalness: 0.9 })); G.add(shield);
+    const back = new T.Mesh(new T.ShapeGeometry(inner, 24), new T.MeshStandardMaterial({ color: 0x0b1322, roughness: 0.6, metalness: 0.3, transparent: true, opacity: 0.85 })); back.position.z = -0.25; back.position.y = -0.0; G.add(back);
+    const eye = new T.Group(); eye.position.y = -0.05; G.add(eye);
+    eye.add(new T.Mesh(new T.SphereGeometry(1.05, 64, 40), K.phys(0x7c3aed, 0.15, { metalness: 0.3, sheen: 0 })));
+    const iris = new T.Group(); eye.add(iris);
+    const ic = K.cnv(256, 256, (g) => { const gr = g.createRadialGradient(128, 128, 0, 128, 128, 128); gr.addColorStop(0, '#0b0820'); gr.addColorStop(0.42, '#0b0820'); gr.addColorStop(0.5, '#5eead4'); gr.addColorStop(0.85, '#2dd4bf'); gr.addColorStop(1, 'rgba(45,212,191,0)'); g.fillStyle = gr; g.fillRect(0, 0, 256, 256); });
+    const idisc = new T.Mesh(new T.CircleGeometry(0.62, 48), new T.MeshBasicMaterial({ map: ic, transparent: true, toneMapped: false })); idisc.position.z = 1.035; iris.add(idisc);
+    const hl = new T.Mesh(new T.SphereGeometry(0.1, 16, 10), new T.MeshBasicMaterial({ color: 0xffffff })); hl.position.set(0.26, 0.28, 1.04); iris.add(hl);
+    const orbit = new T.Group(); orbit.rotation.set(1.25, 0, -0.35); G.add(orbit);
+    orbit.add(new T.Mesh(new T.TorusGeometry(1.75, 0.055, 16, 140), K.glow(0x8b5cf6, 1.6)));
+    const sat = new T.Mesh(new T.SphereGeometry(0.15, 20, 12), K.glow(0x2dd4bf, 2.4)); orbit.add(sat);
+    const cam = new T.PerspectiveCamera(30, 1, 0.1, 100); cam.position.set(0, 0, 13);
+    return { r: r, frame: (st) => {
+      const t = st.t;
+      if (st.resized) { cam.aspect = st.a; cam.position.z = st.a < 1 ? 16 : 12.5; cam.updateProjectionMatrix(); }
+      G.rotation.y = Math.sin(t * 0.6) * 0.45 + st.px * 0.5; G.rotation.x = Math.sin(t * 0.4) * 0.12 + st.py * 0.25; G.position.y = Math.sin(t * 1.2) * 0.08;
+      iris.rotation.y = st.px * 0.35; iris.rotation.x = st.py * 0.3;
+      const a = t * 1.3; sat.position.set(Math.cos(a) * 1.75, Math.sin(a) * 1.75, 0);
+      r.render(scene, cam);
+    } };
+  }
+
+}
+
+function __start() {
+  const c = new Component({}); APP = c; __render(c);
+  document.querySelectorAll('[data-ref]').forEach((el) => { const f = c.__v[el.dataset.ref]; if (typeof f === 'function') f(el); });
+  document.addEventListener('click', (e) => { const a = e.target.closest('[data-act]'); if (!a) return; const f = a.closest('[data-for]'); if (!f) return; const it = (c.__v[f.dataset.for] || [])[+a.dataset.i]; if (it && typeof it[a.dataset.act] === 'function') it[a.dataset.act](); });
+  if (c.componentDidMount) c.componentDidMount();
+  const form = document.getElementById('lead-form'), st = document.getElementById('lead-status');
+  if (form) form.addEventListener('submit', (e) => {
+    e.preventDefault(); const btn = form.querySelector('button[type="submit"]'); btn.disabled = true; st.style.color = '#9AAAC0'; st.textContent = 'Sending…';
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then((r) => r.json().catch(() => ({ ok: false })))
+      .then((j) => { if (j.ok) { form.reset(); st.style.color = '#2DD4BF'; st.textContent = 'Thank you — we’ll be in touch within one business day.'; } else { st.style.color = '#FF5C7A'; st.textContent = j.error || 'Something went wrong. Please email abubakar@sopnotec.com.'; } })
+      .catch(() => { st.style.color = '#FF5C7A'; st.textContent = 'Could not send. Please email abubakar@sopnotec.com.'; })
+      .finally(() => { btn.disabled = false; });
+  });
+}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', __start); else __start();
+</script>
+</body>
+</html>
