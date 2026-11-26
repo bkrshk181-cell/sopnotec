@@ -111,7 +111,7 @@ def testimonial_block():
 <p>“{e(t['short'])}”</p><div class="chips">{chips}</div><p class="tbio">{e(t['bio'])}</p></div>'''
     return f'''<section class="testis"><div class="wrap">
 <div class="center"><div class="eyebrow rv">Client Testimonials</div><h2 class="rv">What founders &amp; CEOs <span class="grad">say about us.</span></h2>
-<p class="sub rv">Visionary CEOs trust us to streamline their workflows — here's what they say about working with our founder, Abu Bakar.</p></div>
+<p class="sub rv">Visionary CEOs trust us to streamline their workflows — here's what they say about working with SopnoTec.</p></div>
 <div class="tdeck rv s"><button class="tarrow prev" aria-label="Previous">{ic('arrow')}</button><div class="tstack">{cards}</div><button class="tarrow next" aria-label="Next">{ic('arrow')}</button></div>
 <div class="tnav rv">{nav}</div>
 <div class="center" style="margin:90px 0 40px"><div class="eyebrow rv">Client Reviews</div><h3 class="rv" style="font-size:clamp(26px,3vw,38px)">Reviews about <span class="grad">our work.</span></h3></div>
